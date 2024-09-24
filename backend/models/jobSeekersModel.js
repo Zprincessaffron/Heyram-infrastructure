@@ -7,6 +7,7 @@ const jobSeekerSchema = new mongoose.Schema({
   resume: { type: String, required: true },  // Path to the uploaded resume
   link1: { type: String },
   link2: { type: String },
+  appliedFor: { type: String, required: true },
   educationLevel: { type: String, required: true },
   degree: { type: String, required: true },
   stream: { type: String, required: true },
@@ -18,7 +19,9 @@ const jobSeekerSchema = new mongoose.Schema({
   gender: { type: String },
   city: { type: String, required: true },
   state: { type: String, required: true },
-  expectedCTC: { type: Number, required: true }
+  expectedCTC: { type: Number, required: true },
+  opened: { type: String, default: 'no' }, 
+
 });
 
 const JobSeeker = mongoose.model('JobSeeker', jobSeekerSchema);

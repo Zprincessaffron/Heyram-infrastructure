@@ -7,8 +7,8 @@ const jobSchema = new mongoose.Schema({
   skills: { type: [String], required: true },  // array of skills
   location: { type: String, required: true },
   jobPostedDate: { type: Date, default: Date.now },  // auto-fetch current date and time
-  minExperience: { type: String, required: true },   // minimum experience in years
-  maxExperience: { type: String, required: true }    // maximum experience in years
+  minExperience: { type: String, required: true },  
+  maxExperience: { type: String, required: true } 
 });
 
 const Job = mongoose.model('Job', jobSchema);

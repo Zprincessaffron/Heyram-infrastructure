@@ -36,3 +36,27 @@ export const deleteClient = async (req, res) => {
         res.status(500).json({ message: 'Error deleting client data', error });
     }
 };
+
+
+// Update opened status of an client notification
+
+export const updateClientNotification = async (req, res) => {
+    const { id } = req.params; // Get the ID from the request parameters
+  
+    try {
+      // Update the opened field to "yes"
+      const updatedClient = await Client.findByIdAndUpdate(
+        id,
+        { opened: "yes" }, // Update opened field
+        { new: true } // Return the updated document
+      );
+  
+      if (!updatedClient) {
+        return res.status(404).json({ message: 'client data not found' });
+      }
+  
+      res.status(200).json({ message: 'client notification opened'});
+    } catch (error) {
+      res.status(400).json({ message: 'Error updating client notification', error });
+    }
+  };

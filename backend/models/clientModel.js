@@ -7,7 +7,9 @@ const clientSchema = new mongoose.Schema({
     service: { type: String, required: true },
     message: { type: String, required: true },
     howDidYouHear: { type: String, required: true },
-    createdAt: { type: Date, default: Date.now }
+    createdAt: { type: Date, default: Date.now },
+    opened: { type: String, default: 'no' }, 
+
 });
 
 const Client = mongoose.model('Client', clientSchema);
