@@ -78,18 +78,18 @@
 }
 .mainpagediv2>img{
     width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
   
 
 
 }
 .mainpagediv21{
     width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+   
     height: 100%;
     background: linear-gradient(180deg, rgb(0, 0, 0)  -10%, rgba(28, 4, 73, 0.362) 30%);
-
     /* background: linear-gradient(180deg,rgb(232, 4, 4) 10%, rgba(28, 4, 73, 0.362) 100% ); */
     backdrop-filter: blur(30px);
     
@@ -97,15 +97,14 @@
 }
 .mainpagediv22{
     width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+  
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     color: white;
     gap: 15px;
+    height: fit-content;
 
 
 }

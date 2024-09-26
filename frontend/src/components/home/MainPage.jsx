@@ -101,12 +101,10 @@ function MainPage() {
 
     <div className='mainpagediv2'>
         <img src={rectangle} alt="" />
-        <img style={{rotate:"180deg",marginTop:"10rem"}} src={rectangle} alt="" />
+        <img  style={{rotate:"180deg",marginTop:"10rem",top:"250vh"}} src={rectangle} alt="" />
+
 
         <div className='mainpagediv21'>
-
-
-        </div>
         <div className='mainpagediv22'>
             <div className='mainpagediv22_1'  >
             <h1>Empower Your Business with Access to World-Class Services.</h1>
@@ -171,6 +169,9 @@ function MainPage() {
 
            
         </div>
+
+        </div>
+        
       
         
 
