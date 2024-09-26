@@ -110,7 +110,7 @@ function MainPage() {
             <h1>Empower Your Business with Access to World-Class Services.</h1>
             <div className='mainpagediv221'><span>See What We Do</span><span><Button/></span></div>
             </div>
-            <div>
+            <div style={{marginBottom:"10rem"}}>
               <ServiceIntro/>
             </div>
             <div>
