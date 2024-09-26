@@ -101,7 +101,7 @@ function MainPage() {
 
     <div className='mainpagediv2'>
         <img src={rectangle} alt="" />
-        <img  style={{rotate:"180deg",marginTop:"10rem",top:"250vh"}} src={rectangle} alt="" />
+        <img  style={{rotate:"180deg",marginTop:"10rem",top:"280vh"}} src={rectangle} alt="" />
 
 
         <div className='mainpagediv21'>
