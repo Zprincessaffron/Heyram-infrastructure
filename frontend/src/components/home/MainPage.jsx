@@ -10,6 +10,7 @@ import { useInView } from 'react-intersection-observer';
 
 import Button from '../button/Button'
 import ServiceIntro from './ServiceIntro'
+import TopSection from './TopSection'
 function MainPage() {
     const [scale,setScale]=useState()
     const [imageWidth, setImageWidth] = useState('100%'); // Initial image width
@@ -79,7 +80,7 @@ function MainPage() {
   return (
    <>
    <div className='mainmain'>
-    <div className='maincon'>
+    {/* <div className='maincon'>
         <div className='maincon1'>
             <img src={firstimg} alt="" />
             <div className='maincon2'>
@@ -97,7 +98,8 @@ function MainPage() {
         
 
 
-    </div>
+    </div> */}
+    <TopSection/>
 
     <div className='mainpagediv2'>
         <img src={rectangle} alt="" />
