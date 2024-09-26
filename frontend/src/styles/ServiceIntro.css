@@ -1,0 +1,67 @@
+.si_main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.si_div1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 90%;
+
+
+}
+.si_div1>div{
+    width: 50%;
+}
+.si_div11_1{
+    font-size: 1.2rem;
+    font-weight: 200; 
+    width: 80%;
+
+}
+.si_div11_0{
+    margin: 1rem 0;
+    font-size: 1.8rem;
+    border-left: 3px solid rgb(181, 71, 187);
+    padding-left: 10px;
+}
+.si_main_quates{
+    font-size: 3rem;
+    font-weight: 300;
+}
+.si_div12>img{
+    width: 100%;
+    margin-top: 10%;
+}
+.si_selection{
+    width: fit-content;
+    height: 60px;
+    margin-top: 4rem;
+    background-color: rgba(255, 255, 255, 0.44);
+    border-radius: 30px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+.si_selection>div{
+    background-color: rgb(230, 230, 230);
+    width: 200px;
+    height: 70%;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(48, 5, 48);
+    font-weight: 400;
+    font-size: 1rem;
+    text-transform: uppercase;
+
+}

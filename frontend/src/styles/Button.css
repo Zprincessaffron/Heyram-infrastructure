@@ -1,0 +1,8 @@
+.butttonmain{
+    height: 25px;
+    width: 25px;
+    background-color: #6D40B7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
