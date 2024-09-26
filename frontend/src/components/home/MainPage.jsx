@@ -114,11 +114,7 @@ function MainPage() {
               <ServiceIntro/>
             </div>
             <div>
-            <div className='mainpagediv3' >
-            <div>High-Impact Outcomes That Drive Your Business</div>
-            <p>In today's fast-paced world, efficiency is paramount. We leverage best-in-class talent and  cutting-edge technology to expedite your digital journey</p>
-
-        </div>
+          
         <div className='mainpagediv4'  ref={divRef}
 >
 
