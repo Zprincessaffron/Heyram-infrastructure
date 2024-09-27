@@ -188,7 +188,8 @@
     transition: all 0.3s ease;
 
     backdrop-filter: blur(20px);
-    background:radial-gradient(rgba(210, 177, 216, 0.422) 10%, rgba(230, 242, 230, 0.274) 40%)
+    background:rgba(255, 255, 255, 0.753);
+    color: rgb(62, 18, 79);
 }
 .sifull_div1_1>img{
     position: absolute;

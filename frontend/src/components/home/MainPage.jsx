@@ -11,6 +11,7 @@ import { useInView } from 'react-intersection-observer';
 import Button from '../button/Button'
 import ServiceIntro from './ServiceIntro'
 import TopSection from './TopSection'
+import Footer from '../footer/Footer'
 function MainPage() {
     const [scale,setScale]=useState()
     const [imageWidth, setImageWidth] = useState('100%'); // Initial image width
@@ -125,7 +126,7 @@ function MainPage() {
             top: '30%', // Adjust the top position as needed
             // Center the image horizontally
              // To perfectly center the image
-            transition: 'width 0.1s ease'}}  />
+           }}  />
             <div className={`mainpagediv41 ${opacityContent?"true":""}`}>
               <h3>CAREERS</h3>
               <h2>Grow your career at the heart of change</h2>
@@ -162,11 +163,15 @@ function MainPage() {
                   Zprincess saffron
                 </div>
               </div>
+
             
             </div>
 
            
         </div>
+      
+        
+   <Footer/>
 
         </div>
         
@@ -179,6 +184,7 @@ function MainPage() {
     </div>
 
    </div>
+   
    
    </>
   )

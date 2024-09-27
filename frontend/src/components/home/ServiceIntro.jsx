@@ -4,7 +4,6 @@ import frame4 from '../../images/frame 4.png'
 import frame5 from '../../images/frame 5.png'
 import frame6 from '../../images/frame 6.png'
 
-
 import circletext from '../../images/circle-text.png'
 function ServiceIntro() {
     const [ballRotate,setBallRotate]=useState(0)
