@@ -1,0 +1,43 @@
+.connect_form{
+    position: fixed;
+    top: 0;
+    right: -55%;
+    width: 50%;
+    background-color: rgb(255, 255, 255);
+    height: 100vh;
+    z-index: 42;
+    padding: 2rem 2rem;
+    transition: all 0.3s ease-in-out;
+}
+.connect_form.true{
+    right: 0
+    ;
+
+
+}
+.connect_div1{
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    font-weight: 300;
+}
+.connect_form textarea{
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+.connect_button{
+    display: flex;
+    justify-content: center;
+    
+}
+.connect_closebtn{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.connect_closebtn{
+    font-size: 1.4rem;
+    cursor: pointer;
+}

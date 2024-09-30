@@ -1,24 +1,37 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import '../../styles/Home.css'
 import firstimg from '../../images/40.jpg'
 import rectangle from '../../images/rectangle11.png'
 import rectangle20 from '../../images/rectangle20.jpg'
 import career from '../../images/career.jpg'
-
+import { motion } from 'framer-motion';
 import { useSpring, animated } from 'react-spring';
 import { useInView } from 'react-intersection-observer';
-
+import turningimg from '../../images/turning-img.png'
 import Button from '../button/Button'
 import ServiceIntro from './ServiceIntro'
-import TopSection from './TopSection'
+import TopSection from './TopSection'  
 import Footer from '../footer/Footer'
+import SlideInSection from './SlideInSection'
+import Navbar from '../navbar/Navbar'
+import NeonBox from './NeonBox'
+import { useNavigate } from 'react-router-dom'
+import Connect from '../form/Connect'
+import { AppContext } from '../../context/AppContext'
+
 function MainPage() {
+  const ref = React.useRef(null);
+  const { connectForm, setConnectForm } = useContext(AppContext)
+
+  const isInView = useInView(ref, { once: false }); 
     const [scale,setScale]=useState()
     const [imageWidth, setImageWidth] = useState('100%'); // Initial image width
     
     const [isDivInView, setIsDivInView] = useState(false);
     const [ opacityContent,setOpacityContent] = useState(false)
     const divRef = useRef(null);
+    const navigate = useNavigate()
+    
   
 
 
@@ -80,7 +93,10 @@ function MainPage() {
     }, []);
   return (
    <>
+   <Connect/>
+   <Navbar/>
    <div className='mainmain'>
+    
     {/* <div className='maincon'>
         <div className='maincon1'>
             <img src={firstimg} alt="" />
@@ -107,11 +123,20 @@ function MainPage() {
         <img  style={{rotate:"180deg",marginTop:"10rem",top:"280vh"}} src={rectangle} alt="" />
 
 
+
         <div className='mainpagediv21'>
+        <img className='turningimg' src={turningimg} alt="" />
+
         <div className='mainpagediv22'>
             <div className='mainpagediv22_1'  >
-            <h1>Empower Your Business with Access to World-Class Services.</h1>
-            <div className='mainpagediv221'><span>See What We Do</span><span><Button/></span></div>
+            <SlideInSection delayy={0.2} durationn={0.4}>
+            <h1 className='mainpagediv221_h1'>Empower Your Business with Access to World-Class Services.</h1>
+            </SlideInSection>
+            <SlideInSection delayy={0.3} durationn={0.4}>
+
+            <div className='mainpagediv221'><span onClick={()=>navigate('/services')}>See What We Do</span><span onClick={()=>navigate('/services')}><Button/></span></div>
+            </SlideInSection>
+
             </div>
             <div style={{marginBottom:"10rem"}}>
               <ServiceIntro/>
@@ -131,8 +156,8 @@ function MainPage() {
               <h3>CAREERS</h3>
               <h2>Grow your career at the heart of change</h2>
               <p>It's your time to shine. Bring your ingenuity, curiosity and big ideas.</p>
-              <div><span>Join  Us </span><Button/> </div>
-
+              <div style={{cursor:"pointer"}} onClick={()=>{navigate('/careers')}}><span>Join  Us </span><Button/> </div>
+              
 
             </div>
             
@@ -141,16 +166,24 @@ function MainPage() {
             
             </div>
             <div  className='mainpagediv5'>
+
               <div>
-                <h1>Your business is our priority!</h1>
+              <SlideInSection delayy={0.2} durationn={0.4}>
+
+                <h1 className='mainpagediv5_h1'>Your business is our priority!</h1>
+                
+              </SlideInSection>
                 <p>Partnering with Heyram infrastructure enables your organization to gain a competitive  advantage by focusing on your core business goals and delivering dependable solutions,  optimized to meet your needs. Reach out today to schedule a meeting, and discover how we  deliver the best solutions possible.</p>
-                <div><span>Connect with us </span><span><Button/></span></div>
+                <div  style={{cursor:"pointer"}} onClick={()=>{setConnectForm(true)}} ><span>Connect with us </span><span><Button/></span></div>
               </div>
             </div>
 
             <div  className='mainpagediv6'>
               <div>
-                <h1>Our MSP Clients</h1>
+              <SlideInSection delayy={0.2} durationn={0.4}>
+
+                <h1 className='mainpagediv6_h1'>Our MSP Clients</h1>
+                </SlideInSection>
               </div>
               <div className='mainpagediv62'>
                 <div >
@@ -163,6 +196,10 @@ function MainPage() {
                   Zprincess saffron
                 </div>
               </div>
+              <div>
+                <NeonBox/>
+              </div>
+           
 
             
             </div>

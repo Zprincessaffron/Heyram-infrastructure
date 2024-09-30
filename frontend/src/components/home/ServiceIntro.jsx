@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import '../../styles/ServiceIntro.css'
 import frame4 from '../../images/frame 4.png'
 import frame5 from '../../images/frame 5.png'
 import frame6 from '../../images/frame 6.png'
 
 import circletext from '../../images/circle-text.png'
+import SlideInSection from './SlideInSection'
+import CardHove from './CardHove'
 function ServiceIntro() {
     const [ballRotate,setBallRotate]=useState(0)
     const [ballText,setBallText]=useState("planning & discovery")
@@ -13,7 +15,7 @@ function ServiceIntro() {
     const [stop, setStop] = useState(false); // State to handle animation class
     const [navBtn,setnavBtn]=useState("dev")
     const [ contentAnim, setContentAnim]=useState("dev")
-
+    const bottomDivRef = useRef(null);
     let index = 0;
     useEffect(() => {
         if(!stop){
@@ -68,9 +70,17 @@ function ServiceIntro() {
             setContentAnim("data")
         }, 300);
     }
+
+      
+        const handleScrollToBottom = () => {
+          // Scroll to the bottom div with smooth behavior
+          bottomDivRef.current.scrollIntoView({ behavior: 'smooth' });
+        }
   return (
     <div className='si_main'>
+        <SlideInSection delayy={0.2} durationn={0.4}>
         <div className='si_main_quates'> Crafted with Talent, Perfected through Service </div>
+        </SlideInSection>
         <div className='si_selection'>
             <div onClick={handleDevelopment} >DEVELOPMENT</div>
             <div onClick={handleDigital}>DIGITAL MARKETING </div>
@@ -120,24 +130,84 @@ function ServiceIntro() {
                 )}                </div>
             </div>
             <div className='si_div12'>
-                {contentAnim == 'dev' &&(
-                    
-                <img src={frame4} alt="" />
+               {contentAnim == 'dev' &&(
+
+<div onClick={handleScrollToBottom} style={{width:"300px",marginLeft:"200px"}}>
+<SlideInSection delayy={0.2} durationn={0.4}>
+
+    <CardHove  setStop={setStop} settext="planning & discovery" setCurrentText={setCurrentText} text="PLANNING AND DISCOVERY" />
+    </SlideInSection>
+    <SlideInSection delayy={0.3} durationn={0.4}>
+
+    <CardHove  setStop={setStop} settext="design" setCurrentText={setCurrentText}  text="DESIGN" />
+    </SlideInSection>
+    <SlideInSection delayy={0.4} durationn={0.4}>
+
+    <CardHove  setStop={setStop} settext="development" setCurrentText={setCurrentText}  text="DEVELOPMENT" />
+    </SlideInSection>
+    <SlideInSection delayy={0.5} durationn={0.4}>
+
+    <CardHove  setStop={setStop} settext="testing & launch" setCurrentText={setCurrentText}  text="TESTING & LAUNCH" />
+    </SlideInSection>
+
+    
+    
+    </div>
                 )}
                 {contentAnim == 'digital' &&(
                     
-                    <img src={frame5} alt="" />
-                )}
+<div  onClick={handleScrollToBottom}  style={{width:"300px",marginLeft:"200px"}}>
+<SlideInSection delayy={0.2} durationn={0.4}>
+
+    <CardHove  setStop={setStop} text="RESEARCH & STRATEGY" setCurrentText={setCurrentText} settext="planning & discovery" />
+    </SlideInSection>
+    <SlideInSection delayy={0.3} durationn={0.4}>
+
+    <CardHove  setStop={setStop} text="PLANNING" setCurrentText={setCurrentText}   settext="design"/>
+    </SlideInSection>
+    <SlideInSection delayy={0.4} durationn={0.4}>
+
+    <CardHove  setStop={setStop} text="EXECUTION & CAMPAIGN" setCurrentText={setCurrentText}   settext="development" />
+    </SlideInSection>
+    <SlideInSection delayy={0.5} durationn={0.4}>
+
+    <CardHove  setStop={setStop} text="ANALYSIS & OPTIMIZATION" setCurrentText={setCurrentText}   settext="testing & launch" />
+    </SlideInSection>
+ 
+    
+    </div>
+                    )}
                 {contentAnim == 'data' &&(
                     
-                    <img src={frame6} alt="" />
+<div  onClick={handleScrollToBottom}  style={{width:"300px",marginLeft:"200px"}}>
+<SlideInSection delayy={0.2} durationn={0.4}>
+
+    <CardHove  setStop={setStop} text="PROBLEM DEFINITION" setCurrentText={setCurrentText}  settext="planning & discovery"  />
+    </SlideInSection>
+    <SlideInSection delayy={0.3} durationn={0.4}>
+
+    <CardHove  setStop={setStop} text="DATA COLLECTION" setCurrentText={setCurrentText}   settext="design" />
+    </SlideInSection>
+    <SlideInSection delayy={0.4} durationn={0.4}>
+
+    <CardHove  setStop={setStop} text="DEVELOPMENT" setCurrentText={setCurrentText}  settext="development"  />
+    </SlideInSection>
+    <SlideInSection delayy={0.5} durationn={0.4}>
+
+    <CardHove  setStop={setStop} text="DEPLOYMENT" setCurrentText={setCurrentText}   settext="testing & launch" />
+    </SlideInSection>
+
+    
+    </div>
                 )}
+
 
 
 
             </div>
 
         </div>
+        <div ref={bottomDivRef}>
         {navBtn == "dev" &&(
             <div className='sifull_main'  onMouseEnter={()=>{setStop(true)}} onMouseLeave={()=>{setStop(false)}} >
             <div className='sifull_div1'>
@@ -307,6 +377,7 @@ function ServiceIntro() {
 
         </div>
         )}
+        </div>
 
     
     </div>

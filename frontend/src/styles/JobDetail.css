@@ -1,0 +1,53 @@
+.jd_main{
+    width: 100%;
+    background-color: white;
+    padding-top: 10vh;
+    padding-bottom: 5vh;
+
+    padding-left: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+.jd_div1{
+    width: fit-content;
+
+
+}
+
+.box{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.errormsg.error{
+    background-color: #d37c6a07;
+    
+
+
+}
+.submit_buuton{
+    width: 170px;
+    margin-top: 3rem;
+    border-radius: 25px;
+    height: 40px;
+    background-color: rgb(52, 12, 60);
+    color: white;
+    font-weight: 300;
+
+
+}
+.jd_main>form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.application_title{
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}

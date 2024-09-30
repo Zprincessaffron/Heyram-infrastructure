@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import Cookies from 'js-cookie';
 import { useNavigate } from 'react-router-dom';
+import { useAdmin } from '../../context/AdminContext';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
+  const { login } = useAdmin();
+
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -19,9 +22,11 @@ const Login = () => {
 //     }
 //   };
 const token = "hello"
+login(data.token); // Set the admin token
+navigate('/admin/dashboard');
 
-localStorage.setItem("user", "one");
-navigate('/admin');}
+
+}
 
   return (
     <form onSubmit={handleLogin}>

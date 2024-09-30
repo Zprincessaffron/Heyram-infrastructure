@@ -1,14 +1,18 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { motion } from "framer-motion";
-import firstimg from "../../images/40.jpg";
+import firstimg from "../../images/heyramback.png";
 import Button from "../button/Button";
+import { AppContext } from "../../context/AppContext";
 
 const TopSection = () => {
   const [showWhiteScreen, setShowWhiteScreen] = useState(false);
   const [showImage, setShowImage] = useState(false);
   const [showUnderline, setShowUnderline] = useState(false);
+  const { connectForm, setConnectForm } = useContext(AppContext)
+
 
   useEffect(() => {
+
     const timer1 = setTimeout(() => {
       setShowWhiteScreen(true);
     }, 1000);
@@ -85,7 +89,7 @@ const TopSection = () => {
               style={{ display: 'block', textAlign: 'start', position: 'relative' }}
             >
               <motion.h1
-                className="text-[4.5rem] font-light tracking-widest inline-block"
+                className="text-[4.3rem] font-light tracking-widest inline-block"
                 initial={{ y: "50px", opacity: 0 }} // Start below and hidden
                 animate={{ y: "0", opacity: 1 }} // Slide to center and fade in
                 transition={{ delay: 1, duration: 2, ease: "easeOut" }} // Smooth animation
@@ -93,14 +97,14 @@ const TopSection = () => {
               >
                 HEYRAM INFRASTRUCTURE
                 {/* Underline Animation */}
-              {showUnderline && (
+              {/* {showUnderline && (
                 <motion.div
-                  className="absolute left-1/2 w-full h-[5px] bg-white transform -translate-x-1/2 shadow-glow rounded-full" // Added glow class
+                  className="absolute left-1/2 w-full h-[5px] bg-none transform -translate-x-1/2 shadow-[0_0_15px_rgba(0,123,255,0.8)] rounded-full" // Added glow class
                   initial={{ width: 0 }} // Start with no width
                   animate={{ width: "70%" }} // Animate to full width
                   transition={{ duration: 0.5, ease: "easeInOut" }} // Reduced duration for quicker appearance
                 />
-              )}
+              )} */}
               </motion.h1>
             </div>
 
@@ -109,7 +113,7 @@ const TopSection = () => {
               style={{ display: 'block', textAlign: 'start', position: 'relative' }}
             >
               <motion.h2
-              className="text-lg tracking-[2.5px] mt-5 inline-block"
+              className="text-[1.5rem] tracking-[2.5px] font-extralight mt-0 inline-block"
               initial={{ y: "50px", opacity: 0 }} // Start below and hidden
               animate={{ y: "0", opacity: 1 }} // Slide to center and fade in
               transition={{ delay: 0.2, duration: 2.4, ease: "easeOut" }} // Smooth animation
@@ -118,7 +122,7 @@ const TopSection = () => {
               Experience the impact across your digital ecosystem
             </motion.h2>
             </div>
-            
+
             {/* <div className="mt-4 tracking-wider flex items-center space-x-2"> */}
             <div
               className="relative block text-left whitespace-nowrap mb-[-0.12em] px-0 py-[0.12em] overflow-hidden mt-4 tracking-wider flex items-center space-x-2"
@@ -130,14 +134,15 @@ const TopSection = () => {
               transition={{ delay: 0.2, duration: 2.8, ease: "easeOut" }} // Smooth animation
               style={{ position: 'relative', display: 'flex', whiteSpace: 'nowrap' , gap: "10px" }} // Inline block for effects
               >
-              <span>Connect with us</span>
-              <span>
+              <span onClick={()=>{setConnectForm(true)}} className="text-[1.1rem] font-light cursor-pointer" >Connect with us</span>
+              <span onClick={()=>{setConnectForm(true)}} className="cursor-pointer">
                 <Button />
               </span>
+
               </motion.div>
-              
+
             </div>
-              
+
             {/* </div> */}
           </div>
         </motion.div>

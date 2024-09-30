@@ -1,0 +1,245 @@
+.careermain{
+    width: 100%;
+} 
+.career_div1{
+    background-image: url(../images/career.png);
+    background-position: bottom;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+
+
+}
+.career_div11{
+    background-color: rgba(0, 0, 0, 0.316);
+    width: 100%; height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: calc(20px + 2vw);
+    font-weight: 300;
+    text-align: center;
+}
+.career_div2{
+    background-color: #142745;
+}
+.career_div21{
+    padding: 5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.career_div21_1{
+    color: rgb(136, 136, 234);
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+.career_div21_2{
+    font-size: 2rem;
+    color: white;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.career_div21_3{
+    font-size: 1rem;
+    color: white;
+    font-weight: 200;
+    letter-spacing: 1px;
+
+}
+.career_div22{
+    padding-top: 5rem;
+    display: flex;
+    padding-bottom: 10rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+
+
+}
+.career_div22_1{
+    width: 60%;
+    border: 1px solid #7d89c63a;
+    height: 120px;
+    box-shadow: 0 2px 5px 2px #02040f89;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+}
+.career_div22_11{
+    position: absolute;
+    top: 10px;
+    background-color: #4d62c9a5;
+    padding: 1px 5px;
+    color: white;
+    border-radius: 4px;
+    left: 10px;
+    font-weight: 300;
+}
+.career_div22_2{
+    display: flex;
+    flex-direction: row;
+    
+}
+.career_div22_2>div{
+    width: 50%;
+
+
+}
+.career_div22_21{
+    margin-top: 50px;
+    padding-left: 20px;
+}
+.career_div22_21{
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: white;
+}
+.career_div22_21>ul{
+    font-size: 1rem;
+    font-weight: 300;
+    color: rgb(177, 175, 175);
+    text-decoration: wavy;
+}
+.career_div22_21>ul>li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.career_div22_22>div{
+    background-color: #4D62C9;
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    color: white;
+
+}
+.career_div22_22{
+    display: flex;
+    justify-content: end;
+    padding-right: 5%;
+    align-items: center;
+}
+/* styles.css */
+.careerdetail_1 {
+    
+    right: auto;
+    bottom: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    height: 98vh;
+    overflow-y: scroll;
+    position: relative;
+    
+
+    scrollbar-width: thin; /* Options: auto | thin | none */
+    scrollbar-color: #888 #f1f1f1; /* Thumb color and track color */
+  
+  }
+  
+  .careerdetail {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+  }
+  
+  .jodmodeldesc{
+    padding: 3% 10%;
+  }
+  .jodmodeldesc>h2{
+    text-align: center;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+  .jodmodeldesc>h3{
+    text-align: center;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+  }
+  .jodmodeldesc>h4{
+    text-align: center;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    text-transform: uppercase;
+  }
+  .jodmodeldesc>h5{
+    text-align: left;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    text-transform: uppercase;
+  }
+
+  .jodmodeldesc1{
+    text-align: center;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .skillset_div{
+    display: grid; /* Use CSS grid for layout */
+    grid-template-columns: repeat(4, 1fr); /* 5 boxes per row */
+    gap: 10px;
+    margin-top: 10px;
+
+    justify-content: end;
+    align-items: end;
+  }
+  .skillset_div>div{
+    padding: 3px 5px;
+    border: 1px solid rgb(57, 32, 86);
+    border-radius: 3px;
+    
+  
+  }
+  .jodmodeldesc2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+  }
+  .jodmodeldesc2>button{
+    background-color: rgb(47, 47, 147);
+    height: 40px;
+    width: 150px;
+    color: white;
+    font-weight: 300;
+    letter-spacing: 2px;
+    border-radius: 25px;
+
+  }
+  .closemodel{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: rgb(48, 46, 46);
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  .closemodel:hover{
+    scale: 110%;
+    color: black;
+
+  }

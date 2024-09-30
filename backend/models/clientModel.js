@@ -6,7 +6,7 @@ const clientSchema = new mongoose.Schema({
     phone: { type: String, required: true },
     service: { type: String, required: true },
     message: { type: String, required: true },
-    howDidYouHear: { type: String, required: true },
+    howDidYouHear: { type: String, required: false },
     createdAt: { type: Date, default: Date.now },
     opened: { type: String, default: 'no' }, 
 
