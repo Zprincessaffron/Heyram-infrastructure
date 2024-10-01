@@ -1,34 +1,43 @@
 import React, { useState, useEffect } from 'react';
 import Logo from "../../images/heyramlogo1.png";
-import MainSection from './MainSection';
+import MainPage from './MainPage';
 
 const TopSection2 = () => {
   const [showCoin, setShowCoin] = useState(true); // State to show/hide the coin
+  const [showFlash, setShowFlash] = useState(false); // State to handle the flash
 
-  // Effect to hide the coin and show the text after the animation ends
+  // Effect to hide the coin and show the flash, then show the MainPage
   useEffect(() => {
-    const timer = setTimeout(() => {
+    const timer1 = setTimeout(() => {
       setShowCoin(false); // Hide the coin after animation completes
-    }, 1000); // Duration matches the animation length (2s)
+      setShowFlash(true); // Trigger the flash
+    }, 1500); // Duration matches the coin animation length (1.5s)
 
-    return () => clearTimeout(timer); // Clean up the timer when component unmounts
+    const timer2 = setTimeout(() => {
+      setShowFlash(false); // Hide the flash after a brief moment
+    }, 2000); // Set a short delay for the flash (0.5s after the coin)
+
+    return () => {
+      clearTimeout(timer1);
+      clearTimeout(timer2);
+    }; // Clean up the timers when the component unmounts
   }, []);
 
   return (
     <>
-    
       {showCoin ? (
         <div className="h-screen w-full flex justify-center items-center">
-        <div className="coin-spinner p-8 flex justify-center items-center rounded-full bg-white text-7xl shadow-lg animate-spinCoin">
-          <img src={Logo} alt="HeyRam-info logo" className='h-10 w-10'/>
+          <div className="coin-spinner p-8 flex justify-center items-center rounded-full text-7xl shadow-3xl animate-spinCoin">
+            <img src={Logo} alt="HeyRam-info logo" className='h-[40px] ' />
+          </div>
         </div>
-        </div>
+      ) : showFlash ? (
+        // White flash effect
+        <div className="h-screen w-full bg-white animate-fadeOut"></div>
       ) : (
-        <MainSection/>
+        <MainPage />
       )}
-    
     </>
-    
   );
 }
 

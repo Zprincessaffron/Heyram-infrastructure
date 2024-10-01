@@ -7,6 +7,7 @@ import frame6 from '../../images/frame 6.png'
 import circletext from '../../images/circle-text.png'
 import SlideInSection from './SlideInSection'
 import CardHove from './CardHove'
+import { useNavigate } from 'react-router-dom'
 function ServiceIntro() {
     const [ballRotate,setBallRotate]=useState(0)
     const [ballText,setBallText]=useState("planning & discovery")
@@ -15,6 +16,7 @@ function ServiceIntro() {
     const [stop, setStop] = useState(false); // State to handle animation class
     const [navBtn,setnavBtn]=useState("dev")
     const [ contentAnim, setContentAnim]=useState("dev")
+    const navigate = useNavigate();
     const bottomDivRef = useRef(null);
     let index = 0;
     useEffect(() => {
@@ -118,10 +120,10 @@ function ServiceIntro() {
                 </div>
                 <div className={`si_btn ${contentAnim}`}>
                 {contentAnim =="dev" &&(
-                    <button>View More</button>
+                    <button onClick={()=> navigate("/web-development")}>View More</button>
                     )}
                     {contentAnim =="digital" &&(
-                    <button>View More</button>
+                    <button onClick={()=> navigate("/digital-marketing")}>View More</button>
                     )}
                     {contentAnim =="data" &&(
                     <button>View More</button>
