@@ -18,6 +18,7 @@ import NeonBox from './NeonBox'
 import { useNavigate } from 'react-router-dom'
 import Connect from '../form/Connect'
 import { AppContext } from '../../context/AppContext'
+import MainSection from './MainSection'
 
 function MainPage() {
   const ref = React.useRef(null);
@@ -96,27 +97,9 @@ function MainPage() {
    <Connect/>
    <Navbar/>
    <div className='mainmain'>
-    
-    {/* <div className='maincon'>
-        <div className='maincon1'>
-            <img src={firstimg} alt="" />
-            <div className='maincon2'>
-                <h1>HEYRAM INFRASTRUCTURE</h1>
-                <h2> Experience the impact across your digital ecosystem</h2>
-                <div><span>Connect with us </span><span><Button/></span></div>
 
-            </div>
-            <div className={`maincon3 ${scale?"true":""}`}>
-
-            </div>
-
-        </div>
-
-        
-
-
-    </div> */}
-    <TopSection/>
+    {/* <TopSection/> */}
+    <MainSection/>
 
     <div className='mainpagediv2'>
         <img src={rectangle} alt="" />
