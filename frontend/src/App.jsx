@@ -18,9 +18,12 @@ import { AppProvider } from './context/AppContext';
 import { AdminProvider, useAdmin } from './context/AdminContext';
 import TopSection2 from './components/home/TopSection2';
 import Contact from './components/contact/Contact';
-
 import { Bounce, Slide, ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import WebDevelopment from './components/services/WebDevelopment';
+import DigitalMarketing from './components/services/DigitalMarketing';
+import DataAIService from './components/services/DataAIService';
+
 const App = () => {
   // Protected Route Component
   const ProtectedRoute = ({ component }) => {
@@ -38,8 +41,10 @@ const App = () => {
             path="/admin/*"
             element={<ProtectedRoute component={<DashBoard />} />}
           />
-          <Route path="/" element={<MainPage />} />
-          <Route path="/top-section" element={<TopSection />} />
+          <Route path="/" element={<TopSection2 />} />
+          <Route path="/web-development" element={<WebDevelopment />} />
+          <Route path="/digital-marketing" element={<DigitalMarketing />} />
+          <Route path="/data-ai" element={<DataAIService />} />
           <Route path="/contact-us" element={<Contact />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/services" element={<Services />} />

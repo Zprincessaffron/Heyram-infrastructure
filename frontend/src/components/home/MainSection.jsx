@@ -9,21 +9,20 @@ function MainSection() {
   const { setConnectForm } = useContext(AppContext)
   const services = [
     {
-      title: "Web Development",  
-      description:
-        "We specialize in creating robust, scalable, and responsive websites tailored to meet the specific needs of your business. From frontend to backend, our expert developers ensure your digital presence is fast, secure, and user-friendly.",
+        title: "Web Development",
+        description: "We create scalable, responsive websites tailored to your business needs, ensuring a fast, secure, and user-friendly digital presence."
     },
     {
-      title: "Digital Marketing",
-      description:
-        "With our data-driven digital marketing solutions, we help your brand reach its target audience more effectively. From SEO to social media strategies, we optimize your online presence to drive growth and engagement.",
+        title: "Digital Marketing",
+        description: "Our data-driven marketing solutions optimize your online presence, enhancing growth and engagement through SEO and social media strategies."
     },
     {
-      title: "Gen-Z AI",
-      description:
-        "Harness the power of data and artificial intelligence to streamline operations and enhance decision-making. Our team delivers AI-powered solutions that turn raw data into actionable insights, driving smarter business outcomes.",
-    },
-  ];
+        title: "Gen-Z AI",
+        description: "Leverage data and AI to streamline operations and enhance decision-making, turning raw data into actionable insights for smarter outcomes."
+    }
+];
+
+
 
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [isFadingOut, setIsFadingOut] = useState(false);
@@ -80,7 +79,7 @@ function MainSection() {
                 {services[currentServiceIndex].title}
               </motion.h1>
               <motion.p
-                className="text-md tracking-wider text-gray-300 mb-6 max-w-3xl"
+                className="text-md tracking-wider text-gray-300 mb-6 max-w-4xl"
                 transition={{ delay: 0.5 }} // Delay for paragraph
               >
                 {services[currentServiceIndex].description}
@@ -118,7 +117,7 @@ function MainSection() {
                 {services[currentServiceIndex].title}
               </motion.h1>
               <motion.p
-                className="text-md tracking-wider text-gray-300 mb-6 max-w-3xl"
+                className="text-md tracking-wider text-gray-300 mb-6 max-w-4xl"
                 transition={{ delay: 0.5 }} // Delay for paragraph
               >
                 {services[currentServiceIndex].description}
