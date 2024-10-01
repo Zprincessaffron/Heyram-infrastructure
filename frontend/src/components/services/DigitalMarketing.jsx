@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { FaRegHandPointRight } from "react-icons/fa";
 import Footer from "../footer/Footer";
-import WebDev from "../../images/webdev.jpg";
+import Digimg from "../../images/Digitalimg.jpg";
 import Navbar from "../navbar/Navbar";
 import Menubar from "../menubar/Menubar";
 import MenuButton from "../navbar/MenuButton";
@@ -10,8 +10,9 @@ import Seo from "./Digitalservice/Seo";
 import Ppc from "./Digitalservice/Ppc";
 import Smm from "./Digitalservice/Smm";
 import ContentMarketing from "./Digitalservice/ContentMarketing";
-import EmailMarketing from "./Webservices/EmailMarketing";
-import WhatsappMarketing from "./Webservices/WhatsappMarketing";
+import EmailMarketing from "./Digitalservice/EmailMarketing";
+import WhatsappMarketing from "./Digitalservice/WhatsappMarketing";
+import DataProviding from "./Digitalservice/DataProviding";
 
 const DigitalMarketing = () => {
   const [selectedService, setSelectedService] = useState(null); // State to track the selected service
@@ -44,8 +45,6 @@ const DigitalMarketing = () => {
   // Function to render the selected service component
   const renderSelectedService = () => {
     switch (selectedService) {
-      case "Search Engine Optimization (SEO)":
-        return <Seo />;
       case "Pay-Per-Click (PPC) Advertising":
         return < Ppc/>;
       case "Social Media Marketing (SMM)":
@@ -56,10 +55,10 @@ const DigitalMarketing = () => {
         return <EmailMarketing />;
       case "WhatsApp Marketing":
         return <WhatsappMarketing />;
-      // case "Data Providing"
-      //   return < />;
+      case "Data Providing":
+        return <DataProviding />;
       default:
-        return null;
+        return <Seo />;
     }
   };
 
@@ -75,7 +74,7 @@ const DigitalMarketing = () => {
       <MenuButton />
       <Menubar />
       <div className="h-screen w-full relative flex overflow-hidden">
-        <img src={WebDev} alt="Web developer img" className="w-full h-screen bg-cover bg-no-repeat" />
+        <img src={Digimg} alt="Web developer img" className="w-full h-screen bg-cover bg-no-repeat" />
         <div className="absolute inset-0 bg-black opacity-40"></div>
 
         {/* Title on the left side */}

@@ -137,7 +137,7 @@ function ServiceIntro() {
                             <button onClick={()=> navigate("/digital-marketing")}>View More</button>
                         )}
                         {contentAnim == "data" && (
-                            <button>View More</button>
+                            <button onClick={()=> navigate("/data-ai")}>View More</button>
                         )}                </div>
                 </div>
                 <div className='si_div12'>
