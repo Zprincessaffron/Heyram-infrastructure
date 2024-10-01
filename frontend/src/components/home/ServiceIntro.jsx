@@ -270,7 +270,7 @@ function ServiceIntro() {
 
 
                                 </div>
-                                <img style={{ rotate: `${ballRotate}deg` }} src={circletext} alt="" />
+                                <img className='si_circleimg' style={{ rotate: `${ballRotate}deg` }} src={circletext} alt="" />
 
                             </div>
 
@@ -332,7 +332,7 @@ function ServiceIntro() {
 
 
                                 </div>
-                                <img style={{ rotate: `${ballRotate}deg` }} src={circletext} alt="" />
+                                <img className='si_circleimg' style={{ rotate: `${ballRotate}deg` }} src={circletext} alt="" />
 
                             </div>
 
