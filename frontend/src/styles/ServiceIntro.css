@@ -4,22 +4,23 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
+
 }
 .si_div1{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: start;
     flex-direction: row;
-    width: 90%;
-    padding: 5rem 0;
+    width: 100%;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 
 
 }
-.si_div1{
-    height: 70vh;
-}
+
 .si_div1>div{
-    width: 50%;
+    width: 40%;
 }
 .si_div11_1{
     font-size: 1.2rem;
@@ -65,6 +66,9 @@
 .si_div11_01.data{
     transform: translateX(0);
 
+}
+.si_div11{
+    padding-left: 3vw;
 }
 .si_main_quates{
     font-size: 3rem;
@@ -254,3 +258,69 @@
   .currenttext{
     transition: all 0.4s ease-in-out;
   }
+  .msl_main{
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.msl_div1>div{
+    font-weight: 300;
+    letter-spacing: 1px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: rgba(255, 255, 255, 0.767);;
+    margin: 10px 0;
+}
+.msl_div1{
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    align-items: end;
+}
+.msl_div2{
+    height: 200px;
+    width: 2px;
+    background-color: rgba(255, 255, 255, 0.415);
+}
+.ms_border{
+    width: 50px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.415);
+}
+.msl_servicename:hover{
+    scale:110%;
+    color: white;
+
+}
+.msl_servicename{
+    cursor: pointer;
+    font-size: 0.8rem;
+    color: rgb(199, 199, 199);
+    transition: scale 0.3s ease-in-out;
+
+}
+
+.msl_servicename.true{
+    scale: 110%;
+    color: white;
+}
+.si_rightkey{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    font-size: 2rem;
+    cursor: pointer;
+    transform: translateX(-40px);
+}
+.si_rightkey:active{
+}
+.si_circleimg{
+    width: 270px;
+    
+}

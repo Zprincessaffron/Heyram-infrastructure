@@ -165,7 +165,7 @@ function MainPage() {
               </div>
             </div>
 
-            <div  className='mainpagediv6'>
+            {/* <div  className='mainpagediv6'>
               <div>
               <SlideInSection delayy={0.2} durationn={0.4}>
 
@@ -189,7 +189,7 @@ function MainPage() {
            
 
             
-            </div>
+            </div> */}
 
            
         </div>
