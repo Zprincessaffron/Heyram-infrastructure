@@ -15,36 +15,53 @@ import Services from './components/services/Services';
 import Career from './components/career/Career';
 import JobDetail from './components/career/JobDetail';
 import { AppProvider } from './context/AppContext';
-import { AdminProvider,useAdmin } from './context/AdminContext';
+import { AdminProvider, useAdmin } from './context/AdminContext';
 import TopSection2 from './components/home/TopSection2';
 import Contact from './components/contact/Contact';
+
+import { Bounce, Slide, ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const App = () => {
   // Protected Route Component
-const ProtectedRoute = ({ component }) => {
-  const { isAuthenticated } = useAdmin();
-  return isAuthenticated ? component : <Navigate to="/admin-login" />;
-};
+  const ProtectedRoute = ({ component }) => {
+    const { isAuthenticated } = useAdmin();
+    return isAuthenticated ? component : <Navigate to="/admin-login" />;
+  };
   return (
     <AppProvider>
-    <Router>
-      <Routes>
-        {/* <Route path="/" element={<Login />} />
+      <Router>
+        <Routes>
+          {/* <Route path="/" element={<Login />} />
          */}
           <Route path="/admin-login" element={<Login />} />
           <Route
             path="/admin/*"
             element={<ProtectedRoute component={<DashBoard />} />}
           />
-         <Route path="/" element={<MainPage/>} />
-         <Route path="/top-section" element={<TopSection/>} />
-         <Route path="/contact-us" element={<Contact/>} />
-         <Route path="/about-us" element={<AboutUs/>} />
-         <Route path="/services" element={<Services/>} />
-         <Route path="/careers" element={<Career/>} />
-         <Route path="/apply/:jobId" element={<JobDetail />} />
-     
-      </Routes>
-    </Router>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/top-section" element={<TopSection />} />
+          <Route path="/contact-us" element={<Contact />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/careers" element={<Career />} />
+          <Route path="/apply/:jobId" element={<JobDetail />} />
+         
+        </Routes>
+      </Router>
+      <ToastContainer
+            position="top-right"
+            autoClose={5000}
+            hideProgressBar={true}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="dark"
+            transition={Bounce}
+            
+/>
     </AppProvider>
   );
 };
