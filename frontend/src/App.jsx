@@ -16,6 +16,7 @@ import Career from './components/career/Career';
 import JobDetail from './components/career/JobDetail';
 import { AppProvider } from './context/AppContext';
 import { AdminProvider,useAdmin } from './context/AdminContext';
+import ContactUs from './components/contact/ContactUs';
 const App = () => {
   // Protected Route Component
 const ProtectedRoute = ({ component }) => {
@@ -35,6 +36,7 @@ const ProtectedRoute = ({ component }) => {
           />
          <Route path="/" element={<MainPage/>} />
          <Route path="/top-section" element={<TopSection/>} />
+         <Route path="/contact-us" element={<ContactUs/>} />
          <Route path="/about-us" element={<AboutUs/>} />
          <Route path="/services" element={<Services/>} />
          <Route path="/careers" element={<Career/>} />
