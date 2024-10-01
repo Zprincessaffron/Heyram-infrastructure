@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MdArrowForward } from "react-icons/md"; // Import the right arrow icon
 // import Navbar from "../navbar/Navbar";
 // import Menubar from "../menubar/Menubar";
+import { AppContext } from "../../context/AppContext";
 
 function MainSection() {
+  const { setConnectForm } = useContext(AppContext)
   const services = [
     {
-      title: "Web Development",
+      title: "Web Development",  
       description:
         "We specialize in creating robust, scalable, and responsive websites tailored to meet the specific needs of your business. From frontend to backend, our expert developers ensure your digital presence is fast, secure, and user-friendly.",
     },
@@ -84,6 +86,7 @@ function MainSection() {
                 {services[currentServiceIndex].description}
               </motion.p>
               <motion.button
+                onClick={()=>{setConnectForm(true)}}
                 className="px-6 py-3 font-semibold tracking-wider bg-[#C0C0C0] text-[#090a29] rounded-full transition hover:bg-gray-300 flex items-center justify-center text-center"
                 onMouseEnter={() => setIsHovered(true)} // Set hover state
                 onMouseLeave={() => setIsHovered(false)} // Reset hover state
@@ -121,6 +124,7 @@ function MainSection() {
                 {services[currentServiceIndex].description}
               </motion.p>
               <motion.button
+                onClick={()=>{setConnectForm(true)}}
                 className="px-6 py-3 font-semibold tracking-wider bg-[#C0C0C0] text-[#090a29] rounded-full transition hover:bg-gray-300 flex items-center justify-center text-center"
                 onMouseEnter={() => setIsHovered(true)} // Set hover state
                 onMouseLeave={() => setIsHovered(false)} // Reset hover state
