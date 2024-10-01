@@ -19,6 +19,8 @@ import { useNavigate } from 'react-router-dom'
 import Connect from '../form/Connect'
 import { AppContext } from '../../context/AppContext'
 import MainSection from './MainSection'
+import MenuButton from '../navbar/MenuButton'
+import Menubar from '../menubar/Menubar'
 
 function MainPage() {
   const ref = React.useRef(null);
@@ -96,14 +98,16 @@ function MainPage() {
    <>
    <Connect/>
    <Navbar/>
+   <MenuButton/>
+   <Menubar/>
+   
+   
    <div className='mainmain'>
 
     {/* <TopSection/> */}
     <MainSection/>
 
     <div className='mainpagediv2'>
-        <img src={rectangle} alt="" />
-        <img  style={{rotate:"180deg",marginTop:"10rem",top:"280vh"}} src={rectangle} alt="" />
 
 
 

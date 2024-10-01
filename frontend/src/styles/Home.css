@@ -2,13 +2,10 @@
     width: 100%;
     
 }
-body{
-    background-color: #000000;
-}
+
 .maincon{
     width: 100%;
     height: 100vh;
-    background-color: rgb(0, 0, 0);
     position: relative;
 
 }
@@ -74,7 +71,6 @@ body{
 .mainpagediv2{
     width: 100%;
     position: relative;
-    background-image: linear-gradient(black ,#677ac2);
 
 }
 .mainpagediv2>img{
@@ -93,7 +89,6 @@ body{
     
 
 
-    background: linear-gradient(180deg, rgb(2, 1, 61)  5%, rgba(2, 0, 4, 0.414) 20%, rgb(26, 26, 165) 200%);
     /* background: linear-gradient(180deg,rgb(232, 4, 4) 10%, rgba(28, 4, 73, 0.362) 100% ); */
     backdrop-filter: blur(30px);
     

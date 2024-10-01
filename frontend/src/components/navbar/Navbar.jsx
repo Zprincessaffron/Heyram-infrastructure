@@ -13,7 +13,7 @@ function Navbar() {
 
         </div>
         <div className='navbar_div3'>
-         <MenuButton/>
+         
         </div>
     </div>
   )

@@ -39,7 +39,6 @@ function ServiceIntro() {
             index = (index + 1) % arr.length;
         
         }, 3000); // 4 seconds interval
-        console.log("hi")
         
         return () => clearInterval(interval); 
     } 
@@ -47,7 +46,6 @@ function ServiceIntro() {
       }, [stop]); //
 
 
-    console.log(stop)
     function handleDevelopment(){
         setnavBtn("dev")
         setContentAnim("")

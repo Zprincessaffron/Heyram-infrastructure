@@ -7,9 +7,11 @@ const AppContext = createContext();
 // Create a provider component
 const AppProvider = ({ children }) => {
   const [connectForm, setConnectForm] = useState(false);
+  const [showMenu,setShowMenu]=useState(false)
+
 
   return (
-    <AppContext.Provider value={{ connectForm, setConnectForm }}>
+    <AppContext.Provider value={{ showMenu,setShowMenu,connectForm,setConnectForm }}>
       {children}
     </AppContext.Provider>
   );

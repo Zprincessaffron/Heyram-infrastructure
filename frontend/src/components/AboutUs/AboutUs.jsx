@@ -12,10 +12,8 @@ const AboutUs = () => {
   // Function to handle scroll progress
   const handleScroll = () => {
     const scrollTop = window.scrollY;
-    console.log(scrollTop);
     const documentHeight =
       document.documentElement.scrollHeight - window.innerHeight;
-    console.log(documentHeight);
     const scrollPercent = (scrollTop / documentHeight) * 100;
     setScrollPercent(scrollPercent);
   };

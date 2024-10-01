@@ -9,7 +9,6 @@ function JobDetail() {
 
   const location = useLocation();
   const jobData = location.state; // Retrieve the job data passed from the Career component
-  console.log(jobData)
  const {
     register,
     handleSubmit,
