@@ -11,7 +11,7 @@ function Connect() {
 
     const { connectForm, setConnectForm } = useContext(AppContext)
 
-    const {
+    const { 
         register,
         handleSubmit,
         formState: { errors }, 
