@@ -66,10 +66,8 @@
 }
 .career_div22_1{
     width: 60%;
-    border: 1px solid #7d89c63a;
+    border-bottom: 1px solid #f9f9f93a;
     height: 120px;
-    box-shadow: 0 2px 5px 2px #02040f89;
-    border-radius: 10px;
     position: relative;
     cursor: pointer;
 }
@@ -94,7 +92,7 @@
 
 }
 .career_div22_21{
-    margin-top: 50px;
+    margin-top: 10px;
     padding-left: 20px;
 }
 .career_div22_21{
@@ -107,6 +105,11 @@
     font-weight: 300;
     color: rgb(177, 175, 175);
     text-decoration: wavy;
+}
+.career_div22_21>p{
+  font-size: 1rem;
+  margin-left: 5px;
+  color: rgb(229, 225, 225);
 }
 .career_div22_21>ul>li{
     display: flex;

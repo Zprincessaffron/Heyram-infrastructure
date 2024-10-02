@@ -13,7 +13,7 @@ function Career() {
   const navigate = useNavigate();
 
   const openModal = (job) => {
-    setSelectedJob(job);
+    setSelectedJob(job); 
     setModalIsOpen(true);
   };
 
@@ -62,10 +62,10 @@ function Career() {
         <div className='career_div22'>
           {careerData.map((job) => (
             <div className='career_div22_1' onClick={() => openModal(job)} key={job._id}>
-              <div className='career_div22_11'> Development </div>
               <div className='career_div22_2'>
                 <div className='career_div22_21'>
                   <h1>{job.jobName}</h1>
+                  <p> {job.minExperience} - {job.maxExperience} years</p>
                   <ul>
                     <li>
                       <span style={{ fontSize: "0.8rem" }}><TbPointFilled /></span>{job.jobType}

@@ -29,9 +29,7 @@
 .logoclass{
     background-color: blue;
 }
-.navbar_div1{
 
-}
 .navbar_div2>img{
     width: 22px;
     opacity: 70%;
@@ -45,10 +43,13 @@
     justify-content: center;
 }
 .navbar_div1{
-    color: rgba(50, 8, 70, 0.912);
-    /* color: white; */
+    color: white;
     font-style: normal;
     font-weight: 400;
     letter-spacing: 2px;
     word-spacing: 3px;
+}
+.navbar_div1.true{
+    color: rgba(50, 8, 70, 0.912);
+
 }

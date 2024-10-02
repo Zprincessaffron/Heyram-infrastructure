@@ -21,6 +21,7 @@ import { AppContext } from '../../context/AppContext'
 import MainSection from './MainSection'
 import MenuButton from '../navbar/MenuButton'
 import Menubar from '../menubar/Menubar'
+import Cards from './Cards'
 
 function MainPage() {
   const ref = React.useRef(null);
@@ -115,6 +116,22 @@ function MainPage() {
         <img className='turningimg' src={turningimg} alt="" />
 
         <div className='mainpagediv22'>
+            <div style={{flexDirection:"row",gap:"3rem"}} className='mainpagediv22_0'>
+              <div>
+              <Cards/>
+              </div>
+
+              <div>
+              <Cards/>
+              </div>
+
+              <div>
+              <Cards/>
+              </div>
+            
+
+
+            </div>
             <div className='mainpagediv22_1'  >
             <SlideInSection delayy={0.2} durationn={0.4}>
             <h1 className='mainpagediv221_h1'>Empower Your Business with Access to World-Class Services.</h1>

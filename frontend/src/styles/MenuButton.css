@@ -4,10 +4,13 @@
 
   
 }
+.navbar_main.true{
+  background-color: white;
+}
 .menubtnmain{
   z-index: 15;
   position: fixed;
-  top: 12px;
+  top: 12px; 
   right: 30px;
 }
 

@@ -3,22 +3,35 @@ import '../../styles/Menubar.css'
 import { AppContext } from '../../context/AppContext'
 import { useContext } from 'react'
 import SlideInSection from './SlideInSection'
+import { useNavigate } from 'react-router-dom'
+import techvideo from '../../images/techvideo.mp4'
 function Menubar() {
+    const  navigate =useNavigate()
     const { showMenu }=useContext(AppContext)
     console.log(showMenu)
 
+    function handleRedirect(val){
+        navigate(val)
+    }
+
   return (
     <div className={`mb_main ${showMenu}`}>
+         {showMenu?(
+            <div className='menu_video'>
+            <video src={techvideo} autoPlay muted loop ></video>
+        </div>
+         ):null}
         {showMenu?(
-            <div className='menu_items'>
+            <div className='mb_listmain'>
+                <div className='menu_items'>
             <SlideInSection delayy={0} durationn={0.5} >
-               Career
+               <div onClick={()=>handleRedirect("/careers")}>Career</div>
             </SlideInSection>
             <SlideInSection delayy={0.1} durationn={0.5} >
                 <div>ABOUT</div>
             </SlideInSection>
             <SlideInSection delayy={0.2} durationn={0.5} >
-                <div>WEB DEVELOPMENT</div>
+                <div  >WEB DEVELOPMENT</div>
             </SlideInSection>
             <SlideInSection delayy={0.3} durationn={0.5} >
                 <div>DIGITAL MARKETING</div>
@@ -27,10 +40,12 @@ function Menubar() {
                 <div>GEN Z AI</div>
             </SlideInSection>
             <SlideInSection delayy={0.5} durationn={0.5} >
-                <div>CONTACT</div>
+                <div onClick={()=>handleRedirect("/contact-us")}>CONTACT</div>
             </SlideInSection>
             </div>
+            </div>
         ):null}
+       
 
     </div>
   )

@@ -45,7 +45,6 @@ const App = () => {
           <Route path="/services" element={<Services />} />
           <Route path="/careers" element={<Career />} />
           <Route path="/apply/:jobId" element={<JobDetail />} />
-         
         </Routes>
       </Router>
       <ToastContainer
