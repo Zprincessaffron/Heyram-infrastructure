@@ -2,8 +2,8 @@ import React, { useState, useEffect, useContext } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MdArrowForward } from "react-icons/md"; // Import the right arrow icon
 import { AppContext } from "../../context/AppContext";
-import webdev from "/webdev.mp4"; // Web Development video
-import digimark from "/digimark.mp4"; // Digital Marketing video
+import webdev from "/WD.mp4"; // Web Development video
+import digimark from "/DM.mp4"; // Digital Marketing video
 import AI from "/AI.mp4"; // AI video
 
 function MainSection() {

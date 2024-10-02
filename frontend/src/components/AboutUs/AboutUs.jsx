@@ -524,7 +524,12 @@ const AboutUs = () => {
           {/* Social responsibility & values */}
           <div className="flex flex-col justify-between my-20">
             {/* Top left content */}
-            <div className="flex flex-row justify-around">
+            <motion.div className="flex flex-row justify-around"
+            ref={refSection}
+            initial="hidden"
+            animate={controlsSection}
+            variants={sectionVariants}
+            >
               <motion.div
                 className="w-1/2"
                 ref={refSection}
@@ -556,7 +561,7 @@ const AboutUs = () => {
                   className="mt-4 w-full h-[70%] rounded-lg"
                 />
               </motion.div>
-            </div>
+            </motion.div>
 
             {/* Bottom right content */}
             <div className="flex flex-row justify-around">
