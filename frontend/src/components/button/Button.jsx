@@ -6,7 +6,6 @@ function Button() {
   return (
     <div className='butttonmain'>
         <FaAngleRight/>
-
     </div>
   )
 }
