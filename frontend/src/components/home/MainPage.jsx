@@ -117,7 +117,7 @@ function MainPage() {
 
         <div className='mainpagediv22'>
             <div style={{flexDirection:"row",justifyContent:"space-around"}} className='mainpagediv22_0'>
-              <div  >
+              <div onClick={()=>navigate('/package-services')} >
               <SlideInSection delayy={0.2} durationn={0.4}>
               <Cards type="Start-Up Companies" intro="Empowering new ventures to transform ideas into reality with agile and innovative solutions."
               intro2="Start-ups require cost-effective and scalable solutions. We provide the support to fuel their growth." />

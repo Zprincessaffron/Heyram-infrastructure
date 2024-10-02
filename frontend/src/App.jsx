@@ -50,7 +50,7 @@ const App = () => {
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/services" element={<Services />} />
           <Route path="/careers" element={<Career />} />
-          <Route path="/pakage-services" element={<CardServices />} />
+          <Route path="/package-services" element={<CardServices />} />
           <Route path="/apply/:jobId" element={<JobDetail />} />
         </Routes>
       </Router>
