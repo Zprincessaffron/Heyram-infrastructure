@@ -1,0 +1,225 @@
+.cs_main{
+    width: 100%;
+    color: white;
+}
+.cs_container1{
+    width: 100%;
+    height: 40vh;
+    background-image: url('../images/startupbanner.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.cs_container1>div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.489);
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+}
+.cs_container1>div>p{
+    width: 60%;
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+.cs_container1>div>h1{
+    font-size: 3rem;
+    font-weight: 300;
+
+
+}
+.cs_container2_splitter{
+    display: flex;
+    flex-direction: row;
+}
+
+.cs_container2_1{
+    width: 50%;
+    padding: 5rem 3rem;
+   
+}
+
+.cs_container2_1>h1{
+    color: white;
+    font-size: 1.5rem;
+    padding-left: 5px;
+    border-left: 3.5px solid rgb(82, 10, 98);
+
+}
+.cs_container2_1>p{
+    font-size: 0.8rem;
+    font-weight: 300;
+    width: 90%;
+    margin-top: 1rem;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    display: flex;
+    color: rgb(228, 228, 228);
+
+    padding-left: 10px;
+
+}
+.cs_container2_2{
+    width: 50%;
+    background-size: cover;
+    justify-content: right;
+    display: flex;
+    padding: 5rem 3rem;
+
+}
+.cs_container2_2>img{
+    width: 80%;
+
+
+}
+.cs_container4_splitter{
+    display: flex;
+    flex-direction: row;
+}
+.cs_container41{
+    width: 100%;
+    padding: 5rem 3rem;
+
+}
+.cs_container41>h1{
+    color: white;
+    font-size: 1.5rem;
+    padding-left: 5px;
+    border-left: 3.5px solid rgb(82, 10, 98);
+
+
+}
+
+.cs_container411{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid gray;
+    width: 60%;
+    margin-left: 20%;
+    margin-top: 2rem;
+}
+.cs_container411_1{
+    width: 50%;
+}
+
+.cs_container411_2{
+    width: 50%;
+}
+
+.cs_container411_2{
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: row;
+
+
+}
+.cs_container411_2>h1{
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+.cs_container411_21{
+    height: 40px;
+    transition: height 0.3s ease-in-out;
+}
+.cs_container411_21.true{
+    height: 150px;
+}
+.cs_container411_21>h1{
+    height: 40px;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+.cs_container411_22{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    margin-right: 2rem;
+    font-size: 1.5rem;
+    color: rgb(218, 218, 218);
+    cursor: pointer;
+
+}
+.cs_container411_1>h1{
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+.cs_container411_21>p{
+    font-size: 0.9rem;
+    font-weight: 300;
+
+}
+.cs_container5{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    width: 50%;
+}
+.cs_container5>h1{
+    font-size: 1.5rem;
+    padding-left: 5px;
+    border-left: 3.5px solid rgb(82, 10, 98);
+  
+}
+.cs_container5>p{
+    margin-top: 2rem;
+    width: 80%;
+    font-weight: 300;
+    color: rgb(212, 212, 212);
+    letter-spacing: 0.8px;
+    font-size: 0.8rem;
+
+}
+.cs_container2_splitter2{
+    padding: 2rem;
+}
+.weservicesmap{
+    width: 150px;
+    border: 1px solid rgba(128, 128, 128, 0.505);
+    padding: 10px 5px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.cs_container2_s2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+}
+.weservicesmap>h1{
+    font-weight: 300;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+
+}
+.weservicesmap{
+    font-size: 1.5rem;
+}
+.cs_container2_s1{
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 2rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+.cs_container411_22_2{
+    transition: all 0.3s ease-in-out;
+}
+.cs_container411_22_2.true{
+    rotate: 180deg;
+}

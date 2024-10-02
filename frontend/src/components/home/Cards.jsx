@@ -1,105 +1,42 @@
 import React from 'react'
-import '../../styles/Cards.css'
-function Cards() {
+import { TbPointFilled } from "react-icons/tb";
+
+function Cards({ type,intro,intro2 }) {
   return (
-    <div class="card">
-  <div class="card__border"></div>
-  <div class="card_title__container">
-    <span class="card_title">Explosive Growth</span>
-    <p class="card_paragraph">
-      Perfect for your next content, leave to us and enjoy the result!
-    </p>
+    <div 
+    class="h-[18em] w-[25rem] z-10 border-2 border-[rgba(75,30,133,0.5)] rounded-[1.5em] bg-gradient-to-br from-[rgba(75,30,133,1)] to-[rgba(75,30,133,0.01)] text-white font-nunito p-[1em] flex justify-between  items-center flex-col gap-[0.75em] backdrop-blur-[12px]"
+  >
+    <div>
+      <h1 class="text-[1.7em] font-[200] text-center uppercase" >{type}</h1>
+      <p class="text-[0.85em] font-[200] tracking-wider flex flex-direction-row gap-[4px] mt-[10px] ">
+      <TbPointFilled/> {intro}
+      </p>
+      <p class="text-[0.85em] font-[200] tracking-wider flex flex-direction-row gap-[4px] mt-[10px] ">
+      <TbPointFilled/> {intro}
+      </p>
+    </div>
+  
+    <button 
+      class="h-fit w-fit px-[1em] text-[0.7rem] py-[0.25em] border-[1px] rounded-full flex justify-center items-center gap-[0.5em] overflow-hidden group hover:translate-y-[0.125em] z-20 duration-200 backdrop-blur-[12px]"
+    >
+      <p>Enquire Now</p>
+      <svg
+        class="w-6 h-6 group-hover:translate-x-[10%] duration-300"
+        stroke="currentColor"
+        stroke-width="1"
+        viewBox="0 0 24 24"
+        fill="white"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
+          stroke-linejoin="round"
+          stroke-linecap="round"
+        ></path>
+      </svg>
+    </button>
   </div>
-  <hr class="line" />
-  <ul class="card__list">
-    <li class="card__list_item">
-      <span class="check">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 16 16"
-          fill="currentColor"
-          class="check_svg"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z"
-            clip-rule="evenodd"
-          ></path>
-        </svg>
-      </span>
-      <span class="list_text">10 Launch Weeks</span>
-    </li>
-    <li class="card__list_item">
-      <span class="check">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 16 16"
-          fill="currentColor"
-          class="check_svg"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z"
-            clip-rule="evenodd"
-          ></path>
-        </svg>
-      </span>
-      <span class="list_text">10 Influencers Post</span>
-    </li>
-    <li class="card__list_item">
-      <span class="check">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 16 16"
-          fill="currentColor"
-          class="check_svg"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z"
-            clip-rule="evenodd"
-          ></path>
-        </svg>
-      </span>
-      <span class="list_text">100.000 Views</span>
-    </li>
-    <li class="card__list_item">
-      <span class="check">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 16 16"
-          fill="currentColor"
-          class="check_svg"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z"
-            clip-rule="evenodd"
-          ></path>
-        </svg>
-      </span>
-      <span class="list_text">10 Reddit Posts</span>
-    </li>
-    <li class="card__list_item">
-      <span class="check">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 16 16"
-          fill="currentColor"
-          class="check_svg"
-        >
-          <path
-            fill-rule="evenodd"
-            d="M12.416 3.376a.75.75 0 0 1 .208 1.04l-5 7.5a.75.75 0 0 1-1.154.114l-3-3a.75.75 0 0 1 1.06-1.06l2.353 2.353 4.493-6.74a.75.75 0 0 1 1.04-.207Z"
-            clip-rule="evenodd"
-          ></path>
-        </svg>
-      </span>
-      <span class="list_text">2 Hours Marketing Consultation</span>
-    </li>
-  </ul>
-  <button class="button">Book a Call</button>
-</div>
+  
 
   )
 }

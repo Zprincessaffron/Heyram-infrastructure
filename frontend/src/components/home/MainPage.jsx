@@ -116,17 +116,30 @@ function MainPage() {
         <img className='turningimg' src={turningimg} alt="" />
 
         <div className='mainpagediv22'>
-            <div style={{flexDirection:"row",gap:"3rem"}} className='mainpagediv22_0'>
-              <div>
-              <Cards/>
+            <div style={{flexDirection:"row",justifyContent:"space-around"}} className='mainpagediv22_0'>
+              <div  >
+              <SlideInSection delayy={0.2} durationn={0.4}>
+              <Cards type="Start-Up Companies" intro="Empowering new ventures to transform ideas into reality with agile and innovative solutions."
+              intro2="Start-ups require cost-effective and scalable solutions. We provide the support to fuel their growth." />
+             </SlideInSection>
               </div>
 
               <div>
-              <Cards/>
+              <SlideInSection delayy={0.4} durationn={0.4}>
+
+              <Cards type="Mid-size Companies"  intro="Helping established businesses scale up with technology and strategic solutions."
+              intro2="Mid-size companies need tailored strategies for scaling operations. We offer targeted solutions to achieve this." />
+             </SlideInSection>
+
               </div>
 
               <div>
-              <Cards/>
+              <SlideInSection delayy={0.6} durationn={0.4}>
+
+              <Cards type="Large-size Companies"  intro="Supporting enterprises to stay ahead with enterprise-grade solutions and services."
+              intro2="Large companies require robust and secure solutions. We deliver enterprise-level services to match their needs." />
+             </SlideInSection>
+
               </div>
             
 

@@ -23,6 +23,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import WebDevelopment from './components/services/WebDevelopment';
 import DigitalMarketing from './components/services/DigitalMarketing';
 import DataAIService from './components/services/DataAIService';
+import CardServices from './components/cardServices/CardServices';
 
 const App = () => {
   // Protected Route Component
@@ -49,6 +50,7 @@ const App = () => {
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/services" element={<Services />} />
           <Route path="/careers" element={<Career />} />
+          <Route path="/pakage-services" element={<CardServices />} />
           <Route path="/apply/:jobId" element={<JobDetail />} />
         </Routes>
       </Router>

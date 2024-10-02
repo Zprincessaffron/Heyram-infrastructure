@@ -113,6 +113,10 @@
 
     
 }
+.mainpagediv22_0{
+    margin-top: 7rem;
+    justify-content: space-around;
+}
 .mainpagediv22>div{
     width: 100%;
     display: flex;
@@ -179,8 +183,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: he;
-    z-index: 2;
+    z-index: -1;
 }
 .mainpagediv4{
     width: 100%;
