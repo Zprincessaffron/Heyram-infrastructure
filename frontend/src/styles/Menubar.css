@@ -31,10 +31,10 @@
 .mb_listmain{
     width: 100%;
     height: 100%;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(5px);
     padding-top: 7rem;
     padding-left: 3rem;
-    background-color: rgba(0, 0, 0, 0.244);
+    background-color: rgba(0, 0, 0, 0.216);
   
 }
 .menu_items>div{
