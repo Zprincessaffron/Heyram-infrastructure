@@ -114,7 +114,7 @@ function MainPage() {
 
         <div className='mainpagediv21'>
         <img className='turningimg' src={turningimg} alt="" />
-
+ 
         <div className='mainpagediv22'>
             <div style={{flexDirection:"row",justifyContent:"space-around"}} className='mainpagediv22_0'>
               <div onClick={()=>navigate('/package-services')} >
