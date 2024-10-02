@@ -28,7 +28,10 @@ const TopSection2 = () => {
       {showCoin ? (
         <div className="h-screen w-full flex justify-center items-center">
           <div className="coin-spinner p-8 flex justify-center items-center rounded-full text-7xl shadow-3xl animate-spinCoin">
-            <img src={Logo} alt="HeyRam-info logo" className='h-[40px] ' />
+            <img src={Logo} alt="HeyRam-info logo" className='h-[40px] text-[#a300ff]' />
+            {/* <div className='text-[#C0C0C0] font-light '>
+              HR
+            </div> */}
           </div>
         </div>
       ) : showFlash ? (
