@@ -1,12 +1,16 @@
 .card_main{
   width: 30vw;
-  height: 300px;
-  background-color: rgba(69, 31, 127, 0.222);
+  height: 260px;
+  background: linear-gradient(to top right, rgba(3, 16, 59, 0.5), rgba(49, 56, 150, 0.692));
+  /* background: linear-gradient(to top right, rgba(117, 37, 171, 0.5), rgba(111, 77, 129, 0.692)); */
+  /* background: linear-gradient(to right, rgb(20, 30, 48), rgb(36, 59, 85)); */
   position: relative;
   border-radius: 10px;
-  border: 1px solid rgba(128, 128, 128, 0.3);
+  /* border: 1px solid rgba(79, 41, 106, 0.214); */
+  box-shadow: 0px 4px 15px rgba(5, 1, 26, 0.5);
 
 }
+
 .card_div1,.card_div2{
   width: 100%;
   height: 100%;
@@ -18,16 +22,17 @@
   flex-direction: column;
 }
 .card_div1>h1{
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 300;
+  color: rgba(255, 255, 255, 0.916);
 }
 .card_div1>img{
   width: 200px;
 }
 .card_div2{
-  background-color: antiquewhite;
+  background: linear-gradient(to top right, rgb(214, 206, 235), rgb(206, 199, 176));
   position: absolute;
   top: 0;
   left: 0;
@@ -39,7 +44,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 5px;
+  gap: 2rem;
 
 }
 .card_div2.true{
@@ -63,7 +68,7 @@
   text-align: center;
   display: none;
 }
-.card_div2>button{
+.card_div2>div>button{
   background-color: rgb(43, 37, 37);
   color: white;
   padding: 5px 20px;
@@ -75,6 +80,17 @@
 .card_div2.true>p{
   display: flex;
 }
-.card_div2.true>button{
+.card_div2.true>div>button{
   display: flex;
+  flex-direction: row;
+}
+.card_div2.true>div{
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.card_div1>div{
+  font-size: 2.5rem;
+  color: rgb(220, 220, 220);
+  margin-bottom: 0.5rem;
 }

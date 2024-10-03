@@ -87,7 +87,7 @@ function ServiceIntro() {
     <div className="si_main">
       <SlideInSection delayy={0.2} durationn={0.4}>
         <div className="si_main_quates">
-          {" "}
+        
           Crafted with Talent, Perfected through Service{" "}
         </div>
       </SlideInSection>

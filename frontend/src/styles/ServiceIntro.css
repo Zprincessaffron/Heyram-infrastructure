@@ -71,7 +71,8 @@
     padding-left: 3vw;
 }
 .si_main_quates{
-    font-size: 3rem;
+    font-size: calc(15px + 1.5vw );
+    letter-spacing: 1px;
     font-weight: 300;
 }
 .si_div12>img{

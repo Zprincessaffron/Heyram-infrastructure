@@ -78,15 +78,7 @@ function CardServices() {
             <div className='cs_container2_splitter'>
             <div className='cs_container2_1'>
                <h1> WEB DEVELOPMENT</h1>
-               <p> <span style={{marginTop:"3px",marginRight:"5px"}}>  <TbPointFilled/> </span> Our team specializes in creating modern, responsive, and high-performance websites using the MERN stack (MongoDB, Express.js, React, and Node.js) as the core technology stack. By leveraging this powerful combination, we develop applications that are not only visually engaging but also provide a seamless user experience. Using React for the frontend, Node.js and Express.js for the backend, and MongoDB for efficient data management, we ensure that each website is built to deliver high performance and scalability.</p>
-               <p> <span style={{marginTop:"3px",marginRight:"5px"}}>  <TbPointFilled/> </span>  This approach enables us to create websites with fast load times, dynamic content updates, and the ability to scale effortlessly as your business grows. Additionally, the modular nature of the MERN stack allows for seamless integration with a variety of third-party services, APIs, and microservices, providing a solid foundation for future expansion and new functionalities.
-
-
-
-
-
-
-</p>
+               <p> <span style={{marginTop:"3px",marginRight:"5px"}}>  <TbPointFilled/> </span> Our team builds modern and user-friendly websites that look great on any device and load quickly. We focus on creating websites that not only catch the eye but also provide a smooth and enjoyable experience for your customers. By using the latest tools and techniques, we ensure that your website is fast, reliable, and can easily grow as your business expands.</p>
 
             </div>
             <div className='cs_container2_2' style={{backgroundImage:`${dottedback}`}}>

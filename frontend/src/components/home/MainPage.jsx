@@ -25,6 +25,9 @@ import Cards from './Cards'
 import small from '../../images/small.png'
 import mid from '../../images/mid.png'
 import big from '../../images/big.png'
+import { PiBuildingApartmentFill } from "react-icons/pi";
+import { HiBuildingOffice } from "react-icons/hi2";
+import { SiHomeassistantcommunitystore } from "react-icons/si";
 
 function MainPage() {
   const ref = React.useRef(null);
@@ -119,10 +122,15 @@ function MainPage() {
         <img className='turningimg' src={turningimg} alt="" />
  
         <div className='mainpagediv22'>
-            <div style={{flexDirection:"row",justifyContent:"space-around"}} className='mainpagediv22_0'>
-              <div onClick={()=>navigate('/package-services')} >
-              <SlideInSection delayy={0.2} durationn={0.4}>
-              <Cards type="Start-Up Companies" images={small} intro="Empowering new ventures to transform ideas into reality with agile and innovative solutions."
+            <div className='mainpagediv22_0'>
+              
+             <div className='mainpagediv22_0_1'>
+                     <h1>Choose the Perfect Package Tailored for Your Business Growth</h1>
+             </div>
+             <div className='mainpagediv22_0_2'  style={{flexDirection:"row",justifyContent:"center"}}  >
+             <div >
+              <SlideInSection  delayy={0.2} durationn={0.4}>
+              <Cards  type="Start-Up Companies" images={<SiHomeassistantcommunitystore/>} intro="Empowering new ventures to transform ideas into reality with agile and innovative solutions."
               intro2="Start-ups require cost-effective and scalable solutions. We provide the support to fuel their growth." />
              </SlideInSection>
               </div>
@@ -130,7 +138,7 @@ function MainPage() {
               <div>
               <SlideInSection delayy={0.4} durationn={0.4}>
 
-              <Cards type="Mid-size Companies" images={mid}   intro="Helping established businesses scale up with technology and strategic solutions."
+              <Cards type="Mid-size Companies" images={<HiBuildingOffice/>}   intro="Helping established businesses scale up with technology and strategic solutions."
               intro2="Mid-size companies need tailored strategies for scaling operations. We offer targeted solutions to achieve this." />
              </SlideInSection>
 
@@ -139,11 +147,12 @@ function MainPage() {
               <div>
               <SlideInSection delayy={0.6} durationn={0.4}>
 
-              <Cards type="Large-size Companies" images={big}   intro="Supporting enterprises to stay ahead with enterprise-grade solutions and services."
+              <Cards type="Large-size Companies" images={<PiBuildingApartmentFill/>}   intro="Supporting enterprises to stay ahead with enterprise-grade solutions and services."
               intro2="Large companies require robust and secure solutions. We deliver enterprise-level services to match their needs." />
              </SlideInSection>
 
               </div>
+             </div>
             
 
 
