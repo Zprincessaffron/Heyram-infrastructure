@@ -12,7 +12,7 @@ import ResponsiveWebService from "./Webservices/ResponsiveWebService";
 import FrontendBackendService from "./Webservices/FrontendAndBackendService";
 
 const WebDevelopment = () => {
-  const [selectedService, setSelectedService] = useState(null); // State to track the selected service
+  const [selectedService, setSelectedService] = useState("Custom Web Application"); // State to track the selected service
   const detailsRef = useRef(null); // Create a ref for the details section
 
   // Animation properties for the title
@@ -65,36 +65,48 @@ const WebDevelopment = () => {
       <MenuButton />
       <Menubar />
       <div className="h-screen w-full relative flex overflow-hidden">
-        <img src={WebDev} alt="Web developer img" className="w-full h-screen bg-cover bg-no-repeat" />
+        <img
+          src={WebDev}
+          alt="Web developer img"
+          className="w-full h-screen bg-cover bg-no-repeat"
+        />
         <div className="absolute inset-0 bg-black opacity-40"></div>
 
         {/* Title on the left side */}
         <motion.h1
-          className="absolute top-1/2 left-10 transform -translate-y-1/2 text-6xl font-light text-white uppercase tracking-widest"
+          className="absolute top-1/2 left-10 transform -translate-y-1/2 text-5xl font-light text-white uppercase tracking-widest max-w-3xl"
           variants={titleVariants}
           initial="hidden"
           animate="visible"
         >
-          Web Development
+          {selectedService}
         </motion.h1>
 
         {/* List on the right side */}
         <motion.div
-          className="absolute top-1/2 right-5 transform -translate-y-1/2"
+          className="absolute top-1/2 right-5 transform -translate-y-1/2 mt-6"
+          // -bottom-20 
           variants={listVariants}
           initial="hidden"
           animate="visible"
         >
-          <ul className="pl-5 text-white gap-10 space-y-8 cursor-pointer">
+          <ul className="pl-5 text-white space-y-2 cursor-pointer text-sm">
             {[
               "Custom Web Application",
               "E-Commerce Website",
               "Responsive Web Design",
               "Frontend & Backend Development",
+              "Personal Website",
+              "Business/ Corporate Website",
+              "Educational Website",
+              "Event Site",
+              "Travel Site",
+              "Real-estate Site",
             ].map((item, index) => (
               <motion.li
                 key={index}
-                className="flex items-center tracking-wider hover:underline-offset-8 hover:underline"
+                className="flex items-center tracking-wider border px-5 py-2 rounded-full text-[0.75rem]"
+                // hover:underline-offset-8 hover:underline
                 variants={itemVariants}
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.2 }}

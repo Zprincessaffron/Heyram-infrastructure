@@ -12,12 +12,12 @@ const useAnimatedInView = (threshold = 0.2) => {
       controls.start({
         opacity: 1,
         y: 0,
-        transition: { duration: 0.6 }
+        transition: { duration: 0.6 },
       });
     } else {
       controls.start({
         opacity: 0,
-        y: 50
+        y: 50,
       });
     }
   }, [inView, controls]);
@@ -33,7 +33,7 @@ const ServiceTemplate = ({
   whyChooseUsItems,
   roadmapItems,
   ctaText,
-  buttonText
+  buttonText,
 }) => {
   // Use the custom hook for each section
   const [titleRef, titleControls] = useAnimatedInView();
@@ -44,20 +44,35 @@ const ServiceTemplate = ({
   const [ctaRef, ctaControls] = useAnimatedInView();
 
   return (
-    <div className="text-white py-16 px-6 lg:px-16">
+    <div className="text-white py-8 px-6 lg:px-10">
+      {/* Heyram Infrastructure Intro */}
+      <motion.div
+        className="mb-10 text-lg lg:text-xl text-gray-300 tracking-wider text-center"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        <p className="font-normal text-center text-md lg:text-lg text-white mb-4 border-t-2 border-b-2 py-2 border-purple-600 inline-block">
+          Why choose Heyram Infrastructure for your web application development project?
+        </p>
+        <p className="text-sm text-center max-w-4xl mx-auto">
+          At Heyram Infrastructure, we provide end-to-end web application development services, from initial concept and design to integration and ongoing support. Whether you need a customer-focused web app or a transformative enterprise-level solution, our team manages the entire development process that meet your business needs.
+        </p>
+      </motion.div>
+
       {/* Section Title */}
       <motion.h1
-        className="text-4xl lg:text-5xl font-light mb-8 text-white"
+        className="text-xl lg:text-4xl font-light mb-4 text-white tracking-wider"
         ref={titleRef}
         initial={{ opacity: 0, y: 50 }}
         animate={titleControls}
       >
-        {title}
+        {title} :
       </motion.h1>
 
       {/* Introduction Paragraph */}
       <motion.p
-        className="text-md lg:text-md mb-6 text-gray-300 tracking-wider"
+        className="text-sm lg:text-sm mb-6 text-gray-300 tracking-wider"
         ref={introRef}
         initial={{ opacity: 0, y: 50 }}
         animate={introControls}
@@ -130,9 +145,6 @@ const ServiceTemplate = ({
         <div className="flex justify-center">
           <div
             className="w-1 rounded-full bg-gray-400 h-full absolute left-1/2 transform -translate-x-1/2 overflow-hidden"
-            // initial={{ opacity: 0, y: 50 }}
-            // animate={roadmapControls}
-            // transition={{ duration: 0.6, delay: 0.3 }}
           />
 
           <div className="grid grid-cols-1 w-full tracking-wider">
@@ -140,9 +152,6 @@ const ServiceTemplate = ({
               <div
                 className={`flex justify-${phase.align} mb-6`}
                 key={index}
-                // initial={{ opacity: 0, y: 50 }}
-                // animate={roadmapControls}
-                // transition={{ duration: 0.6, delay: index * 0.3 }}
               >
                 <div className="bg-gray-700 p-6 rounded-lg shadow-lg max-w-md">
                   <h3 className="text-xl font-normal mb-2 text-white">
@@ -166,10 +175,11 @@ const ServiceTemplate = ({
         >
           {ctaText}
         </motion.h2>
-        <motion.p className="text-md lg:text-md tracking-wider mb-6 text-gray-300"
-        ref={ctaRef} // Individual ref for Call to Action
-        initial={{ opacity: 0, y: 50 }}
-        animate={ctaControls}
+        <motion.p
+          className="text-md lg:text-md tracking-wider mb-6 text-gray-300"
+          ref={ctaRef}
+          initial={{ opacity: 0, y: 50 }}
+          animate={ctaControls}
         >
           Let us help turn your vision into a powerful web application tailored
           to your business. Contact us today to discuss your project
