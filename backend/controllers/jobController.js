@@ -2,7 +2,7 @@ import Job from '../models/jobModel.js';
 
 // Route to create a new job posting
 export const createJobs = async (req, res) => {
-  const { jobName, jobDescription, jobType, skills, location, minExperience, maxExperience } = req.body;
+  const { jobName, jobDescription, jobType, skills, location, minExperience, maxExperience, questions } = req.body;
 
   const newJob = new Job({
     jobName,
@@ -11,7 +11,8 @@ export const createJobs = async (req, res) => {
     skills,
     location,
     minExperience,
-    maxExperience
+    maxExperience,
+    questions
   });
 
   try {

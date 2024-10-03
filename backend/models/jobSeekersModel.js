@@ -21,6 +21,8 @@ const jobSeekerSchema = new mongoose.Schema({
   state: { type: String, required: true },
   expectedCTC: { type: Number, required: true },
   opened: { type: String, default: 'no' }, 
+  score: { type: String, required: false },
+
 
 });
 

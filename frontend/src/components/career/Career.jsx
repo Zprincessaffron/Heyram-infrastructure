@@ -24,7 +24,9 @@ function Career() {
 
   const handleApply = () => {
     // Navigate to the Job Application page with the selected job data
-    navigate(`/apply/${selectedJob._id}`, { state: selectedJob });
+    // navigate(`/apply/${selectedJob._id}`, { state: selectedJob });
+    navigate(`/test/${selectedJob._id}`, { state: selectedJob });
+
   };
 
   useEffect(() => {
@@ -35,8 +37,9 @@ function Career() {
       })
       .catch((error) => {
         console.error("Error fetching data: ", error);
-      });
+      }); 
   }, []);
+
 
   return (
     <div className='careermain'>
@@ -95,9 +98,9 @@ function Career() {
                 <h3>Chennai</h3>
                 <h4>Be The First To Apply</h4>
                 <h5>DESCRIPTION</h5>
-                <p style={{ fontSize: "0.9rem", marginBottom: "1rem" }}> {selectedJob.jobDescription}</p>
+                <p style={{ fontSize: "0.9rem", marginBottom: "1rem"}}> {selectedJob.jobDescription}</p>
                 <h1 style={{ marginBottom: "0.5rem" }}>QUALIFICATION</h1>
-                <p>
+                <p >
                   Experience with natural language processing (NLP) and computer vision
                   Knowledge of cloud computing platforms such as AWS, Azure, or Google Cloud
                   Familiarity with version control systems such as Git

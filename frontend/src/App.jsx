@@ -24,6 +24,7 @@ import WebDevelopment from './components/services/WebDevelopment';
 import DigitalMarketing from './components/services/DigitalMarketing';
 import DataAIService from './components/services/DataAIService';
 import CardServices from './components/cardServices/CardServices';
+import Question from './components/career/Question';
 
 const App = () => {
   // Protected Route Component
@@ -52,6 +53,8 @@ const App = () => {
           <Route path="/careers" element={<Career />} />
           <Route path="/package-services" element={<CardServices />} />
           <Route path="/apply/:jobId" element={<JobDetail />} />
+          <Route path="/test/:jobId" element={<Question />} />
+
         </Routes>
       </Router>
       <ToastContainer

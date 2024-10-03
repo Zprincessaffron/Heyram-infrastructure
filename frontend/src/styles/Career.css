@@ -22,7 +22,6 @@
     text-align: center;
 }
 .career_div2{
-    background-color: #142745;
 }
 .career_div21{
     padding: 5rem 0;
@@ -74,7 +73,6 @@
 .career_div22_11{
     position: absolute;
     top: 10px;
-    background-color: #4d62c9a5;
     padding: 1px 5px;
     color: white;
     border-radius: 4px;
@@ -139,13 +137,14 @@
     
     right: auto;
     bottom: auto;
-    background: #fff;
+    background: #2e2d2d;
     padding: 20px;
     border-radius: 8px;
     width: 80%;
     height: 98vh;
     overflow-y: scroll;
     position: relative;
+    color: white;
     
 
     scrollbar-width: thin; /* Options: auto | thin | none */
@@ -164,6 +163,9 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.75);
   }
+  .jodmodeldesc p{
+    font-weight: 300;
+  }
   
   .jodmodeldesc{
     padding: 3% 10%;
@@ -172,17 +174,22 @@
     text-align: center;
     font-size: 2.5rem;
     letter-spacing: 1px;
+    font-weight: 300;
   }
   .jodmodeldesc>h3{
     text-align: center;
     font-size: 0.8rem;
     letter-spacing: 1px;
+    font-weight: 300;
+
   }
   .jodmodeldesc>h4{
     text-align: center;
     font-size: 0.9rem;
     letter-spacing: 1px;
     margin-top: 10px;
+    font-weight: 300;
+
     text-transform: uppercase;
   }
   .jodmodeldesc>h5{
@@ -190,6 +197,7 @@
     font-size: 1.2rem;
     letter-spacing: 1px;
     margin-top: 10px;
+    
     text-transform: uppercase;
   }
 
@@ -197,6 +205,7 @@
     text-align: center;
     padding: 2rem 0;
     display: flex;
+    
     justify-content: center;
     flex-direction: column;
     align-items: center;
@@ -212,7 +221,7 @@
   }
   .skillset_div>div{
     padding: 3px 5px;
-    border: 1px solid rgb(57, 32, 86);
+    border: 1px solid rgb(182, 149, 220);
     border-radius: 3px;
     
   
@@ -224,7 +233,7 @@
     padding-top: 5rem;
   }
   .jodmodeldesc2>button{
-    background-color: rgb(47, 47, 147);
+    background-color: rgb(25, 18, 59);
     height: 40px;
     width: 150px;
     color: white;
@@ -237,12 +246,12 @@
     position: absolute;
     top: 20px;
     right: 20px;
-    color: rgb(48, 46, 46);
+    color: rgb(255, 255, 255);
     font-size: 1.5rem;
     cursor: pointer;
   }
   .closemodel:hover{
     scale: 110%;
-    color: black;
+    color: rgb(255, 255, 255);
 
   }

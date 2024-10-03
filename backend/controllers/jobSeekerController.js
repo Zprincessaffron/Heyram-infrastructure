@@ -5,7 +5,7 @@ export const postForm =  async (req, res) => {
   const {
     name, email, phone, link1, link2, educationLevel, degree, stream,resume,appliedFor,
     yearPassed, currentOrganization, totalExperience, noticePeriod,
-    immediateAvailable, gender, city, state, expectedCTC
+    immediateAvailable, gender, city, state, expectedCTC,score
   } = req.body;
 
 
@@ -28,6 +28,7 @@ export const postForm =  async (req, res) => {
     gender,
     city,
     state,
+    score,
     expectedCTC
   });
 
