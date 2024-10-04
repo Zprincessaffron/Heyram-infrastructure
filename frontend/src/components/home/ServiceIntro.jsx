@@ -4,7 +4,6 @@ import { BsChevronRight } from "react-icons/bs";
 
 import circletext from "../../images/circle-text.png";
 import SlideInSection from "./SlideInSection";
-import CardHove from "./CardHove";
 import { useNavigate } from "react-router-dom";
 function ServiceIntro() {
   const [ballRotate, setBallRotate] = useState(0);
