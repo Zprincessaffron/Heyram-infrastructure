@@ -1,39 +1,39 @@
-import React, { createContext, useContext, useEffect, useState } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
-// Create Admin Context
-const AdminContext = createContext();
+export const AdminContext = createContext();
 
-// Create custom hook to use Admin Context
-export const useAdmin = () => useContext(AdminContext);
+const AdminProvider = ({ children }) => {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const navigate = useNavigate();
 
-// Admin Context Provider Component
-export const AdminProvider = ({ children }) => {
-  const [isAuthenticated, setIsAuthenticated] = useState(
-    localStorage.getItem('adminToken') ? true : false
-  );
-
-  // Handle login function
-  const login = (token) => {
-    localStorage.setItem('adminToken', token);
+  const login = () => {
+    sessionStorage.setItem('isAuthenticated', 'true'); // Change here
     setIsAuthenticated(true);
+    navigate('/admindashboard');
   };
 
-  // Handle logout function
   const logout = () => {
-    localStorage.removeItem('adminToken');
+    sessionStorage.removeItem('isAuthenticated'); // Change here
     setIsAuthenticated(false);
+    navigate('/adminlogin');
   };
 
-  // Check local storage for admin authentication
   useEffect(() => {
-    if (localStorage.getItem('adminToken')) {
+    const authStatus = sessionStorage.getItem('isAuthenticated'); // Change here
+    console.log("Checking auth status on mount:", authStatus);
+    if (authStatus === 'false') { // Changed to string comparison
+      setIsAuthenticated(false);
+    } else {
       setIsAuthenticated(true);
     }
   }, []);
 
   return (
-    <AdminContext.Provider value={{ isAuthenticated, login, logout }}>
+    <AdminContext.Provider value={{ setIsAuthenticated, isAuthenticated, login, logout }}>
       {children}
     </AdminContext.Provider>
   );
 };
+
+export default AdminProvider;

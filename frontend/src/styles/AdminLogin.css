@@ -1,0 +1,110 @@
+.al_main{
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(181, 219, 222);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.al_main>button{
+    width: 100px;
+    height: 38px;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+.al_main>h2{
+    font-size: 1.5rem;
+    color: rgb(55, 55, 55);
+    font-weight: 300;
+
+}
+.al_main>h3{
+    font-size: 1rem;
+    color: rgb(55, 55, 55);
+    font-weight: 400;
+    margin-bottom: 2rem;
+
+}
+
+/* ////////otp/////////// */
+/* OTP Container Styling */
+.otp-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    padding: 2rem;
+    margin: 50px auto;
+  }
+  
+  /* Title and Text */
+  .otp-container h2 {
+    margin: 0;
+    font-size: 1.5em;
+  }
+  
+  .otp-container p {
+    margin: 10px 0;
+    color: #777;
+    font-size: 0.9em;
+    text-align: center;
+  }
+  
+  /* OTP Inputs Styling */
+  .otp-inputs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .otp-inputs input {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.2em;
+    background: #f1f1f1;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .otp-inputs input:focus {
+    border: 2px solid #6a5acd;
+    outline: none;
+    background: #ffffff;
+  }
+  
+  /* Verify Button */
+  .verify-btn {
+    background-color: #6a5acd;
+    color: white;
+    padding: 10px 50px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 15px 0;
+    font-size: 1em;
+  }
+  
+  .verify-btn:hover {
+    background-color: #5b50c5;
+  }
+  
+  /* Resend Code */
+  .resend-code {
+    color: #6a5acd;
+    cursor: pointer;
+  }
+  
+  .resend-code:hover {
+    text-decoration: underline;
+  }
+  

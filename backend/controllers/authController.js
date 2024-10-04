@@ -25,7 +25,7 @@ export const sendOtp = async (req, res) => {
 
     try {
         await transporter.sendMail(mailOptions);
-        return res.status(200).json({ message: 'OTP sent to your email' });
+        return res.status(200).json({ message: `We have sent a verification code to ${adminEmail}` });
     } catch (error) {
         return res.status(500).json({ message: 'Error sending OTP', error });
     }
@@ -59,7 +59,7 @@ export const resendOtp = async (req, res) => {
 
     try {
         await transporter.sendMail(mailOptions);
-        return res.status(200).json({ message: 'OTP resent to your email' });
+        return res.status(200).json({ message: `OTP resent to ${adminEmail}` });
     } catch (error) {
         return res.status(500).json({ message: 'Error resending OTP', error });
     }

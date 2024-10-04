@@ -1,21 +1,13 @@
 // App.js
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import DashBoard from './components/dashboard/Dashboard';
-import ProtectedRoute from './components/protectedRoute';
-import Clients from './components/dashboard/Clients';
-import Jobs from './components/dashboard/Jobs';
-import Internships from './components/dashboard/Internships';
-import Queries from './components/dashboard/Queries';
-import Login from './components/login/login';
-import MainPage from './components/home/MainPage';
-import TopSection from './components/home/TopSection';
+import ProtectedRoute from './components/dashboard/ProtectedRoute';
+import AdminDashboard from './components/dashboard/AdminDashboard';
 import AboutUs from './components/AboutUs/AboutUs';
 import Services from './components/services/Services';
 import Career from './components/career/Career';
 import JobDetail from './components/career/JobDetail';
 import { AppProvider } from './context/AppContext';
-import { AdminProvider, useAdmin } from './context/AdminContext';
 import TopSection2 from './components/home/TopSection2';
 import Contact from './components/contact/Contact';
 import { Bounce, Slide, ToastContainer, toast } from 'react-toastify';
@@ -27,24 +19,22 @@ import CardServices from './components/cardServices/CardServices';
 import Question from './components/career/Question';
 import CardServicesMid from './components/cardServices/CardServicesMid';
 import CardServicesLarge from './components/cardServices/CardServicesLarge';
+import AdminProvider from './context/AdminContext';
+import AdminLogin from './components/login/AdminLogin';
 
 const App = () => {
-  // Protected Route Component
-  const ProtectedRoute = ({ component }) => {
-    const { isAuthenticated } = useAdmin();
-    return isAuthenticated ? component : <Navigate to="/admin-login" />;
-  };
+
+  
+
   return (
     <AppProvider>
       <Router>
+        
+      <AdminProvider>
         <Routes>
           {/* <Route path="/" element={<Login />} />
          */}
-          <Route path="/admin-login" element={<Login />} />
-          <Route
-            path="/admin/*"
-            element={<ProtectedRoute component={<DashBoard />} />}
-          />
+          <Route path="/adminlogin" element={<AdminLogin />} />
           <Route path="/" element={<TopSection2 />} />
           <Route path="/web-development" element={<WebDevelopment />} />
           <Route path="/digital-marketing" element={<DigitalMarketing />} />
@@ -58,9 +48,19 @@ const App = () => {
           <Route path="/large-services" element={<CardServicesLarge />} />
           <Route path="/apply/:jobId" element={<JobDetail />} />
           <Route path="/test/:jobId" element={<Question />} />
+          <Route
+            path="/admindashboard"
+            element={
+              <ProtectedRoute>
+                <AdminDashboard/>
+              </ProtectedRoute>
+            }
+          />
 
         </Routes>
+        </AdminProvider>
       </Router>
+      
       <ToastContainer
             position="top-right"
             autoClose={5000}
