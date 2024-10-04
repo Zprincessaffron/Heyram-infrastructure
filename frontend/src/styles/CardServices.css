@@ -4,8 +4,7 @@
 }
 .cs_container1{
     width: 100%;
-    height: 40vh;
-    background-image: url('../images/startupbanner.gif');
+    height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -81,7 +80,7 @@
 .cs_container2_2>img{
     width: 80%;
 
-
+ 
 }
 
 .cs_container4_splitter{
@@ -167,23 +166,84 @@
     display: flex;
     justify-content: center;
     align-items: start;
-    flex-direction: column;
-    width: 50%;
+    flex-direction: row;
+    margin-top: 5rem;
+   
+
 }
-.cs_container5>h1{
+.cs_container5>div{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.cs_container51>h1{
     font-size: 1.5rem;
     padding-left: 5px;
     border-left: 3.5px solid rgb(82, 10, 98);
   
 }
-.cs_container5>p{
+.cs_container51>p{
     margin-top: 2rem;
     width: 80%;
     font-weight: 300;
     color: rgb(212, 212, 212);
     letter-spacing: 0.8px;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
 
+}
+.cs_container6{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: row;
+}
+.cs_container6>div{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 5rem;
+}
+.cs_container62{
+    display: flex;
+    justify-content: end;
+    text-align: end;
+    align-items: end;
+    padding-right: 3vw;
+}
+.cs_container62>h1{
+    font-size: 1.5rem;
+    padding-right: 5px;
+    border-right: 3.5px solid rgb(82, 10, 98);
+  
+}
+.cs_container62>p{
+    margin-top: 2rem;
+    width: 80%;
+    font-weight: 300;
+    color: rgb(212, 212, 212);
+    letter-spacing: 0.8px;
+    font-size: 0.85rem;
+
+}
+.cs_container52{
+    display: flex;
+    justify-content: right;
+    align-items: end;
+    padding-right: 10%;
+}
+.cs_container52>img{
+    width: 30vw;
+}
+
+.cs_container61{
+    display: flex;
+    justify-content: left;
+    align-items: start;
+    padding-left: 5%;
+}
+.cs_container61>img{
+    width: 30vw;
 }
 .cs_container2_splitter2{
     padding: 2rem;

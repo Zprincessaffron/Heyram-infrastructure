@@ -10,7 +10,7 @@ import sucess from '../../images/sucess.json';
 import failure from '../../images/failure.json';
 import Lottie from 'react-lottie';
 import { useNavigate } from 'react-router-dom';
-
+import drive from '../../images/drive.png'
 function JobDetail() {
 
   const location = useLocation();
@@ -176,6 +176,7 @@ function JobDetail() {
         <div className='jd_div1'>
           <h1>EXPERIENCE</h1>
           <div className='jd_div11'>
+            <p>If you are fresher Enter 0</p>
             <Box
               className='box'
               component="form"
@@ -186,6 +187,8 @@ function JobDetail() {
               <TextField required id="outlined-required" label="Experience in Years" variant="outlined" className={`errormsg ${errors.totalExperience ? 'error' : ''}`}   {...register('totalExperience', { required: 'totalExperience is required' })} />
               <TextField required id="outlined-required" label="Current Organization" variant="outlined" className={`errormsg ${errors.currentOrganization ? 'error' : ''}`}   {...register('currentOrganization', { required: 'currentOrganization is required' })} />
               <TextField required id="outlined-required" label="Notice Period" variant="outlined" className={`errormsg ${errors.noticePeriod ? 'error' : ''}`}   {...register('noticePeriod', { required: 'noticePeriod is required' })} />
+              <p>( yes / no )</p>
+
               <TextField required id="outlined-required" label="immediate available" variant="outlined" className={`errormsg ${errors.immediateAvailable ? 'error' : ''}`}   {...register('immediateAvailable', { required: 'immediateAvailable is required' })} />
 
 
@@ -199,6 +202,7 @@ function JobDetail() {
         <div className='jd_div1'>
           <h1>CANDIDATE INFORMATION</h1>
           <div className='jd_div11'>
+            <p>Upload Drive Link <img src={drive} alt="" /> ( Kindly set access to everyone)</p>
             <Box
               className='box'
               component="form"

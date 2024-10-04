@@ -16,7 +16,16 @@
 
 
 }
-
+.jd_div11>p{
+    display: flex;
+    flex-direction: row;
+    padding-left: 10px;
+    align-items: center;
+    font-size: 0.9rem;
+}
+.jd_div11>p>img{
+    width: 25px;
+}
 .box{
     display: flex;
     flex-direction: column;

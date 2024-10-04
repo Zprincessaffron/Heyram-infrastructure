@@ -4,14 +4,14 @@ import { useNavigate } from 'react-router-dom';
 import { AppContext } from '../../context/AppContext'
 
 import '../../styles/Cards.css'
-function Cards({ type,intro,intro2,images }) {
+function Cards({ type,intro,intro2,images,route }) {
   const navigate = useNavigate()
   const [showDiv,setShowDiv]=useState(false)
   const { connectForm, setConnectForm } = useContext(AppContext)
 
    function handleMouse(val){
     setShowDiv(val)
-   }
+   } 
   return (
   <div className='card_main' onMouseEnter={()=>handleMouse(true)} onMouseLeave={()=>handleMouse(false)} >
     <div  className='card_div1' >
@@ -23,7 +23,7 @@ function Cards({ type,intro,intro2,images }) {
     <div className={`card_div2 ${showDiv}`}>
       <p>{intro}</p>
       <div>
-      <button onClick={()=>navigate('/package-services')} >View More</button>
+      <button onClick={()=>navigate(route)} >View More</button>
       <button  onClick={()=>setConnectForm(true)} >Enquire Now</button>
       </div>
 

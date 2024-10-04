@@ -25,6 +25,8 @@ import DigitalMarketing from './components/services/DigitalMarketing';
 import DataAIService from './components/services/DataAIService';
 import CardServices from './components/cardServices/CardServices';
 import Question from './components/career/Question';
+import CardServicesMid from './components/cardServices/CardServicesMid';
+import CardServicesLarge from './components/cardServices/CardServicesLarge';
 
 const App = () => {
   // Protected Route Component
@@ -51,7 +53,9 @@ const App = () => {
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/services" element={<Services />} />
           <Route path="/careers" element={<Career />} />
-          <Route path="/package-services" element={<CardServices />} />
+          <Route path="/startup-services" element={<CardServices />} />
+          <Route path="/mid-services" element={<CardServicesMid />} />
+          <Route path="/large-services" element={<CardServicesLarge />} />
           <Route path="/apply/:jobId" element={<JobDetail />} />
           <Route path="/test/:jobId" element={<Question />} />
 

@@ -1,11 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import '../../styles/Services.css'
 import glass from '../../images/glass47.png'
-import aidata from '../../images/aidata.png'
 import Button from '../button/Button'
-import digital from '../../images/digitalservices.png'
-import web from '../../images/webdevelopment.png'
-import animationWeb from '../../images/Animation-web.json'; 
 import Lottie from 'react-lottie';
 import animationdigital from '../../images/Animation-digital.json'; 
 import animationdata from '../../images/Animation-data.json'; 

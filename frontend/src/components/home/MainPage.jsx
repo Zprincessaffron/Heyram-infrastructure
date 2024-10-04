@@ -73,6 +73,7 @@ function MainPage() {
     console.log(imageWidth)
     
 
+
     useEffect(() => {
       const handleScroll = () => {
         if (divRef.current) {
@@ -130,7 +131,7 @@ function MainPage() {
              <div className='mainpagediv22_0_2'  style={{flexDirection:"row",justifyContent:"center"}}  >
              <div >
               <SlideInSection  delayy={0.2} durationn={0.4}>
-              <Cards  type="Start-Up Companies" images={<SiHomeassistantcommunitystore/>} intro="Empowering new ventures to transform ideas into reality with agile and innovative solutions."
+              <Cards  type="Start-Up Companies" route='/startup-services' images={<SiHomeassistantcommunitystore/>} intro="Empowering new ventures to transform ideas into reality with agile and innovative solutions."
               intro2="Start-ups require cost-effective and scalable solutions. We provide the support to fuel their growth." />
              </SlideInSection>
               </div>
@@ -138,16 +139,16 @@ function MainPage() {
               <div>
               <SlideInSection delayy={0.4} durationn={0.4}>
 
-              <Cards type="Mid-size Companies" images={<HiBuildingOffice/>}   intro="Helping established businesses scale up with technology and strategic solutions."
+              <Cards type="Growing Organizations"  route='/mid-services' images={<HiBuildingOffice/>}   intro="Helping established businesses scale up with technology and strategic solutions."
               intro2="Mid-size companies need tailored strategies for scaling operations. We offer targeted solutions to achieve this." />
-             </SlideInSection>
+             </SlideInSection> 
 
               </div>
 
               <div>
               <SlideInSection delayy={0.6} durationn={0.4}>
 
-              <Cards type="Large-size Companies" images={<PiBuildingApartmentFill/>}   intro="Supporting enterprises to stay ahead with enterprise-grade solutions and services."
+              <Cards type="Global Organizations"  route='/large-services' images={<PiBuildingApartmentFill/>}   intro="Supporting enterprises to stay ahead with enterprise-grade solutions and services."
               intro2="Large companies require robust and secure solutions. We deliver enterprise-level services to match their needs." />
              </SlideInSection>
 
