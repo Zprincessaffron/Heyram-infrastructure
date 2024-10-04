@@ -1,6 +1,7 @@
 import React from "react";
 import ServiceTemplate2 from "../ServiceTemplate2"; // Adjust the path if needed
 import { FaDumbbell, FaSpa, FaHeartbeat, FaAppleAlt, FaUserMd } from "react-icons/fa"; // Import relevant icons
+import Health from "/Health.jpg";
 
 const HealthAndWellness = () => {
   // Define the data to pass to the template
@@ -22,7 +23,7 @@ const HealthAndWellness = () => {
       { name: "Nutritionists & Dieticians", icon: FaAppleAlt },
       { name: "Mental Health Practitioners", icon: FaUserMd }, // Therapists, counselors
     ],
-
+    image: Health,
     ctaText: "Enhance your client's wellness journey with a dedicated website!",
     buttonText: "Get Started",
     tagline: "A health and wellness website ensures that your services are accessible, informative, and easy to engage with, helping clients on their wellness journey.",
@@ -37,6 +38,7 @@ const HealthAndWellness = () => {
       ctaText={data.ctaText}
       buttonText={data.buttonText}
       tagline={data.tagline}
+      image={data.image}
     />
   );
 };

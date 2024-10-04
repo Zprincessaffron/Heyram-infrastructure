@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaRegHandPointRight } from "react-icons/fa";
 import Footer from "../footer/Footer";
@@ -13,9 +13,19 @@ import ContentMarketing from "./Digitalservice/ContentMarketing";
 import EmailMarketing from "./Digitalservice/EmailMarketing";
 import WhatsappMarketing from "./Digitalservice/WhatsappMarketing";
 import DataProviding from "./Digitalservice/DataProviding";
+import Cro from "./Digitalservice/Cro";
+import AnalyticsAndReporting from "./Digitalservice/AnalyticsAndReporting";
+import InfluencerMarketing from "./Digitalservice/InfluencerMarketing";
+import OnlineReputation from "./Digitalservice/OnlineReputation";
+import Branding from "./Digitalservice/Branding";
+import TrafficGeneration from "./Digitalservice/TrafficGeneration";
+import LeadGeneration from "./Digitalservice/LeadGeneration";
+import BrandAwareness from "./Digitalservice/BrandAwareness";
 
 const DigitalMarketing = () => {
-  const [selectedService, setSelectedService] = useState("Search Engine Optimization (SEO)"); // State to track the selected service
+  const [selectedService, setSelectedService] = useState(
+    "Search Engine Optimization (SEO)"
+  ); // State to track the selected service
   const detailsRef = useRef(null); // Create a ref for the details section
 
   // Animation properties for the title
@@ -46,17 +56,31 @@ const DigitalMarketing = () => {
   const renderSelectedService = () => {
     switch (selectedService) {
       case "Pay-Per-Click (PPC) Advertising":
-        return < Ppc/>;
+        return <Ppc />;
       case "Social Media Marketing (SMM)":
-        return < Smm/>;
+        return <Smm />;
       case "Content Marketing":
         return <ContentMarketing />;
       case "Email Marketing":
         return <EmailMarketing />;
       case "WhatsApp Marketing":
         return <WhatsappMarketing />;
-      case "Data Providing":
-        return <DataProviding />;
+      case "Conversion Rate Optimization (CRO)":
+        return <Cro />;
+      case "Influencer Marketing":
+        return <InfluencerMarketing />;
+      case "Analytics And Reporting":
+        return <AnalyticsAndReporting />;
+      case "Online Reputation":
+        return <OnlineReputation />;
+      case "Branding Services":
+        return <Branding />;
+      case "Traffic Generation":
+        return <TrafficGeneration />;
+      case "lead generation":
+        return <LeadGeneration />;
+      case "brand awareness":
+        return <BrandAwareness />;
       default:
         return <Seo />;
     }
@@ -65,8 +89,13 @@ const DigitalMarketing = () => {
   // Function to handle clicking a service
   const handleServiceClick = (item) => {
     setSelectedService(item);
-    detailsRef.current.scrollIntoView({ behavior: "smooth" }); // Smooth scroll to the details section
+    // detailsRef.current.scrollIntoView({ behavior: "smooth" }); // Smooth scroll to the details section
   };
+
+  // Scroll to the top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
@@ -74,7 +103,7 @@ const DigitalMarketing = () => {
       <MenuButton />
       <Menubar />
       <div className="h-screen w-full relative flex overflow-hidden">
-      <video
+        <video
           src={Digivid}
           autoPlay
           loop
@@ -87,7 +116,7 @@ const DigitalMarketing = () => {
 
         {/* Title on the left side */}
         <motion.h1
-          className="absolute top-1/2 left-10 transform -translate-y-1/2 text-4xl font-light text-white uppercase tracking-widest max-w-3xl"
+          className="absolute lg:top-1/2 lg:left-10 bottom-5 left-5 transform -translate-y-1/2 lg:text-5xl text-2xl font-light text-white uppercase tracking-widest max-w-3xl"
           variants={titleVariants}
           initial="hidden"
           animate="visible"
@@ -102,7 +131,7 @@ const DigitalMarketing = () => {
           initial="hidden"
           animate="visible"
         >
-          <ul className="pl-5 text-white space-y-4 cursor-pointer text-sm">
+          <ul className="pl-5 text-white lg:space-y-4 space-y-6 cursor-pointer text-sm">
             {[
               "Search Engine Optimization (SEO)",
               "Pay-Per-Click (PPC) Advertising",
@@ -110,7 +139,14 @@ const DigitalMarketing = () => {
               "Content Marketing",
               "Email Marketing",
               "WhatsApp Marketing",
-              "Data Providing"
+              "Conversion Rate Optimization (CRO)",
+              "Influencer Marketing",
+              "Analytics And Reporting",
+              "Online Reputation",
+              "Branding Services",
+              "Traffic Generation",
+              "lead generation",
+              "brand awareness",
             ].map((item, index) => (
               <motion.li
                 key={index}

@@ -1,6 +1,7 @@
 import React from "react";
 import ServiceTemplate2 from "../ServiceTemplate2"; // Adjust the path if needed
 import { FaBullhorn, FaClipboardList, FaVideo, FaRegEnvelope, FaChartLine } from "react-icons/fa"; // Import relevant icons
+import Land from "/Land.jpg";
 
 const LandingPage = () => {
   // Define the data to pass to the template
@@ -23,7 +24,7 @@ const LandingPage = () => {
       { name: "Lead Generation Campaigns", icon: FaRegEnvelope }, // Real estate, financial services
       { name: "Contests & Giveaways", icon: FaChartLine }, // Campaigns for user engagement
     ],
-
+    image: Land,
     ctaText: "Let us create a high-converting landing page for your campaign!",
     buttonText: "Get Started",
     tagline: "Landing pages are designed to drive specific actions, making them perfect for short-term promotions, product launches, or special offers.",
@@ -38,6 +39,7 @@ const LandingPage = () => {
       ctaText={data.ctaText}
       buttonText={data.buttonText}
       tagline={data.tagline}
+      image={data.image}
     />
   );
 };

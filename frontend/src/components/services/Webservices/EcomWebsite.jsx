@@ -1,6 +1,7 @@
 import React from "react";
 import ServiceTemplate2 from "../ServiceTemplate2";
 import { FaShoppingCart, FaPizzaSlice, FaLaptop, FaHeart, FaPaintBrush, FaCar } from "react-icons/fa"; // Import relevant icons
+import Ecom from "/Ecom.jpg"
 
 const EcomWebsite = () => {
   // Define the data to pass to the template
@@ -24,7 +25,7 @@ const EcomWebsite = () => {
       { name: "Arts & Crafts", icon: FaPaintBrush },
       { name: "Automotive", icon: FaCar },
     ],
-
+    image: Ecom,
     ctaText: "Let us help build your e-commerce website today!",
     buttonText: "Get Started",
     tagline: "A streamlined, user-friendly e-commerce website is your path to increased sales, higher customer satisfaction, and business scalability.",
@@ -39,6 +40,7 @@ const EcomWebsite = () => {
       ctaText={data.ctaText}
       buttonText={data.buttonText}
       tagline={data.tagline}
+      image={data.image}
     />
   );
 };

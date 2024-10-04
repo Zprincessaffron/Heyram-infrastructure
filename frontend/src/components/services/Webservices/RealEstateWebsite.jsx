@@ -1,6 +1,7 @@
 import React from "react";
 import ServiceTemplate2 from "../ServiceTemplate2"; // Adjust the path if needed
 import { FaHome, FaBuilding, FaMapMarkedAlt, FaCalculator, FaHandshake } from "react-icons/fa"; // Import relevant icons
+import Rest from '/Rest.jpg';
 
 const RealEstateWebsite = () => {
   // Define the data to pass to the template
@@ -23,7 +24,7 @@ const RealEstateWebsite = () => {
       { name: "Home Builders & Developers", icon: FaCalculator },
       { name: "Vacation Rentals", icon: FaHandshake }, // Holiday homes, short-term lets
     ],
-
+    image: Rest,
     ctaText: "Let us help you create a powerful real estate platform!",
     buttonText: "Get Started on Your Real Estate Website",
     tagline: "A real estate website offers an engaging and comprehensive user experience, designed to convert browsers into buyers.",
@@ -38,6 +39,7 @@ const RealEstateWebsite = () => {
       ctaText={data.ctaText}
       buttonText={data.buttonText}
       tagline={data.tagline}
+      image={data.image}
     />
   );
 };

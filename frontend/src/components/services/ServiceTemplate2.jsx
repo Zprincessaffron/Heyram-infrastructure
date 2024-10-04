@@ -123,13 +123,14 @@ const ServiceTemplate2 = ({
           animate={offerControls}
           variants={{ hidden: { opacity: 0, x: 50 }, visible: { opacity: 1, x: 0, transition: { duration: 0.8 } } }}
         >
-          <img src={image} alt="Service Illustration" className="w-[75%] rounded-lg shadow-lg" />
+          <img src={image} alt="Service Illustration" className="w-[60%] rounded-lg shadow-lg" />
+          
         </motion.div>
       </div>
 
       {/* Tagline */}
       <motion.p
-        className="mt-8 text-[0.75rem] lg:text-[1rem] text-gray-300 tracking-wider text-center"
+        className="mt-8 text-[0.75rem] lg:text-[1rem] text-gray-300 tracking-wider text-center italic"
         initial="hidden"
         animate={offerControls}
         variants={fadeInUp}

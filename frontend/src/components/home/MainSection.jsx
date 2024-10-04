@@ -206,8 +206,8 @@ function MainSection() {
           {services.map((_, index) => (
             <span
               key={index}
-              className={`h-3 w-3 rounded-full transition-all duration-300 ${
-                index === currentServiceIndex ? "bg-white scale-125" : "bg-gray-400"
+              className={`h-[0.35rem] w-[0.35rem] rounded-full transition-all duration-300 ${
+                index === currentServiceIndex ? "bg-white scale-150" : "bg-gray-400"
               }`}
             />
           ))}

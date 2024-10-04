@@ -1,6 +1,7 @@
 import React from "react";
 import ServiceTemplate2 from "../ServiceTemplate2"; // Adjust the path if needed
 import { FaPlane, FaSuitcaseRolling, FaMapMarkedAlt, FaHotel, FaBus, FaUserFriends } from "react-icons/fa"; // Import relevant icons
+import Tour from "/Tour.png";
 
 const ToursAndTravels = () => {
   // Define the data to pass to the template
@@ -26,7 +27,7 @@ const ToursAndTravels = () => {
       { name: "Airlines & Transportation Services", icon: FaBus },
       { name: "Destination Management Companies", icon: FaUserFriends }, // DMCs
     ],
-
+    image: Tour,
     ctaText: "Plan your next adventure with our comprehensive travel solutions!",
     buttonText: "Explore Now",
     tagline: "A well-structured Tours & Travels website offers a user-friendly and visually captivating way for customers to plan and book their dream vacations. Whether it’s a solo adventure, family trip, or a luxury vacation, the website helps to simplify the booking process while delivering a compelling travel experience.",
@@ -41,6 +42,7 @@ const ToursAndTravels = () => {
       ctaText={data.ctaText}
       buttonText={data.buttonText}
       tagline={data.tagline}
+      image={data.image}
     />
   );
 };

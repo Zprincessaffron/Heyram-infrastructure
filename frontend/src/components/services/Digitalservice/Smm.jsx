@@ -1,55 +1,39 @@
-import ServiceTemplate from '../ServiceTemplate';
+import React from 'react';
+import ServiceTemplate3 from '../ServiceTemplate3';
+import { FaTshirt, FaUtensils, FaHeartbeat, FaFilm, FaBookOpen, FaHandsHelping } from 'react-icons/fa';
+import smm from "/Smm.jpg";
 
 const Smm = () => {
+  const industriesItems = [
+    { name: "Fashion & Lifestyle", icon: FaTshirt },
+    { name: "Food & Beverage", icon: FaUtensils },
+    { name: "Health & Wellness", icon: FaHeartbeat },
+    { name: "Entertainment", icon: FaFilm },
+    { name: "Education", icon: FaBookOpen },
+    { name: "Non-Profits", icon: FaHandsHelping },
+  ];
+
   return (
-    <ServiceTemplate
-      title="Social Media Marketing (SMM)"
-      introduction="Boost your online presence and engage with your target audience effectively through our Social Media Marketing (SMM) services. We craft tailored strategies that build your brand, enhance customer relationships, and drive conversions across all major social media platforms, including Facebook, Instagram, Twitter, LinkedIn, and more."
+    <ServiceTemplate3
+      title="Social Media Marketing"
+      introduction="Social media is a powerful tool for engaging with your audience, building brand loyalty, and driving conversions. Our social media marketing strategies focus on delivering the right message to the right audience across platforms such as Facebook, Instagram, LinkedIn, and Twitter."
       offerItems={[
-        "Social Media Strategy Development: We create custom social media strategies tailored to your business goals, ensuring your brand reaches the right audience on the most effective platforms.",
-        "Content Creation & Management: Our creative team produces engaging and visually appealing content, including images, videos, and posts, designed to captivate your audience and enhance brand loyalty.",
-        "Community Management: We actively manage your social media accounts, responding to comments, messages, and interactions to foster relationships and build a loyal following.",
-        "Social Media Advertising: We implement targeted ad campaigns on platforms like Facebook, Instagram, and LinkedIn to reach specific demographics, ensuring your message reaches potential customers.",
-        "Influencer Marketing: We partner with relevant influencer's in your industry to promote your products or services, leveraging their reach to build credibility and expand your brand’s presence.",
-        "Social Media Analytics & Reporting: Our team provides in-depth reports that track the performance of your social media campaigns, highlighting engagement, reach, and conversion rates, so you can see the impact of your social presence."
+        "Content Creation & Curation: Developing engaging posts, images, and videos that resonate with your audience.",
+        "Social Media Strategy: Crafting tailored strategies based on audience behavior, trends, and platform-specific insights.",
+        "Community Management: Interacting with your followers, responding to comments, and fostering brand loyalty.",
+        "Paid Social Campaigns: Running highly targeted ads to drive brand awareness, website traffic, and conversions."
       ]}
-      whyChooseUsItems={[
-        "Platform Expertise: Our team has extensive experience managing social media campaigns across various platforms, including Facebook, Instagram, LinkedIn, Twitter, and more. We know how to tailor strategies to each platform's unique audience.",
-        "Creative & Engaging Content: We focus on creating high-quality, engaging content that resonates with your audience, encouraging them to engage with your brand and share your message.",
-        "Data-Driven Strategies: We use advanced social media analytics tools to track performance and optimize your campaigns for maximum engagement and conversion.",
-        "Targeted Advertising: Our expertise in social media advertising ensures that your ads reach the right audience at the right time, driving meaningful results without wasting your budget.",
-        "Consistent Engagement: We engage with your audience regularly, responding to their inquiries, comments, and messages to foster a positive and lasting relationship with your brand.",
-        "Transparent Reporting: You'll receive regular updates and detailed reports on the performance of your social media campaigns, allowing you to track progress and ROI in real-time."
+      benefits={[
+        "Improved Brand Recognition: Regular social media activity keeps your brand top of mind with your audience.",
+        "Direct Customer Interaction: Social platforms allow for real-time engagement and feedback from your audience.",
+        "Cost-Effective Marketing: Organic reach is free, and paid ads on social media tend to have lower costs than traditional advertising.",
+        "Increased Website Traffic: Social media channels drive traffic to your website, helping to boost sales and lead generation."
       ]}
-      roadmapItems={[
-        { 
-          title: "Phase 1: Strategy & Planning", 
-          description: "We start by understanding your brand, goals, and target audience to develop a personalized social media strategy. We identify key platforms, set objectives, and plan content that aligns with your business’s vision.", 
-          align: "end" 
-        },
-        { 
-          title: "Phase 2: Content Creation & Scheduling", 
-          description: "Our creative team designs visually compelling content tailored to each social platform. We develop a content calendar to ensure consistent and timely posting, maximizing audience engagement.", 
-          align: "start" 
-        },
-        { 
-          title: "Phase 3: Social Media Advertising", 
-          description: "We implement targeted social media ads to boost your brand’s visibility and drive traffic. Whether it's Facebook Ads, Instagram Stories, or LinkedIn campaigns, we ensure your ads reach your ideal audience.", 
-          align: "end" 
-        },
-        { 
-          title: "Phase 4: Community Management", 
-          description: "We engage with your audience by responding to comments, messages, and interactions. Our proactive community management approach fosters strong relationships and increases brand loyalty.", 
-          align: "start" 
-        },
-        { 
-          title: "Phase 5: Analytics & Reporting", 
-          description: "We provide comprehensive reports detailing the success of your social media campaigns. Using this data, we continuously refine strategies to improve performance and achieve better results.", 
-          align: "end" 
-        }
-      ]}
-      ctaText="Ready to build a stronger social presence? Let’s start growing your brand through social media!"
-      buttonText="Get Started with SMM"
+      image={smm}
+      ctaText="Get Started with Social Media Marketing"
+      buttonText="Start Now"
+      quote="Let's turn your social media presence into a vibrant community!"
+      industriesItems={industriesItems}
     />
   );
 };

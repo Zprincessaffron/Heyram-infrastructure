@@ -1,6 +1,7 @@
 import React from "react";
 import ServiceTemplate2 from "../ServiceTemplate2"; // Adjust the path if needed
 import { FaHotel, FaSpa, FaCalendarAlt, FaUtensils, FaChalkboardTeacher, FaBuilding } from "react-icons/fa"; // Import relevant icons
+import Book from "/Book.jpg";
 
 const BookingWebsite = () => {
   // Define the data to pass to the template
@@ -24,7 +25,7 @@ const BookingWebsite = () => {
       { name: "Educational Services", icon: FaChalkboardTeacher }, // Tutoring, workshops, training sessions
       { name: "Real Estate", icon: FaBuilding }, // Property viewing appointments, open house registrations
     ],
-
+    image: Book,
     ctaText: "Let us help streamline your booking process today!",
     buttonText: "Get Started with Booking",
     tagline: "A booking website is a must for businesses that want to streamline operations and offer customers a seamless way to schedule services.",
@@ -39,6 +40,7 @@ const BookingWebsite = () => {
       ctaText={data.ctaText}
       buttonText={data.buttonText}
       tagline={data.tagline}
+      image={data.image}
     />
   );
 };

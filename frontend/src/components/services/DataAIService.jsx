@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaRegHandPointRight } from "react-icons/fa";
 import Footer from "../footer/Footer";
@@ -7,9 +7,12 @@ import Navbar from "../navbar/Navbar";
 import Menubar from "../menubar/Menubar";
 import MenuButton from "../navbar/MenuButton";
 import DataAndAI from "./AI/DataAndAI";
+import DataAi from "/main.mp4";
+import GenZAI from "./AI/GenZAi";
+import DataAnalysis from "./AI/DataAnalysis";
 
 const DataAIService = () => {
-  const [selectedService, setSelectedService] = useState(null); // State to track the selected service
+  const [selectedService, setSelectedService] = useState("Gen-Z AI"); // State to track the selected service
   const detailsRef = useRef(null); // Create a ref for the details section
 
   // Animation properties for the title
@@ -39,16 +42,23 @@ const DataAIService = () => {
   // Function to render the selected service component
   const renderSelectedService = () => {
     switch (selectedService) {
+      case "Data Analysis":
+        return <DataAnalysis />;
       default:
-        return <DataAndAI />;
+        return <GenZAI/>;
     }
   };
 
   // Function to handle clicking a service
   const handleServiceClick = (item) => {
     setSelectedService(item);
-    detailsRef.current.scrollIntoView({ behavior: "smooth" }); // Smooth scroll to the details section
+    // detailsRef.current.scrollIntoView({ behavior: "smooth" }); // Smooth scroll to the details section
   };
+
+  // Scroll to the top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
@@ -56,17 +66,23 @@ const DataAIService = () => {
       <MenuButton />
       <Menubar />
       <div className="h-screen w-full relative flex overflow-hidden">
-        <img src={AI} alt="Web developer img" className="w-full h-screen bg-cover bg-no-repeat" />
-        <div className="absolute inset-0 bg-black opacity-40"></div>
+      <video
+          src={DataAi}
+          autoPlay
+          loop
+          muted
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-[#090a29] opacity-40"></div>
 
         {/* Title on the left side */}
         <motion.h1
-          className="absolute top-1/2 left-10 transform -translate-y-1/2 text-6xl font-light text-white uppercase tracking-widest"
+          className="absolute lg:top-1/2 lg:left-10 bottom-5 left-5 transform -translate-y-1/2 lg:text-5xl text-2xl font-light text-white uppercase tracking-widest max-w-3xl"
           variants={titleVariants}
           initial="hidden"
           animate="visible"
         >
-          Data And AI Service
+          {selectedService}
         </motion.h1>
 
         {/* List on the right side */}
@@ -76,13 +92,14 @@ const DataAIService = () => {
           initial="hidden"
           animate="visible"
         >
-          {/* <ul className="pl-5 text-white gap-10 space-y-8 cursor-pointer">
+          <ul className="pl-5 text-white lg:space-y-4 space-y-6 cursor-pointer text-sm">
             {[
-              "Data And AI",
+              "Gen-Z AI",
+              "Data Analysis"
             ].map((item, index) => (
               <motion.li
                 key={index}
-                className="flex items-center tracking-wider hover:underline-offset-8 hover:underline"
+                className="flex items-center tracking-wider text-[0.75rem] hover:underline-offset-4 hover:underline"
                 variants={itemVariants}
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.2 }}
@@ -100,7 +117,7 @@ const DataAIService = () => {
                 {item}
               </motion.li>
             ))}
-          </ul> */}
+          </ul>
         </motion.div>
       </div>
 

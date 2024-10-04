@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaRegHandPointRight } from "react-icons/fa";
 import Footer from "../footer/Footer";
@@ -11,7 +11,7 @@ import CustomWebService from "./Webservices/CustomWebService";
 import ResponsiveWebService from "./Webservices/ResponsiveWebService";
 import FrontendBackendService from "./Webservices/FrontendAndBackendService";
 import CorporateWebsite from "./Webservices/CorporateWebsite.jsx";
-import webdev from "/main.mp4";
+import webdev from "/vid1.mp4";
 import EcomWebsite from "./Webservices/EcomWebsite.jsx";
 import PortfolioWebsite from "./Webservices/PortfolioWebsite.jsx";
 import BookingWebsite from "./Webservices/BookingWebsite.jsx";
@@ -79,6 +79,11 @@ const WebDevelopment = () => {
     // detailsRef.current.scrollIntoView({ behavior: "smooth" }); // Smooth scroll to the details section
   };
 
+  // Scroll to the top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Navbar />
@@ -92,7 +97,7 @@ const WebDevelopment = () => {
           muted
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-[#090a29] opacity-50"></div>
+        <div className="absolute inset-0 bg-[#090a29] opacity-30"></div>
 
         {/* Title on the left side */}
         <motion.h1

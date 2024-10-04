@@ -1,6 +1,7 @@
 import React from "react";
 import ServiceTemplate2 from "../ServiceTemplate2"; // Adjust the path if needed
 import { FaPalette, FaCameraRetro, FaUserTie, FaMusic, FaBuilding } from "react-icons/fa"; // Import relevant icons
+import Port from "/Port.jpg";
 
 const PortfolioWebsite = () => {
   // Define the data to pass to the template
@@ -23,7 +24,7 @@ const PortfolioWebsite = () => {
       { name: "Artists & Musicians", icon: FaMusic }, // Painters, sculptors, composers, performers
       { name: "Architects & Interior Designers", icon: FaCameraRetro }, // Architects, interior designers
     ],
-
+    image: Port,
     ctaText: "Let us help showcase your creative work today!",
     buttonText: "Start Building Your Portfolio",
     tagline: "A portfolio website goes beyond showing what you do—it tells the story behind your work, demonstrating your creativity, skills, and professionalism.",
@@ -38,6 +39,7 @@ const PortfolioWebsite = () => {
       ctaText={data.ctaText}
       buttonText={data.buttonText}
       tagline={data.tagline}
+      image={data.image}
     />
   );
 };
