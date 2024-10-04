@@ -2,9 +2,9 @@ import React, { useState, useEffect, useContext } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MdArrowForward } from "react-icons/md"; // Import the right arrow icon
 import { AppContext } from "../../context/AppContext";
-import webdev from "/WBD.mp4"; // Web Development video
-import digimark from "/Digi.mp4"; // Digital Marketing video
-import AI from "/DTAI.mp4"; // AI video
+import webdev from "/main.mp4"; // Web Development video
+import digimark from "/main.mp4"; // Digital Marketing video
+import AI from "/main.mp4"; // AI video
 
 function MainSection() {
   const { setConnectForm } = useContext(AppContext);
@@ -84,8 +84,8 @@ function MainSection() {
         {/* Video Background */}
         <div className="absolute inset-0 overflow-hidden bg-black">
           <AnimatePresence mode="wait">
-            {isFadingOut ? (
-              <motion.div
+            {/* {isFadingOut ? ( */}
+              {/* <motion.div
                 key={`video-fade-out-${currentServiceIndex}`}
                 className="absolute inset-0"
                 {...fadeOutVideoProps}
@@ -95,26 +95,26 @@ function MainSection() {
                   autoPlay
                   loop
                   muted
-                  className="absolute inset-0 w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-cover rotate-180"
                 />
                 <div className="absolute inset-0 bg-black opacity-40" />
-              </motion.div>
-            ) : (
+              </motion.div> */}
+            {/* ) : ( */}
               <motion.div
-                key={`video-fade-in-${currentServiceIndex}`}
+                // key={`video-fade-in-${currentServiceIndex}`}
                 className="absolute inset-0"
-                {...fadeInVideoProps}
+                // {...fadeInVideoProps}
               >
                 <video
                   src={services[currentServiceIndex].video}
                   autoPlay
                   loop
                   muted
-                  className="absolute inset-0 w-full h-full object-cover"
+                  className="absolute inset-0 w-full h-full object-cover rotate-180"
                 />
-                <div className="absolute inset-0 bg-black opacity-20" />
+                <div className="absolute inset-0 bg-[#090a29] opacity-40" />
               </motion.div>
-            )}
+            {/* )} */}
           </AnimatePresence>
         </div>
 

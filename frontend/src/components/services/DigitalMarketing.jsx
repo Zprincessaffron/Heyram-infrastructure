@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { FaRegHandPointRight } from "react-icons/fa";
 import Footer from "../footer/Footer";
-import Digimg from "../../images/Digitalimg.jpg";
+import Digivid from "/main.mp4";
 import Navbar from "../navbar/Navbar";
 import Menubar from "../menubar/Menubar";
 import MenuButton from "../navbar/MenuButton";
@@ -15,7 +15,7 @@ import WhatsappMarketing from "./Digitalservice/WhatsappMarketing";
 import DataProviding from "./Digitalservice/DataProviding";
 
 const DigitalMarketing = () => {
-  const [selectedService, setSelectedService] = useState(null); // State to track the selected service
+  const [selectedService, setSelectedService] = useState("Search Engine Optimization (SEO)"); // State to track the selected service
   const detailsRef = useRef(null); // Create a ref for the details section
 
   // Animation properties for the title
@@ -74,27 +74,35 @@ const DigitalMarketing = () => {
       <MenuButton />
       <Menubar />
       <div className="h-screen w-full relative flex overflow-hidden">
-        <img src={Digimg} alt="Web developer img" className="w-full h-screen bg-cover bg-no-repeat" />
-        <div className="absolute inset-0 bg-black opacity-40"></div>
+      <video
+          src={Digivid}
+          autoPlay
+          loop
+          muted
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-[#090a29] opacity-40"></div>
+        {/* <img src={Digimg} alt="Web developer img" className="w-full h-screen bg-cover bg-no-repeat" />
+        <div className="absolute inset-0 bg-black opacity-40"></div> */}
 
         {/* Title on the left side */}
         <motion.h1
-          className="absolute top-1/2 left-10 transform -translate-y-1/2 text-6xl font-light text-white uppercase tracking-widest"
+          className="absolute top-1/2 left-10 transform -translate-y-1/2 text-4xl font-light text-white uppercase tracking-widest max-w-3xl"
           variants={titleVariants}
           initial="hidden"
           animate="visible"
         >
-          Digital Marketing
+          {selectedService}
         </motion.h1>
 
         {/* List on the right side */}
         <motion.div
-          className="absolute top-1/2 right-5 transform -translate-y-1/2"
+          className="absolute top-1/2 right-5 transform -translate-y-1/2 mt-6"
           variants={listVariants}
           initial="hidden"
           animate="visible"
         >
-          <ul className="pl-5 text-white gap-10 space-y-8 cursor-pointer">
+          <ul className="pl-5 text-white space-y-4 cursor-pointer text-sm">
             {[
               "Search Engine Optimization (SEO)",
               "Pay-Per-Click (PPC) Advertising",
@@ -106,7 +114,7 @@ const DigitalMarketing = () => {
             ].map((item, index) => (
               <motion.li
                 key={index}
-                className="flex items-center tracking-wider hover:underline-offset-8 hover:underline"
+                className="flex items-center tracking-wider text-[0.75rem] hover:underline-offset-4 hover:underline"
                 variants={itemVariants}
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.2 }}

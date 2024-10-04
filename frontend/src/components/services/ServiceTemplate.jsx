@@ -2,23 +2,16 @@ import React, { useEffect, useRef } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-// Helper hook to control individual animations
-const useAnimatedInView = (threshold = 0.2) => {
+// Helper hook for smooth animations on scroll
+export const useAnimatedInView = (threshold = 0.2) => {
   const controls = useAnimation();
   const [ref, inView] = useInView({ threshold });
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (inView) {
-      controls.start({
-        opacity: 1,
-        y: 0,
-        transition: { duration: 0.6 },
-      });
+      controls.start("visible");
     } else {
-      controls.start({
-        opacity: 0,
-        y: 50,
-      });
+      controls.start("hidden");
     }
   }, [inView, controls]);
 
