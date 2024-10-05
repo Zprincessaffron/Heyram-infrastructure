@@ -6,9 +6,9 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { AppContext } from '../../context/AppContext';
 import { IoMdClose } from "react-icons/io";
+import { useNavigate } from 'react-router-dom';
 
 function Connect() {
-
     const { connectForm, setConnectForm } = useContext(AppContext)
 
     const { 

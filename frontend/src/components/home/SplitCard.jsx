@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import '../../styles/SplitCard.css'
-
+import { useNavigate } from 'react-router-dom'
 
 
 function SplitCard() {
+    const navigate  = useNavigate()
+
     const [hoverState, setHoverState] = useState("")
     function handleMouseIn(val) {
         setHoverState(val)
@@ -57,7 +59,7 @@ function SplitCard() {
         <div className='sc_main'>
             <div className='sc_div1'>
                 <h1>OUR SERVICES</h1>
-                <button>View</button>
+                <button onClick={()=>navigate('/services')}>View</button>
 
             </div>
             <div className='sc_div2'>
