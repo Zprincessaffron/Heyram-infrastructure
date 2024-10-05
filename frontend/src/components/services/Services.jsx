@@ -5,6 +5,8 @@ import Button from '../button/Button'
 import Lottie from 'react-lottie';
 import animationdigital from '../../images/Animation-digital.json'; 
 import animationdata from '../../images/Animation-data.json'; 
+import animationWeb from '../../images/Animation-web.json'; 
+
 import Footer from '../footer/Footer'
 
 
