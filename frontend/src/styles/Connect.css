@@ -50,9 +50,14 @@
 }
 .connect_form_6{
     height: 90%;
+  
    
 }
 .connect_form_6>form{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-around;
     gap: 5px;
 }
 .connect_form_6>form input{

@@ -23,8 +23,9 @@
     width: 40%;
 }
 .si_div11_1{
-    font-size: 1.2rem;
-    font-weight: 200; 
+    font-size: calc(0.5px + 0.9vw);
+    font-weight: 300;
+    letter-spacing: 0.5px;
     width: 80%;
     opacity: 0;
     transition: all 0.3s ease-in-out;
@@ -324,4 +325,10 @@
 .si_circleimg{
     width: 270px;
     
+}
+.si_full_div21_2{
+
+    font-size: calc(0.5px + 0.9vw);
+    font-weight: 300;
+    letter-spacing: 0.5px;
 }

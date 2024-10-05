@@ -175,8 +175,8 @@ function MainPage() {
 
             </div>
             <div style={{marginBottom:"10rem"}}>
-              {/* <ServiceIntro/> */}
-              <Test/>
+              <ServiceIntro/>
+              {/* <Test/> */}
             </div>
             <div>
           
@@ -210,7 +210,7 @@ function MainPage() {
                 <h1 className='mainpagediv5_h1'>Your business is our priority!</h1>
                 
               </SlideInSection>
-                <p>Partnering with Heyram infrastructure enables your organization to gain a competitive  advantage by focusing on your core business goals and delivering dependable solutions,  optimized to meet your needs. Reach out today to schedule a meeting, and discover how we  deliver the best solutions possible.</p>
+                <p className='mainpagediv5_p'>Partnering with Heyram infrastructure enables your organization to gain a competitive  advantage by focusing on your core business goals and delivering dependable solutions,  optimized to meet your needs. Reach out today to schedule a meeting, and discover how we  deliver the best solutions possible.</p>
                 <div  style={{cursor:"pointer"}} onClick={()=>{setConnectForm(true)}} ><span>Connect with us </span><span><Button/></span></div>
               </div>
             </div>

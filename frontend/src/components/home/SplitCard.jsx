@@ -8,40 +8,82 @@ function SplitCard() {
     function handleMouseIn(val) {
         setHoverState(val)
     }
-    console.log(hoverState)
+
+    const dataSet = [
+        {
+          id: 1,
+          title: "Shoot & Studio",
+          content: "JavaScript is a versatile programming language used.",
+          al:"start",
+          flexd:"column"
+        },
+        {
+          id: 2,
+          title: "Setup",
+          content: "CSS is used to style and layout web pages. ",
+          al:"end",
+          flexd:"column-reverse"
+
+        },
+        {
+          id: 3,
+          title: "Show",
+          content: "HTML is the standard language for creating web pages",
+          al:"start",
+          flexd:"column"
+
+
+        },
+        {
+          id: 4,
+          title: "Sky",
+          content: "React is a JavaScript library for building user interfaces",
+          al:"end",
+          flexd:"column-reverse"
+
+
+        },
+        {
+          id: 5,
+          title: "Suggest",
+          content: "Node.js is a runtime environment that allows JavaScript",
+          al:"start",
+          flexd:"column"
+
+
+        }
+      ];
     return (
         <div className='sc_main'>
             <div className='sc_div1'>
+                <h1>OUR SERVICES</h1>
+                <button>View</button>
 
             </div>
             <div className='sc_div2'>
-                <div className={`sc_div2_1 ${hoverState == "one" ? "true" : ""}`} onMouseEnter={() => handleMouseIn("one")} onMouseLeave={() => setHoverState("")} >
-                    <div className={`sc_div2_11 ${hoverState == "one" ? "true" : ""}`} >
-
+                {dataSet.map((item)=>(
+                    <div style={{alignItems:`${item.al}`}}   key={item.id} className={`sc_div2_1 ${hoverState == item.id ? "true" : ""}`} onMouseEnter={() => handleMouseIn(item.id)} onMouseLeave={() => setHoverState(" ")} >
+                    <div style={{flexDirection:`${item.flexd}`}} className='sc_div2_1static'>
+                      <div className='sc_div2_1static_1'>
+                          <h1>{item.title}</h1>
+                      </div>
+                      <div className='sc_div2_1static_2'>
+                          <h2>0{item.id}</h2>
+                      </div>
                     </div>
-
-
-                </div>
-                <div style={{ alignItems: "end" }} className={`sc_div2_1 ${hoverState == "two" ? "true" : ""}`} onMouseEnter={() => handleMouseIn("two")} onMouseLeave={() => setHoverState("")} >
-                    <div className={`sc_div2_11 ${hoverState == "two" ? "true" : ""}`} >
-
-                    </div>
-                </div>
-                <div className={`sc_div2_1 ${hoverState == "three" ? "true" : ""}`} onMouseEnter={() => handleMouseIn("three")} onMouseLeave={() => setHoverState("")} >
-                    <div className={`sc_div2_11 ${hoverState == "one" ? "true" : ""}`} >
-
-                    </div>
-                </div >
-                <div style={{ alignItems: "end" }} className={`sc_div2_1 ${hoverState == "four" ? "true" : ""}`} onMouseEnter={() => handleMouseIn("four")} onMouseLeave={() => setHoverState("")} >
-                    <div className={`sc_div2_11 ${hoverState == "one" ? "true" : ""}`} >
-
-                    </div>
-                </div>
-                <div className={`sc_div2_1 ${hoverState == "five" ? "true" : ""}`} onMouseEnter={() => handleMouseIn("five")} onMouseLeave={() => setHoverState("")} >
-                    <div className={`sc_div2_11 ${hoverState == "one" ? "true" : ""}`} >
-
-                    </div>
-                </div>
+                      <div className={`sc_div2_11 ${hoverState == item.id ? "true" : ""}`} >
+                        <div style={{flexDirection:`${item.flexd}`}} className={`sc_div2_11_1 ${hoverState == item.id ? "true" : ""}`} >
+                        <div className='sc_div2_11_1_1'>
+                        <h1>{item.title}</h1>
+                        <p>{item.content}</p>
+                        </div>
+                      <div className='sc_div2_11_1_2'>
+                      <h2>0{item.id}</h2>
+                      </div>
+                        </div>
+                      </div>
+                  </div>
+                ))}
             </div>
         </div>
     )

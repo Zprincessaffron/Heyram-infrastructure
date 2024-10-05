@@ -40,7 +40,8 @@ function Connect() {
         </div>
         <div className='connect_form_6'>
         <form onSubmit={handleSubmit(onSubmit)}>
-                      <Box
+                    <div>
+                    <Box
             className='box'
       component="form"
       sx={{ '& > :not(style)': { m: 1, width: '55ch' } }}
@@ -85,6 +86,7 @@ function Connect() {
 
 
     </Box>
+                    </div>
     <div className='connect_button'>
     <button type='submit'>Submit Application</button>
 

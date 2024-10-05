@@ -105,7 +105,6 @@ function ServiceIntro() {
           <div className={`si_div11_1 ${contentAnim}`}>
             {contentAnim == "dev" && (
               <>
-                {" "}
                 At Heyram Infrastructure, we create modern, responsive websites
                 tailored to your business needs. From design to development, our
                 team ensures a seamless user experience, helping you stand out
@@ -372,7 +371,7 @@ function ServiceIntro() {
               <div className="sifull_div21">
                 <h1 className={`currenttext`}>{currentText}</h1>
               </div>
-              <div>
+              <div className="si_full_div21_2">
                 {currentText == "planning & discovery" && (
                   <>
                     This is the foundational phase where we gather all the

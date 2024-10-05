@@ -1,5 +1,5 @@
 .sc_main{
-    background-color: aliceblue;
+    background:transparent;
     width: 100%;
     height: 80vh;
     display: flex;
@@ -12,12 +12,16 @@
 }
 .sc_div1{
     height: 70%;
-    background-color: aqua;
+    background-color: rgb(97, 109, 147);
     width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
+
 .sc_div2{
     height: 70%;
-    background-color: rgb(120, 171, 171);
     width: 80%;
     display: flex;
     align-items: center;
@@ -29,11 +33,14 @@
 .sc_div2_1{
     width: 20%;
     height: 100%;
-    background-color: gray;
+    background-color: rgba(45, 8, 97, 0.795);
     transition: width 0.3s ease;
+    backdrop-filter: blur(10px);
     cursor: pointer;
     overflow: hidden;
     display: flex;
+    align-items: end;
+
 
 }
 .sc_div2_1.true{
@@ -42,10 +49,72 @@
 .sc_div2_11{
     width: 100%;
     height: 0;
-    background-color: aquamarine;
-    transition: height 0.5s ease;
+    background-color: rgb(195, 207, 245);
+    transition: height 1s ease;
 }
 .sc_div2_11.true{
     height: 100%;
-    background-color: aquamarine;
+}
+.sc_div2_1static{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    z-index: -1;
+}
+.sc_div2_1static_2{
+    font-size: 5rem;
+    color: rgba(255, 255, 255, 0.456);
+}
+
+.sc_div2_1static h1{
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    font-weight: 400;
+}
+.sc_div2_11_1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    color: black;
+    transition: all 0.5s ease;
+    overflow: hidden;
+    opacity: 0;
+    padding: 10px;
+}
+.sc_div2_11_1_1>h1{
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+
+
+}
+.sc_div2_11_1_2{
+    font-size: 5rem;
+    
+}
+.sc_div2_11_1.true{
+    opacity: 1;
+}
+.sc_div2_11_1_1>p{
+    font-weight: 400;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+
+}
+.sc_div1>h1{
+    text-transform: uppercase;
+
+}
+.sc_div1>button{
+    padding: 7px 25px;
+    background-color: rgb(208, 207, 206);
+    margin-top: 10px;
+    border-radius: 20px;
+    color: rgb(56, 6, 56);
 }
