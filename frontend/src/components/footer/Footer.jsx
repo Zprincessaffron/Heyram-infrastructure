@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
-import '../../styles/Footer.css';
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate for navigation
+import "../../styles/Footer.css";
 import { FaWhatsapp } from "react-icons/fa6";
 import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
@@ -30,8 +30,8 @@ function Footer() {
   };
 
   return (
-    <div className='footermain'>
-      <div className='footer_div1'>
+    <div className="footermain">
+      <div className="footer_div1">
         {/* <div className='footer_div1_1'>
           <h1>Services</h1>
           <div
@@ -53,31 +53,52 @@ function Footer() {
             AI & data
           </div>
         </div> */}
-        <div className='footer_div1_1'>
+        <div className="footer_div1_1">
           <h1>About Us</h1>
-          <div onClick={()=> navigate("/about-us")} className='cursor-pointer'>About</div>
-          <div onClick={()=> navigate("/contact-us")} className='cursor-pointer'>Contact</div>
+          <div onClick={() => navigate("/about-us")} className="cursor-pointer">
+            About
+          </div>
+          <div
+            onClick={() => navigate("/contact-us")}
+            className="cursor-pointer"
+          >
+            Contact
+          </div>
         </div>
-        <div className='footer_div1_1'>
+        <div className="footer_div1_1">
           <h1>Careers</h1>
-          <div onClick={()=> navigate("/careers")} className='cursor-pointer'>Career</div>
+          <div onClick={() => navigate("/careers")} className="cursor-pointer">
+            Career
+          </div>
         </div>
-        <div className='footer_div1_1'>
+        <div className="footer_div1_1">
           <h1>Connect with us</h1>
-          <div><FaLinkedinIn /> LinkedIn</div>
-          <div><FaInstagram /> Instagram</div>
-          <div><FaWhatsapp /> WhatsApp</div>
-          <div><FaFacebookF /> Facebook</div>
-          <div><FaXTwitter /> Twitter</div>
+          <div>
+            <FaLinkedinIn /> LinkedIn
+          </div>
+          <div>
+            <FaInstagram /> Instagram
+          </div>
+          <div>
+            <FaWhatsapp /> WhatsApp
+          </div>
+          <div>
+            <FaFacebookF /> Facebook
+          </div>
+          <div>
+            <FaXTwitter /> Twitter
+          </div>
         </div>
       </div>
 
-      <hr className='mb-20'/>
+      <hr className="mb-20" />
 
       {/* Conditional rendering for Web Development Services */}
-      <div className='mb-14'>
-        <h1 className='uppercase text-center flex items-center justify-center lg:text-xl text-sm tracking-widest mb-8 font-light'>Web Development</h1>
-      <div className="grid grid-cols-3 gap-4 mx-4 my-4 text-white lg:text-xs text-[0.5rem] font-thin text-center  tracking-wider">
+      <div className="mb-14">
+        <h1 className="uppercase text-center flex items-center justify-center lg:text-xl text-xs tracking-widest mb-8 lg:font-light font-thin">
+          Web Development
+        </h1>
+        <div className="grid grid-cols-3 gap-4 mx-4 my-4 text-white lg:text-xs text-[0.5rem] font-thin text-center  tracking-wider">
           {[
             "E-Commerce Website",
             "Portfolio Website",
@@ -99,12 +120,12 @@ function Footer() {
           ))}
         </div>
       </div>
-        
-      
 
-      <div className='mb-14'>
-        <h1 className='uppercase text-center flex items-center justify-center lg:text-xl text-sm tracking-widest mb-8 font-light'>Digital Marketing</h1>
-        <div className="grid grid-cols-3 gap-4 mx-4 my-4 text-white lg:text-xs text-[0.5rem] font-thin text-center  tracking-wider">
+      <div className="mb-14">
+        <h1 className="uppercase text-center flex items-center justify-center lg:text-xl text-xs tracking-widest mb-8 lg:font-light font-thin">
+          Digital Marketing
+        </h1>
+        <div className="grid grid-cols-3 gap-4 mx-4 my-4 text-white lg:text-xs text-[0.5rem] font-thin text-center  tracking-wider ">
           {[
             "Search Engine Optimization (SEO)",
             "Pay-Per-Click (PPC) Advertising",
@@ -119,7 +140,7 @@ function Footer() {
             "Branding Services",
             "Traffic Generation",
             "Lead Generation",
-            "Brand Awareness"
+            "Brand Awareness",
           ].map((service, index) => (
             <div
               key={index}
@@ -130,16 +151,14 @@ function Footer() {
             </div>
           ))}
         </div>
-      </div>  
-      
+      </div>
 
-      <div className='mb-14'>
-        <h1 className='uppercase text-center flex items-center justify-center lg:text-xl text-sm tracking-widest mb-8 font-light'>AI and Data</h1>
-        <div className="grid grid-cols-3 gap-4 mx-4 my-4 text-white lg:text-xs text-[0.5rem] font-thin text-center  tracking-wider">
-          {[
-            "Gen-Z AI",
-            "Data Analysis"
-          ].map((service, index) => (
+      <div className="mb-14">
+        <h1 className="uppercase text-center flex items-center justify-center lg:text-xl text-xs tracking-widest mb-8 lg:font-light font-thin">
+          AI and Data
+        </h1>
+        <div className="grid grid-cols-3 gap-4 mx-4 my-4 text-white lg:text-xs text-[0.5rem] font-thin text-center justify-start  tracking-wider">
+          {["Gen-Z AI", "Data Analysis"].map((service, index) => (
             <div
               key={index}
               className="hover:underline hover:underline-offset-4 cursor-pointer"
@@ -149,14 +168,11 @@ function Footer() {
             </div>
           ))}
         </div>
-      </div>  
-      
+      </div>
 
-      <div className='footer_div2'>
-        <div className='footer_div21'>
-          www.heyraminfrastructure.com
-        </div>
-        <div className='footer_div22'>
+      <div className="footer_div2">
+        <div className="footer_div21">www.heyraminfrastructure.com</div>
+        <div className="footer_div22">
           <div>TERMS AND CONDITIONS</div>
           <div>PRIVACY POLICY</div>
         </div>

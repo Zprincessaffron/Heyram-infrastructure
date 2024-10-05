@@ -123,7 +123,7 @@ const WebDevelopment = () => {
 
         {/* List on the right side */}
         <motion.div
-          className="absolute top-1/2 right-5 transform -translate-y-1/2 mt-6"
+          className="absolute lg:top-[65%] top-1/2 right-5 transform -translate-y-1/2 mt-6"
           // -bottom-20
           variants={listVariants}
           initial="hidden"
@@ -143,14 +143,14 @@ const WebDevelopment = () => {
             ].map((item, index) => (
               <motion.li
                 key={index}
-                className="flex items-center tracking-wider text-[0.75rem] hover:underline-offset-4 hover:underline"
+                className="flex items-center tracking-wider text-[0.75rem] hover:underline-offset-4 hover:underline border-l pl-3"
                 // hover:underline-offset-8 hover:underline
                 variants={itemVariants}
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.2 }}
                 onClick={() => handleServiceClick(item)} // Set the selected service and scroll
               >
-                <motion.span
+                {/* <motion.span
                   className="mr-2"
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -158,7 +158,7 @@ const WebDevelopment = () => {
                   transition={{ duration: 0.2 }}
                 >
                   <FaRegHandPointRight />
-                </motion.span>
+                </motion.span> */}
                 {item} 
                 {/* <span className="text-[0px]">-</span> */}
               </motion.li>

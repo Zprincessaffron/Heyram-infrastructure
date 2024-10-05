@@ -12,7 +12,7 @@ function Connect() {
     const { connectForm, setConnectForm } = useContext(AppContext)
 
     const { 
-        register,
+        register, 
         handleSubmit,
         formState: { errors }, 
         reset
@@ -38,7 +38,8 @@ function Connect() {
         <div className='connect_div1'>
         Every outcome starts with a conversation
         </div>
-                      <form onSubmit={handleSubmit(onSubmit)}>
+        <div className='connect_form_6'>
+        <form onSubmit={handleSubmit(onSubmit)}>
                       <Box
             className='box'
       component="form"
@@ -85,12 +86,13 @@ function Connect() {
 
     </Box>
     <div className='connect_button'>
-    <button className='submit_buuton' type='submit'>Submit Application</button>
+    <button type='submit'>Submit Application</button>
 
     </div>
 
 
                       </form>
+        </div>
 
 
     </div>

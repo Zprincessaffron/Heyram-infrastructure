@@ -8,10 +8,12 @@ import animationdata from '../../images/Animation-data.json';
 import animationWeb from '../../images/Animation-web.json'; 
 
 import Footer from '../footer/Footer'
+import { useNavigate } from 'react-router-dom';
 
 
 function Services() {
     const [blur,setBlur]=useState(false)
+    const navigate = useNavigate()
 
     useEffect(() => {
      setTimeout(() => {
@@ -55,6 +57,7 @@ function Services() {
 
 
             </div>
+            <div className='inset-0 bg-black absolute opacity-20'/>
             
 
         </div>
@@ -64,10 +67,10 @@ function Services() {
                     <div className='services_div21_1_bar'></div>
                     <h1 className='services_div21_1_h1'>Website Development</h1>
                     <p className='services_div21_1_p'>We deliver cutting-edge AI solutions and powerful data analytics to unlock insights  and drive smarter decisions. By leveraging innovative technologies, we analyze  complex data and provide tailored services to meet your unique business needs.</p>
-                    <div className='services_div21_11'>View More<Button/> </div>
+                    <div className='services_div21_11 cursor-pointer' onClick={()=> navigate("/web-development")}>View More<Button/> </div>
                 </div>
                 <div className='services_div21_2'>
-                <Lottie style={{opacity:"80%"}} options={defaultOptions} width={500} />
+                <Lottie style={{opacity:"60%"}} options={defaultOptions} width={500} />
                          </div>
             </div>
 
@@ -77,10 +80,10 @@ function Services() {
                     <div className='services_div21_1_bar'></div>
                     <h1 className='services_div21_1_h1'>Digital Marketing Services</h1>
                     <p className='services_div21_1_p'>Our digital marketing services help you reach and engage your target audience  effectively. From SEO to social media and content marketing, we create customized  strategies that boost your online presence and drive measurable results for your  business.</p>
-                    <div className='services_div21_11'>View More<Button/> </div>
+                    <div className='services_div21_11 cursor-pointer' onClick={()=> navigate("/digital-marketing")}>View More<Button/> </div>
                 </div>
                 <div className='services_div21_2' style={{display:"flex",justifyContent:"end"}}>
-                <Lottie style={{opacity:"80%"}} options={defaultOptions2} width={400} />
+                <Lottie style={{opacity:"70%"}} options={defaultOptions2} width={400} />
                 </div>
             </div>
 
@@ -90,10 +93,10 @@ function Services() {
                     <div className='services_div21_1_bar'></div>
                     <h1 className='services_div21_1_h1'>AI and Data Analytics Services</h1>
                     <p className='services_div21_1_p'>We deliver cutting-edge AI solutions and powerful data analytics to unlock insights  and drive smarter decisions. By leveraging innovative technologies, we analyze  complex data and provide tailored services to meet your unique business needs.</p>
-                    <div className='services_div21_11'>View More<Button/> </div>
+                    <div className='services_div21_11 cursor-pointer' onClick={()=> navigate("/data-ai")}>View More<Button/> </div>
                 </div>
                 <div className='services_div21_2'>
-                <Lottie  style={{opacity:"80%"}} options={defaultOptions3} width={400} />
+                <Lottie  style={{opacity:"60%"}} options={defaultOptions3} width={400} />
                 </div>
             </div>
 

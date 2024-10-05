@@ -85,7 +85,7 @@ const DataAIService = () => {
           muted
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-[#090a29] opacity-40"></div>
+        <div className="absolute inset-0 bg-[#090a29] opacity-50"></div>
 
         {/* Title on the left side */}
         <motion.h1
@@ -99,7 +99,7 @@ const DataAIService = () => {
 
         {/* List on the right side */}
         <motion.div
-          className="absolute top-1/2 right-5 transform -translate-y-1/2"
+          className="absolute lg:top-[90%] top-1/2 right-5 transform -translate-y-1/2"
           variants={listVariants}
           initial="hidden"
           animate="visible"
@@ -111,13 +111,13 @@ const DataAIService = () => {
             ].map((item, index) => (
               <motion.li
                 key={index}
-                className="flex items-center tracking-wider text-[0.75rem] hover:underline-offset-4 hover:underline"
+                className="flex items-center tracking-wider text-[0.75rem] hover:underline-offset-4 hover:underline border-l pl-3"
                 variants={itemVariants}
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.2 }}
                 onClick={() => handleServiceClick(item)} // Set the selected service and scroll
               >
-                <motion.span
+                {/* <motion.span
                   className="mr-2"
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -125,7 +125,7 @@ const DataAIService = () => {
                   transition={{ duration: 0.2 }}
                 >
                   <FaRegHandPointRight />
-                </motion.span>
+                </motion.span> */}
                 {item}
               </motion.li>
             ))}

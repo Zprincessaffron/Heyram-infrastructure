@@ -103,34 +103,39 @@ function MainSection() {
                 {...getSlideInProps(currentServiceIndex)} // Apply the respective slide-in animation based on the service index
                 key={`fade-in-${currentServiceIndex}`}
               >
+                {/* Title Animation */}
                 <motion.h1
                   className="text-[2.5rem] uppercase tracking-widest font-light"
-                  initial={{ opacity: 0, y: -20 }}
+                  initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.6, ease: "easeInOut", delay: 0.1 }} // Add slight delay
+                  exit={{ opacity: 0, y: 20 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
                 >
                   {services[currentServiceIndex].title}
                 </motion.h1>
+
+                {/* Description Animation */}
                 <motion.p
                   className="text-sm font-light tracking-wider max-w-3xl"
-                  initial={{ opacity: 0, y: -20 }}
+                  initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  transition={{ duration: 0.6, ease: "easeInOut", delay: 0.5 }} // Stagger the description
+                  exit={{ opacity: 0, y: 20 }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
                 >
                   {services[currentServiceIndex].description}
                 </motion.p>
+
+                {/* Button Animation */}
                 <motion.button
                   onClick={() => setConnectForm(true)}
                   className="px-3 py-2 font-normal text-sm tracking-wider bg-[#e5e5e5] text-[#090a29] rounded-full transition hover:bg-gray-300 flex items-center justify-center"
                   onMouseEnter={() => setIsHovered(true)}
                   onMouseLeave={() => setIsHovered(false)}
                   style={{ maxWidth: "180px" }}
-                  initial={{ opacity: 0, y: -20 }}
+                  initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 20 }}
-                  transition={{ duration: 0.6, ease: "easeInOut", delay: 1.2 }} // Button comes in last
+                  transition={{ duration: 0.5, delay: 0.6 }}
                 >
                   Enquire Now
                   {isHovered && (

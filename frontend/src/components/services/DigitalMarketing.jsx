@@ -162,13 +162,13 @@ const DigitalMarketing = () => {
             ].map((item, index) => (
               <motion.li
                 key={index}
-                className="flex items-center tracking-wider text-[0.75rem] hover:underline-offset-4 hover:underline"
+                className="flex items-center tracking-wider text-[0.65rem] hover:underline-offset-4 hover:underline border-l pl-3"
                 variants={itemVariants}
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.2 }}
                 onClick={() => handleServiceClick(item)} // Set the selected service and scroll
               >
-                <motion.span
+                {/* <motion.span
                   className="mr-2"
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
@@ -176,7 +176,7 @@ const DigitalMarketing = () => {
                   transition={{ duration: 0.2 }}
                 >
                   <FaRegHandPointRight />
-                </motion.span>
+                </motion.span> */}
                 {item}
               </motion.li>
             ))}

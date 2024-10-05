@@ -19,6 +19,7 @@ const ServiceTemplate3 = ({
   const [introRef, introControls] = useAnimatedInView();
   const [offerRef, offerControls] = useAnimatedInView();
   const [benefitsRef, benefitsControls] = useAnimatedInView();
+  const [taglineRef, taglineControls] = useAnimatedInView();
   const [ctaRef, ctaControls] = useAnimatedInView();
   const [industriesRef, industriesControls] = useAnimatedInView(); // For industries section
 
@@ -162,9 +163,10 @@ const ServiceTemplate3 = ({
       <motion.p
         className="mt-8 text-[0.75rem] lg:text-[1rem] text-gray-300 tracking-wider text-center italic"
         initial="hidden"
-        animate={offerControls}
+        ref={taglineRef}
+        animate={taglineControls}
         variants={fadeInUp}
-        transition={{ duration: 0.5, delay: offerItems.length * 0.1 }}
+        transition={{ duration: 0.5, delay:  0.3 }}
       >
         "{quote}"
       </motion.p>

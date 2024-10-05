@@ -44,7 +44,7 @@
 }
 .services_div2{
     padding-top: 5rem;
-    background-image: linear-gradient(180deg, #a796f4,#2b1547);
+    /* background-image: linear-gradient(180deg, #a796f4,#2b1547); */
     width: 100%;
 
 }
@@ -94,5 +94,4 @@
 }
 .services_div21_2>img{
     width: 60%;
-
 }

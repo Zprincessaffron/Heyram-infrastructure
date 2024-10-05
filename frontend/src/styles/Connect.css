@@ -5,21 +5,23 @@
     width: 50%;
     background-color: rgb(255, 255, 255);
     height: 100vh;
+    overflow: hidden;
     z-index: 17;
-    padding: 2rem 2rem;
+    padding-left: 2rem;
+    padding-top: 0.5rem;
     transition: all 0.3s ease-in-out;
 }
 .connect_form.true{
-    right: 0
-    ;
+    right: 0;
 
 
 }
 .connect_div1{
     font-size: 1.3rem;
     margin-bottom: 2rem;
-    margin-top: 1rem;
+    margin-top: 0;
     font-weight: 300;
+    height: 3%;
 }
 .connect_form textarea{
     border: 1px solid gray;
@@ -32,6 +34,11 @@
     justify-content: center;
     
 }
+.connect_button>button{
+    padding: 7px 25px;
+    background-color: rgb(173, 169, 169);
+    border-radius: 25px;
+}
 .connect_closebtn{
     position: absolute;
     top: 20px;
@@ -40,4 +47,15 @@
 .connect_closebtn{
     font-size: 1.4rem;
     cursor: pointer;
+}
+.connect_form_6{
+    height: 90%;
+    overflow-y: scroll;
+}
+.connect_form_6>form{
+    gap: 5px;
+}
+.connect_form_6>form input{
+    height: 10px;
+    
 }
