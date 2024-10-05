@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../../styles/Contact.css'
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
@@ -44,6 +44,11 @@ function Contact() {
 
 
     };
+
+    useEffect(()=>{
+        window.scrollTo(0, 0);
+      },[]);
+
     return (
 
         <>

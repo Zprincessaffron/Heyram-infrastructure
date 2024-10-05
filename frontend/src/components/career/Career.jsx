@@ -29,6 +29,10 @@ function Career() {
 
   };
 
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
+
   useEffect(() => {
     // Step 3: Make an axios GET request
     axios.get('/job') // Example API URL

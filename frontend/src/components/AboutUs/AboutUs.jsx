@@ -15,6 +15,10 @@ const AboutUs = () => {
   const { setConnectForm } = useContext(AppContext);
   const navigate = useNavigate();
 
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
+
   // Function to handle scroll progress
   const handleScroll = () => {
     const scrollTop = window.scrollY;

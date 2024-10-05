@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaRegHandPointRight } from "react-icons/fa";
 import Footer from "../footer/Footer";
-import Digivid from "/main.mp4";
+import Digivid from "/vid2.mp4";
 import Navbar from "../navbar/Navbar";
 import Menubar from "../menubar/Menubar";
 import MenuButton from "../navbar/MenuButton";
@@ -21,12 +21,24 @@ import Branding from "./Digitalservice/Branding";
 import TrafficGeneration from "./Digitalservice/TrafficGeneration";
 import LeadGeneration from "./Digitalservice/LeadGeneration";
 import BrandAwareness from "./Digitalservice/BrandAwareness";
+import { useParams } from "react-router-dom";
 
 const DigitalMarketing = () => {
+  const { service } = useParams(); // Retrieve the selected service from the URL
   const [selectedService, setSelectedService] = useState(
-    "Search Engine Optimization (SEO)"
+    service ||  "Search Engine Optimization (SEO)"
   ); // State to track the selected service
   const detailsRef = useRef(null); // Create a ref for the details section
+
+  // UseEffect to update selected service when URL changes
+  useEffect(() => {
+    if (service) {
+      setSelectedService(service);
+    } else {
+      setSelectedService("Search Engine Optimization (SEO)"); // Fallback default
+    }
+  }, [service]);// State to track the selected service
+
 
   // Animation properties for the title
   const titleVariants = {

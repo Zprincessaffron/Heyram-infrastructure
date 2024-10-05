@@ -20,9 +20,21 @@ import RealEstateWebsite from "./Webservices/RealEstateWebsite.jsx";
 import LandingPage from "./Webservices/LandingPage.jsx";
 import HealthAndWellness from "./Webservices/HealthAndWellness.jsx";
 import ToursAndTravels from "./Webservices/ToursAndTravels.jsx";
+import { useParams } from "react-router-dom";
 
 const WebDevelopment = () => {
-  const [selectedService, setSelectedService] = useState("E-Commerce Website"); // State to track the selected service
+  const { service } = useParams(); // Retrieve the selected service from the URL
+  const [selectedService, setSelectedService] = useState(service || "E-Commerce Website");
+
+  // UseEffect to update selected service when URL changes
+  useEffect(() => {
+    if (service) {
+      setSelectedService(service);
+    } else {
+      setSelectedService("E-Commerce Website"); // Fallback default
+    }
+  }, [service]);// State to track the selected service
+  
   const detailsRef = useRef(null); // Create a ref for the details section
 
   // Animation properties for the title

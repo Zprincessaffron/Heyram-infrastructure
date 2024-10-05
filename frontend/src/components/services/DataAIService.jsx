@@ -7,13 +7,25 @@ import Navbar from "../navbar/Navbar";
 import Menubar from "../menubar/Menubar";
 import MenuButton from "../navbar/MenuButton";
 import DataAndAI from "./AI/DataAndAI";
-import DataAi from "/main.mp4";
+import DataAi from "/vid3.mp4";
 import GenZAI from "./AI/GenZAi";
 import DataAnalysis from "./AI/DataAnalysis";
+import { useParams } from "react-router-dom";
 
 const DataAIService = () => {
+  const { service } = useParams();
   const [selectedService, setSelectedService] = useState("Gen-Z AI"); // State to track the selected service
   const detailsRef = useRef(null); // Create a ref for the details section
+
+  // UseEffect to update selected service when URL changes
+  useEffect(() => {
+    if (service) {
+      setSelectedService(service);
+    } else {
+      setSelectedService("Gen-Z AI"); // Fallback default
+    }
+  }, [service]);// State to track the selected service
+
 
   // Animation properties for the title
   const titleVariants = {
