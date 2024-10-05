@@ -1,0 +1,79 @@
+.t_con{
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-left: 3vw;
+    padding-left: 5px;
+    border-left: 3px solid  purple;
+    margin-top: 3rem;
+}
+.t_mainn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 2rem;
+}
+.t_main1{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    color: rgb(255, 255, 255);
+    transition: all 0.3s ease-in-out;
+
+}
+.tmain2{
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+.t_main1.true{
+    scale: 140%;
+    opacity: 1;
+}
+.t_main3{
+    width: 70%;
+    height: 70%;
+    border-radius: 90%;
+    position: absolute;
+    top: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: rgb(187, 187, 187);
+    left: 15%;
+    font-size: 1.2rem;
+    transition: color 0.3s ease-in-out;
+    z-index: 10;
+    color:rgb(187, 187, 187);
+    
+}
+.t_main3.true{
+    color: rgb(41, 8, 70);
+
+    
+    background-color: white;
+}
+.tmain2>img{
+    width: 95%;
+}
+.line{
+    position: absolute;
+    width: 0px;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.5;
+    z-index: -3;
+    top: 50%;
+    left: 80%;
+    transition: all 0.3s ease-in-out;
+}
+.line.true{
+    width: 150px;
+
+}

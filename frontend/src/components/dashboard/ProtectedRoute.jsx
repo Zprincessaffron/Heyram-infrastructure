@@ -10,7 +10,7 @@ const ProtectedRoute = ({ children }) => {
   useEffect(() => {
     const authStatus = sessionStorage.getItem('isAuthenticated'); // Change here
     setAuth(authStatus)
-    console.log("authStatus",authStatus)
+    console.log("authStatus from pro",authStatus)
   }, []);
 return authStatus ? children : <Navigate to="/adminlogin" />;
 
