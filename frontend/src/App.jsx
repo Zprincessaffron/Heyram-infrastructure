@@ -21,6 +21,10 @@ import CardServicesMid from './components/cardServices/CardServicesMid';
 import CardServicesLarge from './components/cardServices/CardServicesLarge';
 import AdminProvider from './context/AdminContext';
 import AdminLogin from './components/login/AdminLogin';
+import Jobs from './components/dashboard/Jobs';
+import Internships from './components/dashboard/Internships';
+import Clients from './components/dashboard/Clients';
+import Queries from './components/dashboard/Queries';
 
 const App = () => {
 
@@ -58,9 +62,14 @@ const App = () => {
                 <AdminDashboard/>
               </ProtectedRoute>
             }
-          />
-
+          >
+          <Route path="jobs" element={<Jobs />} />
+          <Route path="internships" element={<Internships />} />
+          <Route path="clients" element={<Clients />} />
+          <Route path="queries" element={<Queries />} />
+          </Route>
         </Routes>
+        
         </AdminProvider>
       </Router>
       

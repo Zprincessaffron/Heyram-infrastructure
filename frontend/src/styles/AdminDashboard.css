@@ -1,0 +1,11 @@
+.ad_sidebar{
+    width: 15%;
+    background-color: rgb(52, 90, 88);
+    position: fixed;
+    height: 100%;
+
+}
+.ad_outlet{
+    width: 85%;
+    margin-left: 15%;
+}
