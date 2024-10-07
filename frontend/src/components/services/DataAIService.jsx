@@ -11,6 +11,7 @@ import DataAi from "/vid3.mp4";
 import GenZAI from "./AI/GenZAi";
 import DataAnalysis from "./AI/DataAnalysis";
 import { useParams } from "react-router-dom";
+import { GiBottomRight3dArrow } from "react-icons/gi";
 
 const DataAIService = () => {
   const { service } = useParams();
@@ -110,24 +111,32 @@ const DataAIService = () => {
               "Data Analysis"
             ].map((item, index) => (
               <motion.li
-                key={index}
-                className="flex items-center tracking-wider text-[0.75rem] hover:underline-offset-4 hover:underline border-l pl-3"
-                variants={itemVariants}
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.2 }}
-                onClick={() => handleServiceClick(item)} // Set the selected service and scroll
-              >
-                {/* <motion.span
-                  className="mr-2"
-                  initial={{ opacity: 0, x: -10 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  whileHover={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <FaRegHandPointRight />
-                </motion.span> */}
-                {item}
-              </motion.li>
+      key={index}
+      className="flex items-center tracking-wider text-[0.75rem] border-l pl-2 relative group" // Added 'group' for hover targeting
+      variants={itemVariants}
+      whileHover={{ scale: 1.05 }}
+      onClick={() => handleServiceClick(item)}
+    >
+      {/* Arrow icon, initially hidden, will appear when the item text is hovered */}
+      <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 mr-1 -rotate-45">
+        <GiBottomRight3dArrow />
+      </span>
+
+      <motion.span
+        className="relative cursor-pointer overflow-hidden"
+        initial={{ backgroundSize: "0% 0px" }}
+        whileHover={{ backgroundSize: "100% 1px" }}
+        transition={{ duration: 0.5, ease: "easeInOut" }}
+        style={{
+          backgroundImage: "linear-gradient(90deg, white 100%, transparent 0)",
+          backgroundPosition: "0% 100%",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "0% 1px",
+        }}
+      >
+        {item}
+      </motion.span>
+    </motion.li>
             ))}
           </ul>
         </motion.div>

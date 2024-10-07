@@ -31,6 +31,7 @@ function Footer() {
 
   return (
     <div className="footermain">
+        <hr className="mb-20 opacity-20" />
       <div className="footer_div1">
         {/* <div className='footer_div1_1'>
           <h1>Services</h1>
@@ -53,6 +54,7 @@ function Footer() {
             AI & data
           </div>
         </div> */}
+        
         <div className="footer_div1_1">
           <h1>About Us</h1>
           <div onClick={() => navigate("/about-us")} className="cursor-pointer">
@@ -91,9 +93,9 @@ function Footer() {
         </div>
       </div>
 
-      <hr className="mb-20" />
+      
 
-      {/* Conditional rendering for Web Development Services */}
+      {/* Services */}
       <div className="mb-14">
         <h1 className="uppercase text-center flex items-center justify-center lg:text-xl text-xs tracking-widest mb-8 lg:font-light font-thin">
           Web Development
@@ -173,7 +175,7 @@ function Footer() {
       <div className="footer_div2">
         <div className="footer_div21">www.heyraminfrastructure.com</div>
         <div className="footer_div22">
-          <div>TERMS AND CONDITIONS</div>
+          <div>Terms of Use</div>
           <div>PRIVACY POLICY</div>
         </div>
       </div>
