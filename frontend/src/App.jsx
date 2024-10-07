@@ -25,6 +25,8 @@ import Jobs from './components/dashboard/Jobs';
 import Internships from './components/dashboard/Internships';
 import Clients from './components/dashboard/Clients';
 import Queries from './components/dashboard/Queries';
+import TermsOfUse from './components/TermsOfUse/TermsOfUse';
+import PrivacyPolicy from './components/PrivacyPolicy/PrivacyPolicy';
 
 const App = () => {
 
@@ -48,6 +50,8 @@ const App = () => {
           <Route path="/data-ai/:service" element={<DataAIService />} />
           <Route path="/contact-us" element={<Contact />} />
           <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/terms-of-use" element={<TermsOfUse />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/services" element={<Services />} />
           <Route path="/careers" element={<Career />} />
           <Route path="/startup-services" element={<CardServices />} />
