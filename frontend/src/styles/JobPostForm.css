@@ -1,0 +1,93 @@
+/* JobPostForm.css */
+.form_container {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    margin-top: 20px;
+    width: 80%;
+    height: 100vh;
+  }
+  
+  .job-form {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    overflow-y: scroll;
+    height: 100%;
+   
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  textarea {
+    height: 100px;
+  }
+  
+  .experience-range {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .experience-range input {
+    width: 48%;
+  }
+  
+  .question-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .question-section input {
+    width: 48%;
+  }
+  
+  .add-button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .add-button:hover {
+    background: #0056b3;
+  }
+  
+  .submit-button {
+    background: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .submit-button:hover {
+    background: #218838;
+  }
+  
+  .jp_closebtn{
+    display: flex;
+    justify-content: end;
+  }

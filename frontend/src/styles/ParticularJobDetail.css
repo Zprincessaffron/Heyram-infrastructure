@@ -1,0 +1,120 @@
+/* JobDetails.css */
+.job-details-container {
+    width: 60%;
+    height: 100vh;
+  }
+  
+  .job-details-main {
+    background: #fff;
+    padding: 30px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow-y: scroll;
+  }
+  
+  .job-title {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .job-type {
+    font-size: 1.2em;
+    color: #6c757d;
+    margin-bottom: 20px;
+  }
+  
+  .job-description {
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+  
+  .job-info {
+    margin-bottom: 30px;
+  }
+  
+  .job-info h2 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #4a5568;
+  }
+  
+  .job-info-item {
+    margin-bottom: 10px;
+  }
+  
+  .job-info-item span {
+    font-weight: bold;
+    color: #2d3748;
+  }
+  
+  .skills-section {
+    margin-bottom: 30px;
+  }
+  
+  .skills-section h2 {
+    font-size: 1.5em;
+    color: #4a5568;
+  }
+  
+  .skills-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+  
+  .skill-item {
+    background: #edf2f7;
+    color: #2d3748;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin: 5px;
+  }
+  
+  .questions-section h2 {
+    font-size: 1.5em;
+    color: #4a5568;
+  }
+  .questions-section{
+  }
+  
+  .questions-list {
+  }
+  
+  .question-item {
+    margin-bottom: 20px;
+    border: 1px solid #e2e8f0;
+    padding: 15px;
+    border-radius: 8px;
+    background: #f7fafc;
+  }
+  
+  .options-list {
+    list-style-type: disc;
+    margin-top: 10px;
+    padding-left: 20px;
+  }
+  
+  .option-item {
+    margin-bottom: 5px;
+  }
+  
+  .answer {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #38a169;
+  }
+  
+  .pjd_closediv{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    font-size: 1.5rem;
+  }
+  .pjd_closediv>div:hover{
+    cursor: pointer;
+    scale: 150%;
+    transition: scale 0.2s ease;
+
+  }

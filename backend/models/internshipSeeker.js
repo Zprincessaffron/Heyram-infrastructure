@@ -19,7 +19,8 @@ const internshipSeekerSchema = new mongoose.Schema({
   gender: { type: String, required: true },
   city: { type: String, required: true },
   state: { type: String, required: true },
-  cgp: { type: Number, required: true },  // CGP (Cumulative Grade Point)
+  cgp: { type: Number, required: true },
+  jobPostedDate: { type: Date, default: Date.now }
 });
 
 const InternshipSeeker = mongoose.model('InternshipSeeker', internshipSeekerSchema);

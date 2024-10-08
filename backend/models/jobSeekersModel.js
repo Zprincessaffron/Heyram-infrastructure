@@ -22,6 +22,7 @@ const jobSeekerSchema = new mongoose.Schema({
   expectedCTC: { type: Number, required: true },
   opened: { type: String, default: 'no' }, 
   score: { type: String, required: false },
+  jobPostedDate: { type: Date, default: Date.now }
 
 
 });

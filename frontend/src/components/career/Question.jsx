@@ -18,7 +18,6 @@ function Question() {
 //    console.log(selectedJob)
   const [answers, setAnswers] = useState({});
   const [score, setScore] = useState(null);  // Holds the total score
-
   // Handle option change for each question
   const handleOptionChange = (questionId, selectedOption) => {
     setAnswers((prevAnswers) => ({
@@ -31,7 +30,7 @@ function Question() {
   const handleSubmit = async () => {
     const valuesArray = Object.values(answers);
 
-    if(valuesArray.length < 3){
+    if(valuesArray.length < jobData.questions.length){
       toast("answer all the Questions")
       return
       

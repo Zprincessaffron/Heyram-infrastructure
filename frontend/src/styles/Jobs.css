@@ -1,39 +1,212 @@
- .jobs_main{
-    background-color: aliceblue;
-    width: 100%;
-    height: 100%;
- }
- .jobs_main1{
-    width: 100%;
-    height: 20%;
+.ad_job_main{
+    padding-top: 10vh;
+    
+}
+.ad_job_div1{
+    padding: 2rem 1rem;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 70px;
+    gap: 5rem;
 
-    
-
- }
- .jobs_main1>div{
-    width: 20%;
-    height: 50%;
-    background-color: rgb(165, 228, 180);
-    border-radius: 10px;
+}
+.ad_job_div13{
+    color: white;
+    border: 1px solid rgba(128, 128, 128, 0.642);
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5rem;
- }
- .jobs_main2{
+    width: 200px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.ad_job_div11>h1{
+    color: white;
+    letter-spacing: 1px;
+}
+.ad_job_div11>p{
+    color: #52bba4;
+}
+.ad_job_div12{
+    color: white;
+    border: 1px solid rgba(128, 128, 128, 0.642);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+.tableCon{
+    display: flex;
+    justify-content: center;
     width: 100%;
-    background-color: antiquewhite;
-    height: 80%;
- }
- .jobs_nav{
+    margin-top: 5rem;
+}
+.job_table_bottom{
+    background-color: #676994;
+    height: 50px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    justify-content: end;
+    padding-right: 20px;
+    align-items: center;
+
+}
+.job_appli{
+    padding: 3rem 1rem ;
+    height: 50%;
     width: 100%;
-    height: 70px;
-    background-color: aqua;
+
+}
+.job_appli>div{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.jobseekerlist{
+    background-color: #ffffff;
+    margin-bottom: 5px;
+    height: 60px; 
+    padding-left: 2rem;
+    font-weight: 500;
+
+    
+}
+.jobseekerlist:hover{
+    transition: scale 0.1s ease-in-out;
+    scale: 100.5%;
+    cursor: pointer;
+
+    
+}
+.jobseekerlist.true{
+    color: rgb(132, 130, 130);
+    background-color: #d2d8da;
+    font-weight: 300;
+
+
+}
+
+.jobseekerlist>div{
+    text-align: left;
+    width: 24%;
+    display: flex;
+    align-items: center;
+
+
+}
+
+.jobseekerlisthead{
+    background-color: #5156b5;
+    color: white;
+    margin-bottom: 5px;
+    height: 50px; 
+    padding-left: 2rem;
+    font-weight: 500;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+
+    
+}
+
+.jobseekerlisthead>div{
+    text-align: left;
+    width: 24%;
+    display: flex;
+    align-items: center;
+
+
+}
+.selectedjsdata{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(52, 51, 51, 0.321);
     position: fixed;
     top: 0;
- }
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.jobpostForm{
+    background-color: rgba(52, 51, 51, 0.321);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+
+}
+.particular_jobdata{
+    background-color: rgba(52, 51, 51, 0.321);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+}
+.Delete_pop{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.421);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Delete_pop>div{
+    width: 40%;
+    height: 40%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}
+.job_delete_button{
+    padding-left: 20px;
+}
+.job_delete_button:hover{
+    color: red;
+}
+.Delete_pop>div>p{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+.Delete_pop>div>h1{
+    font-size: 1.2rem;
+}
+.dp_buttondiv{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 5rem;
+}
+.dp_buttondiv>button{
+    padding: 7px 25px;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    font-weight: 300;
+    background-color: #af2a05;
+
+}
+.dp_buttondiv>button:hover{
+    scale:103%;
+}
+.dp_buttondiv>button:active{
+    scale:97%;
+}

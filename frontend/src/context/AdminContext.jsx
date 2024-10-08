@@ -5,6 +5,7 @@ export const AdminContext = createContext();
 
 const AdminProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [selectedNav,setSelectedNav]=useState("job")
   const navigate = useNavigate();
 
   const login = () => {
@@ -30,7 +31,7 @@ const AdminProvider = ({ children }) => {
   }, []);
 
   return (
-    <AdminContext.Provider value={{ setIsAuthenticated, isAuthenticated, login, logout }}>
+    <AdminContext.Provider value={{ setIsAuthenticated, isAuthenticated, login, logout,selectedNav,setSelectedNav }}>
       {children}
     </AdminContext.Provider>
   );

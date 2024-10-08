@@ -27,6 +27,7 @@ import Clients from './components/dashboard/Clients';
 import Queries from './components/dashboard/Queries';
 import TermsOfUse from './components/TermsOfUse/TermsOfUse';
 import PrivacyPolicy from './components/PrivacyPolicy/PrivacyPolicy';
+import ClientsDetails from './components/dashboard/ClientsDetail';
 
 const App = () => {
 
@@ -59,19 +60,20 @@ const App = () => {
           <Route path="/large-services" element={<CardServicesLarge />} />
           <Route path="/apply/:jobId" element={<JobDetail />} />
           <Route path="/test/:jobId" element={<Question />} />
-          <Route
-            path="/admindashboard"
-            element={
-              <ProtectedRoute>
-                <AdminDashboard/>
-              </ProtectedRoute>
-            }
-          >
-          <Route path="jobs" element={<Jobs />} />
-          <Route path="internships" element={<Internships />} />
-          <Route path="clients" element={<Clients />} />
-          <Route path="queries" element={<Queries />} />
-          </Route>
+  <Route
+    path="/admindashboard"
+    element={
+      <ProtectedRoute>
+        <AdminDashboard />
+      </ProtectedRoute>
+    }
+  >
+    <Route path="jobs" element={<Jobs />} />
+    <Route path="internships" element={<Internships />} />
+    <Route path="clients" element={<Clients />} />
+    <Route path="clients/:name" element={<ClientsDetails />} /> {/* Changed to relative path */}
+    <Route path="queries" element={<Queries />} />
+  </Route>
         </Routes>
         
         </AdminProvider>
