@@ -43,7 +43,7 @@ function Connect() {
       </div>
       <div className="connect_form_6">
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div>
+          <div className="connect_form_61">
             <Box
               className="box"
               component="form"
@@ -109,14 +109,14 @@ function Connect() {
                 })}
               />
 
-              <textarea
+             
+            </Box>
+            <textarea
                 name=""
                 id=""
                 rows={4}
-                className={`errormsg ${errors.message ? "error" : ""}`}
                 {...register("message", { required: "message is required" })}
               ></textarea>
-            </Box>
           </div>
           <div className="connect_button">
             <button type="submit">Submit Application</button>

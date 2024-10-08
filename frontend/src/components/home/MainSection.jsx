@@ -125,7 +125,7 @@ function MainSection() {
 
                 {/* Description Animation */}
                 <motion.p
-                  className="text-xs lg:text-xs font-light tracking-widest max-w-3xl text-center lg:text-left text-gray-300 mb-4"
+                  className="text-[0.65rem] lg:text-xs font-light tracking-widest max-w-3xl text-center lg:text-left text-gray-300 mb-4"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 20 }}
@@ -139,7 +139,7 @@ function MainSection() {
                   onClick={() =>
                     navigate(services[currentServiceIndex].navigate)
                   }
-                  className="lg:px-7 lg:py-2 py-2 px-2 lg:text-[0.7rem] text-xs tracking-wider bg-[#e5e5e5] text-[#090a29] rounded-full transition hover:bg-gray-300 flex items-center justify-center font-bold"
+                  className="lg:px-7 lg:py-2 py-2 px-5 lg:text-[0.7rem] text-[0.6rem] tracking-wider bg-[#e5e5e5] text-[#090a29] rounded-full transition hover:bg-gray-300 flex items-center justify-center font-bold"
                   onMouseEnter={() => setIsHovered(true)}
                   onMouseLeave={() => setIsHovered(false)}
                   style={{ maxWidth: "180px" }}
@@ -165,44 +165,32 @@ function MainSection() {
           </AnimatePresence>
         </div>
 
-        {/* Enquire Now Button and Arrow at the bottom center */}
-        {/* <div className="absolute bottom-5 left-0 right-0 flex flex-col items-center justify-center cursor-pointer"
-        onClick={() => setConnectForm(true)}
-        >
-          <motion.button
-            className="lg:text-[0.7rem] gap-2 text-xs tracking-widest rounded-full transition flex items-center justify-center font-light text-white cursor-pointer"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 20 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
-          >
-            Enquire Now 
-            <FaArrowRight className="text-white text-xs" />
-          </motion.button>
-
-          {/* Down arrow below the button */}
-          {/* <div className="mt-1">
-            <FaArrowRight className="text-white text-xs" />
-          </div> */}
-        {/* </div> */} 
-
         {/* Enquire Now Button at the bottom */}
-        <div className="absolute bottom-5 left-0 right-0 flex justify-center z-10">
-          <div className="inline-block w-fit">
-          <motion.button
-            onClick={() => setConnectForm(true)}
-            className="lg:text-[0.7rem] text-xs gap-2 hover:text-[0.75rem] tracking-wider text-white rounded-full transition flex items-center justify-center font-light cursor-pointer"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 20 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
-          >
-            Enquire Now
-            <FaArrowRight className="text-white text-xs" />
-          </motion.button>
-          </div>
-          
-        </div>
+<div className="absolute bottom-5 left-0 right-0 flex justify-center z-10">
+  <div className="inline-block w-fit">
+    <motion.button
+      onClick={() => setConnectForm(true)}
+      className="lg:text-[0.7rem] text-[0.65rem] gap-2 tracking-wider text-white rounded-full transition flex items-center justify-center font-light cursor-pointer hover:text-[0.75rem]"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: 20 }}
+      transition={{ duration: 0.5, delay: 0.6 }}
+      whileHover="hover"
+    >
+      Enquire Now
+      <motion.span
+        className="ml-2 inline-block"
+        initial={{ x: -10, opacity: 0 }} // Arrow hidden by default
+        animate={{ x: 0, opacity: 1 }}  // When hovered
+        whileHover={{ x: 0, opacity: 1 }} // Show when button is hovered
+        transition={{ duration: 0.3 }} // Smooth transition for arrow
+      >
+        <FaArrowRight className="text-white text-xs" />
+      </motion.span>
+    </motion.button>
+  </div>
+</div>
+
       </div>
     </>
   );

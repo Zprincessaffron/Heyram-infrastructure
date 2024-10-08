@@ -1,24 +1,26 @@
-.mainmain{
+.mainmain {
     width: 100%;
-    
+
 }
 
-.maincon{
+.maincon {
     width: 100%;
     height: 100vh;
     position: relative;
- 
+
 }
-.maincon1{
+
+.maincon1 {
     width: 100%;
     height: 100vh;
     overflow: hidden;
 }
-.maincon1>img{
+
+.maincon1>img {
     width: 100%;
 }
 
-.maincon2{
+.maincon2 {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -32,18 +34,21 @@
     gap: 15px;
     z-index: 2;
 }
-.maincon2>h1{
+
+.maincon2>h1 {
     font-weight: 300;
     letter-spacing: 2px;
     font-size: calc(45px + 2vw);
 }
-.maincon2>h2{
+
+.maincon2>h2 {
     font-weight: 300;
     letter-spacing: 1px;
     font-size: calc(5px + 1vw);
     text-transform: capitalize;
 }
-.maincon2>div{
+
+.maincon2>div {
     font-weight: 400;
     text-transform: capitalize;
     letter-spacing: 1.5px;
@@ -55,7 +60,8 @@
     gap: 5px;
 
 }
-.maincon3{
+
+.maincon3 {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -66,38 +72,43 @@
     transition: all 1s ease-in-out;
 
 }
-.maincon3.true{
+
+.maincon3.true {
     opacity: 20%;
 }
-.mainpagediv2{
+
+.mainpagediv2 {
     width: 100%;
     position: relative;
 
 }
-.mainpagediv2>img{
+
+.mainpagediv2>img {
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
-  
+
 
 
 }
-.mainpagediv21{
+
+.mainpagediv21 {
     width: 100%;
-   
+
     height: 100%;
-    
+
 
 
     /* background: linear-gradient(180deg,rgb(232, 4, 4) 10%, rgba(28, 4, 73, 0.362) 100% ); */
     backdrop-filter: blur(30px);
-    
+
 
 }
-.mainpagediv22{
+
+.mainpagediv22 {
     width: 100%;
-  
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -108,15 +119,18 @@
 
 
 }
-.mainpagediv22_1{
+
+.mainpagediv22_1 {
     padding: 15rem 0;
 
-     
+
 }
-.mainpagediv22_101{
+
+.mainpagediv22_101 {
     width: 100%;
 }
-.mainpagediv22_0{
+
+.mainpagediv22_0 {
     width: 100%;
     max-width: 100%;
     height: 90vh;
@@ -125,25 +139,26 @@
 
 
 }
-.mainpagediv22_0>div{
-   
-   
-}
-.mainpagediv22>div{
+
+.mainpagediv22_0>div {}
+
+.mainpagediv22>div {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-  
+
     align-items: center;
 }
-.mainpagediv22>div>h1{
+
+.mainpagediv22>div>h1 {
     font-weight: 300;
     text-align: center;
     font-size: calc(20px + 2vw);
     width: 70%;
 }
-.mainpagediv221{
+
+.mainpagediv221 {
     text-align: center;
     font-size: calc(7px + 1vw);
     font-weight: 400;
@@ -154,29 +169,31 @@
     align-items: center;
     gap: 5px;
     margin-top: 2rem;
-       
+
 
 
 }
-.mainpagediv221_h1{
-    font-size: calc(15px + 1.5vw );
+
+.mainpagediv221_h1 {
+    font-size: calc(15px + 1.5vw);
     letter-spacing: 1px;
     font-weight: 300;
 }
 
-.mainpagediv3{
+.mainpagediv3 {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 15rem 0 ;
+    padding: 15rem 0;
     margin-top: 5rem;
     gap: 20px;
-    
+
 
 }
-.mainpagediv3>p{
+
+.mainpagediv3>p {
     width: 70%;
     font-size: 20px;
     letter-spacing: 1px;
@@ -185,47 +202,54 @@
     text-align: center;
     line-height: 35px;
 }
-.mainpagediv3>div{
+
+.mainpagediv3>div {
     font-weight: 300;
     text-align: center;
     font-size: calc(20px + 2vw);
-    
+
 
 }
-.mainpagediv22_0_2{
+
+.mainpagediv22_0_2 {
     display: flex;
     gap: 1.5rem;
     overflow: hidden;
 
 }
-.mainpagediv22_0_1>h1{
-    font-size: calc(8px + 1vw );
+
+.mainpagediv22_0_1>h1 {
+    font-size: calc(8px + 1vw);
     letter-spacing: 3px;
     margin-bottom: 4rem;
     font-weight: 300;
     text-transform: uppercase;
 }
-.turningimg{
+
+.turningimg {
     position: absolute;
     top: 0;
     right: 0;
     z-index: -1;
 }
-.mainpagediv4{
+
+.mainpagediv4 {
     width: 100%;
     height: 1300px;
-    
+
 }
-.mainpagediv4>img{
+
+.mainpagediv4>img {
     float: left;
 }
-.mainpagediv41{
+
+.mainpagediv41 {
     width: 50%;
     position: sticky;
     top: 50%;
     right: 0;
     left: 60%;
-    opacity: 0;   
+    opacity: 0;
     display: flex;
     justify-content: start;
     flex-direction: column;
@@ -234,31 +258,36 @@
     margin-bottom: 5rem;
 
 }
-.mainpagediv41.true{
+
+.mainpagediv41.true {
     opacity: 1;
     transform: translateY(0);
 }
-.mainpagediv41>h3{
+
+.mainpagediv41>h3 {
     font-size: 1rem;
     font-weight: 400;
     letter-spacing: 1.2px;
     margin-bottom: 50px;
 }
-.mainpagediv41>h2{
-    font-size: calc(8px + 1vw );
+
+.mainpagediv41>h2 {
+    font-size: calc(8px + 1vw);
     letter-spacing: 3px;
     margin-bottom: 0.8rem;
     font-weight: 300;
     text-transform: uppercase;
 }
-.mainpagediv41>p{
+
+.mainpagediv41>p {
     font-size: calc(0.5px + 0.8vw);
     font-weight: 300;
     letter-spacing: 1px;
     margin-bottom: 5px;
     text-transform: capitalize;
 }
-.mainpagediv41>div{
+
+.mainpagediv41>div {
     display: flex;
     flex-direction: row;
     justify-content: start;
@@ -268,28 +297,32 @@
     letter-spacing: 1.2px;
     font-weight: 300;
 }
-.mainpagediv5{
+
+.mainpagediv5 {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 
 }
-.mainpagediv5>div{
+
+.mainpagediv5>div {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 
 }
-.mainpagediv5_h1{
-    font-size: calc(10px + 1.2vw );
+
+.mainpagediv5_h1 {
+    font-size: calc(10px + 1.2vw);
     letter-spacing: 3px;
     margin-bottom: 1rem;
     font-weight: 300;
     text-transform: uppercase;
 }
-.mainpagediv5_p{
+
+.mainpagediv5_p {
     width: 60%;
     font-size: 0.7rem;
     font-weight: 200;
@@ -299,32 +332,34 @@
     color: white;
 }
 
-.mainpagediv5>div>div{
+.mainpagediv5>div>div {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     gap: 5px;
     font-size: 20px;
-    font-weight:200;
+    font-weight: 200;
     margin-top: 20px;
     letter-spacing: 1px;
 }
-.mainpagediv5>div{
+
+.mainpagediv5>div {
     padding: 10rem 0;
-    
+
 }
-.mainpagediv6{
+
+.mainpagediv6 {
     width: 100%;
 }
 
-.mainpagediv6_h1{
+.mainpagediv6_h1 {
     font-size: calc(20px + 2vw);
-font-weight: 300;
+    font-weight: 300;
 
 }
 
-.mainpagediv62{
+.mainpagediv62 {
     width: 90%;
     display: flex;
     padding: 5rem 0;

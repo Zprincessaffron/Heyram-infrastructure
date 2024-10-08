@@ -105,9 +105,7 @@ function Services() {
           </div>
 
           <div
-            className="services_div21"
-            style={{ flexDirection: "row-reverse" }}
-          >
+            className="services_div21 lg:flex lg:flex-row-reverse">
             <div className="services_div21_1">
               <div className="services_div21_1_bar"></div>
               <h1 className="services_div21_1_h1">
