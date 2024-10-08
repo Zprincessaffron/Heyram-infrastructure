@@ -11,7 +11,7 @@ const AdminProvider = ({ children }) => {
   const login = () => {
     sessionStorage.setItem('isAuthenticated', 'true'); // Change here
     setIsAuthenticated(true);
-    navigate('/admindashboard');
+    navigate('/admindashboard/jobs');
   };
 
   const logout = () => {

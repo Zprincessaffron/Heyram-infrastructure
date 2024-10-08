@@ -28,6 +28,8 @@ import Queries from './components/dashboard/Queries';
 import TermsOfUse from './components/TermsOfUse/TermsOfUse';
 import PrivacyPolicy from './components/PrivacyPolicy/PrivacyPolicy';
 import ClientsDetails from './components/dashboard/ClientsDetail';
+import QueriesDetail from './components/dashboard/QueriesDetail';
+import InternDetail from './components/career/InternDetail';
 
 const App = () => {
 
@@ -60,6 +62,7 @@ const App = () => {
           <Route path="/large-services" element={<CardServicesLarge />} />
           <Route path="/apply/:jobId" element={<JobDetail />} />
           <Route path="/test/:jobId" element={<Question />} />
+          <Route path="/internapply/:jobId" element={<InternDetail />} />
   <Route
     path="/admindashboard"
     element={
@@ -71,8 +74,10 @@ const App = () => {
     <Route path="jobs" element={<Jobs />} />
     <Route path="internships" element={<Internships />} />
     <Route path="clients" element={<Clients />} />
-    <Route path="clients/:name" element={<ClientsDetails />} /> {/* Changed to relative path */}
+    <Route path="clients/:name" element={<ClientsDetails />} />
     <Route path="queries" element={<Queries />} />
+    <Route path="queries/:name" element={<QueriesDetail />} />
+
   </Route>
         </Routes>
         

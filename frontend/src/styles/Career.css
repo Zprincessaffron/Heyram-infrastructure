@@ -255,3 +255,20 @@
     color: rgb(255, 255, 255);
 
   }
+  .career_div21_4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    color: gray;
+  }
+  .career_div21_4_h1{
+    cursor: pointer;
+  }
+  .career_div21_4_h1.true{
+    color: white;
+    text-decoration: underline;
+    text-underline-offset: 7px;
+    transition: all 0.3s ease-in-out;
+    text-decoration-color: rgb(128, 46, 215);
+  }

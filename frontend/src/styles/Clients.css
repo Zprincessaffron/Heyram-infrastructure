@@ -90,15 +90,15 @@
   }
   
   .back-button button:hover {
-    background-color: #000000; /* Darker color on hover */
+    background-color: #000000; 
   }
  
   
   .details-container {
-    padding: 15px; /* Inner padding for details */
-    border: 1px solid #e0e0e0; /* Light border around the details */
-    border-radius: 4px; /* Rounded corners for details */
-    background-color: #f9f9f9; /* Light background for details */
+    padding: 15px; 
+    border: 1px solid #e0e0e0; 
+    border-radius: 4px;
+    background-color: #f9f9f9; 
   }
   
   .details-container p {
@@ -122,3 +122,29 @@
     text-align: center;
     margin-bottom: 2rem;
   } 
+  .client_tr.true{
+    opacity: 70%;
+    background-color: rgba(128, 128, 128, 0.132);
+    font-weight:400;
+
+  }
+  .client_tr{
+    font-weight:600;
+  }
+  .clients_div1_1{
+    color: white;
+
+  }
+  .clients_div1_1{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding-left: 5rem;
+  }
+  .clients_div1_1>div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
