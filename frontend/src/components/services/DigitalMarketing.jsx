@@ -23,6 +23,7 @@ import LeadGeneration from "./Digitalservice/LeadGeneration";
 import BrandAwareness from "./Digitalservice/BrandAwareness";
 import { useParams } from "react-router-dom";
 import { GiBottomRight3dArrow } from "react-icons/gi";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const DigitalMarketing = () => {
   const { service } = useParams(); // Retrieve the selected service from the URL
@@ -169,8 +170,8 @@ const DigitalMarketing = () => {
       onClick={() => handleServiceClick(item)}
     >
       {/* Arrow icon, initially hidden, will appear when the item text is hovered */}
-      <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 mr-1 -rotate-45">
-        <GiBottomRight3dArrow />
+      <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 mr-1">
+        <FaArrowRightLong size={10}/>
       </span>
 
       <motion.span

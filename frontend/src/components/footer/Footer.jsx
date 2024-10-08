@@ -100,7 +100,7 @@ function Footer() {
         <h1 className="uppercase text-center flex items-center justify-center lg:text-xl text-xs tracking-widest mb-8 lg:font-light font-thin">
           Web Development
         </h1>
-        <div className="grid grid-cols-3 gap-4 mx-4 my-4 text-white lg:text-xs text-[0.5rem] font-thin text-center  tracking-wider">
+        <div className="grid grid-cols-3 gap-4 mx-4 my-4 text-white lg:text-[0.6rem] text-[0.5rem] font-light text-center  tracking-wider">
           {[
             "E-Commerce Website",
             "Portfolio Website",
@@ -114,10 +114,12 @@ function Footer() {
           ].map((service, index) => (
             <div
               key={index}
-              className="hover:underline hover:underline-offset-4 cursor-pointer"
+              className="cursor-pointer "
               onClick={() => handleServiceClick(service)} // Navigate to WebDevelopment page with the selected service
             >
+              <div className="flex item-center justify-start lg:ml-24 ml-6">
               {service}
+              </div>
             </div>
           ))}
         </div>
@@ -127,7 +129,7 @@ function Footer() {
         <h1 className="uppercase text-center flex items-center justify-center lg:text-xl text-xs tracking-widest mb-8 lg:font-light font-thin">
           Digital Marketing
         </h1>
-        <div className="grid grid-cols-3 gap-4 mx-4 my-4 text-white lg:text-xs text-[0.5rem] font-thin text-center  tracking-wider ">
+        <div className="grid grid-cols-3 gap-4 mx-4 my-4 text-white lg:text-[0.6rem] text-[0.5rem] font-light text-center  tracking-wider ">
           {[
             "Search Engine Optimization (SEO)",
             "Pay-Per-Click (PPC) Advertising",
@@ -146,10 +148,12 @@ function Footer() {
           ].map((service, index) => (
             <div
               key={index}
-              className="hover:underline hover:underline-offset-4 cursor-pointer"
+              className="cursor-pointer"
               onClick={() => handleDigitalServiceClick(service)} // Navigate to DigitalMarketing page with the selected service
             >
+              <div className="flex item-center justify-start lg:ml-24 ml-4">
               {service}
+              </div>
             </div>
           ))}
         </div>
@@ -159,24 +163,26 @@ function Footer() {
         <h1 className="uppercase text-center flex items-center justify-center lg:text-xl text-xs tracking-widest mb-8 lg:font-light font-thin">
           AI and Data
         </h1>
-        <div className="grid grid-cols-3 gap-4 mx-4 my-4 text-white lg:text-xs text-[0.5rem] font-thin text-center justify-start  tracking-wider">
+        <div className="grid grid-cols-3 gap-4 mx-4 my-4 text-white lg:text-[0.6rem] text-[0.5rem] font-light text-center justify-start  tracking-wider">
           {["Gen-Z AI", "Data Analysis"].map((service, index) => (
             <div
               key={index}
-              className="hover:underline hover:underline-offset-4 cursor-pointer"
+              className="cursor-pointer"
               onClick={() => handleDataAiClick(service)} // Navigate to DataAI page with the selected service
             >
+             <div className="flex item-center justify-start lg:ml-24 ml-6">
               {service}
+              </div>
             </div>
           ))}
         </div>
       </div>
 
       <div className="footer_div2">
-        <div className="footer_div21">www.heyraminfrastructure.com</div>
+        <div className="footer_div21 tracking-wider">www.heyraminfrastructure.com</div>
         <div className="footer_div22">
-          <div>Terms of Use</div>
-          <div>PRIVACY POLICY</div>
+          <div onClick={()=> navigate("/terms-of-use")} className="cursor-pointer tracking-wider">Terms of Use</div>
+          <div onClick={()=> navigate("/privacy-policy")} className="cursor-pointer tracking-wider">Privacy Policy</div>
         </div>
       </div>
     </div>

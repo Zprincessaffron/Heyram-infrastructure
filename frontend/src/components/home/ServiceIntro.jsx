@@ -329,7 +329,7 @@ function ServiceIntro() {
           style={{ width: "20px" }}
         >
           <div>
-            <BsChevronRight />
+            <BsChevronRight size={20}/>
           </div>
         </div>
       </div>
@@ -351,7 +351,7 @@ function ServiceIntro() {
                     style={{
                       transform: `${
                         currentText == "planning & discovery"
-                          ? "translateX(40px)"
+                          ? "translateX(0px)"
                           : ""
                       }`,
                     }}
@@ -430,13 +430,13 @@ function ServiceIntro() {
               <div className="sifull_div1_1">
                 <div className={`sifull_div1_2 ${stop ? "true" : ""}`}>
                   {currentText == "planning & discovery" && (
-                    <h1 style={{ transform: "translateX(40px)" }}>
+                    <h1 style={{ transform: "translateX(0px)" }}>
                       research & strategy{" "}
                     </h1>
                   )}
                   {currentText == "design" && <h1>planning </h1>}
                   {currentText == "development" && (
-                    <h1 style={{ transform: "translateX(40px)" }}>
+                    <h1 style={{ transform: "translateX(0px)" }}>
                       execution & campaign{" "}
                     </h1>
                   )}

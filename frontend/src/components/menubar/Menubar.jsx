@@ -28,16 +28,16 @@ function Menubar() {
                <div onClick={()=>handleRedirect("/careers")}>Career</div>
             </SlideInSection>
             <SlideInSection delayy={0.1} durationn={0.5} >
-                <div>ABOUT</div>
+                <div onClick={()=>handleRedirect("/about-us")}>ABOUT</div>
             </SlideInSection>
             <SlideInSection delayy={0.2} durationn={0.5} >
-                <div  >WEB DEVELOPMENT</div>
+                <div onClick={()=>handleRedirect("/web-development")} >WEB DEVELOPMENT</div>
             </SlideInSection>
             <SlideInSection delayy={0.3} durationn={0.5} >
-                <div>DIGITAL MARKETING</div>
+                <div onClick={()=>handleRedirect("/digital-marketing")}>DIGITAL MARKETING</div>
             </SlideInSection>
             <SlideInSection delayy={0.4} durationn={0.5} >
-                <div>GEN Z AI</div>
+                <div onClick={()=>handleRedirect("/data-ai")}>GEN Z AI</div>
             </SlideInSection>
             <SlideInSection delayy={0.5} durationn={0.5} >
                 <div onClick={()=>handleRedirect("/contact-us")}>CONTACT</div>

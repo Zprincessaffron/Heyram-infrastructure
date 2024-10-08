@@ -10,21 +10,17 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: start;
-  
     padding: 0 5rem 5rem 5rem;
 
 
 }
 .footer_div1>div{
     width: fit-content;
-
     display: flex;
     justify-content: start;
     flex-direction: column;
     float: left;
     gap: 8px;
-
-
 }
 .footer_div2{
     width: 100%;
@@ -55,6 +51,7 @@
     display: flex;
     align-items: center;
     padding-left: 7%;
+    font-size: 0.7rem;
 }
 .footer_div22{
     display: flex;
@@ -62,14 +59,18 @@
     justify-content: end;
     align-items: center;
     gap: 3rem;
-    font-weight: 300;
+    font-weight: 200;
     padding-right: 7%;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
 }
 .footer_div1_1>div{
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 5px;
+    font-size: 0.65rem;
+    letter-spacing: 1px;
 }
 @media only screen and (max-width: 600px) {
     .footermain{
@@ -130,13 +131,4 @@
         gap: 5px;
     }
 }
-
-/* In your Footer.css file */
-.webdev-services-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
-    gap: 1rem; /* Space between grid items */
-    padding-left: 0; /* Remove any left padding if needed */
-    margin-top: 1rem; /* Space above the grid */
-  }
-  
+ 

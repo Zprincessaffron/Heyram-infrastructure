@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import { motion } from "framer-motion";
 import { useAnimatedInView } from "./ServiceTemplate"; // Custom hook for animations
+import { AppContext } from "../../context/AppContext";
+import Connect from "../form/Connect";
 
 // ServiceTemplate3 component
 const ServiceTemplate3 = ({
@@ -23,6 +25,8 @@ const ServiceTemplate3 = ({
   const [ctaRef, ctaControls] = useAnimatedInView();
   const [industriesRef, industriesControls] = useAnimatedInView(); // For industries section
 
+  const { setConnectForm } = useContext(AppContext);
+
   // Animation variants for consistency across different sections
   const fadeInUp = {
     hidden: { opacity: 0, y: 50 },
@@ -30,7 +34,9 @@ const ServiceTemplate3 = ({
   };
 
   return (
-    <div className="text-white py-4 px-4 lg:px-6">
+    <>
+    <Connect/>
+     <div className="text-white py-4 px-4 lg:px-6">
       {/* Section Title */}
       <motion.h1
         className="text-lg lg:text-2xl font-light mb-4 tracking-widest uppercase lg:text-start text-center"
@@ -197,11 +203,14 @@ const ServiceTemplate3 = ({
           initial="hidden"
           animate={ctaControls}
           variants={fadeInUp}
+          onClick={() => setConnectForm(true)}
         >
           {buttonText}
         </motion.button>
       </div>
     </div>
+    </>
+   
   );
 };
 

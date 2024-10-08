@@ -18,6 +18,7 @@ import { useParams } from "react-router-dom";
 import webdev from "/vid1.mp4"; // Video background
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { GiBottomRight3dArrow } from "react-icons/gi";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const WebDevelopment = () => {
   const { service } = useParams(); // Retrieve the selected service from the URL
@@ -126,50 +127,48 @@ const WebDevelopment = () => {
           initial="hidden"
           animate="visible"
         >
+          <ul className="pl-5 text-white lg:space-y-4 space-y-6 cursor-pointer text-sm">
+            {[
+              "E-Commerce Website",
+              "Portfolio Website",
+              "Corporate Website",
+              "Booking Website",
+              "Educational Website",
+              "Real Estate Website",
+              "Landing Page",
+              "Health And Wellness",
+              "Tours And Travels",
+            ].map((item, index) => (
+              <motion.li
+                key={index}
+                className="flex items-center tracking-wider text-[0.75rem] border-l pl-2 relative group" // Added 'group' for hover targeting
+                variants={itemVariants}
+                whileHover={{ scale: 1.05 }}
+                onClick={() => handleServiceClick(item)}
+              >
+                {/* Arrow icon, initially hidden, will appear when the item text is hovered */}
+                <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 mr-1 ">
+                  <FaArrowRightLong size={10} />
+                </span>
 
-<ul className="pl-5 text-white lg:space-y-4 space-y-6 cursor-pointer text-sm">
-  {[
-    "E-Commerce Website",
-    "Portfolio Website",
-    "Corporate Website",
-    "Booking Website",
-    "Educational Website",
-    "Real Estate Website",
-    "Landing Page",
-    "Health And Wellness",
-    "Tours And Travels",
-  ].map((item, index) => (
-    <motion.li
-      key={index}
-      className="flex items-center tracking-wider text-[0.75rem] border-l pl-2 relative group" // Added 'group' for hover targeting
-      variants={itemVariants}
-      whileHover={{ scale: 1.05 }}
-      onClick={() => handleServiceClick(item)}
-    >
-      {/* Arrow icon, initially hidden, will appear when the item text is hovered */}
-      <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 mr-1 -rotate-45">
-        <GiBottomRight3dArrow />
-      </span>
-
-      <motion.span
-        className="relative cursor-pointer overflow-hidden"
-        initial={{ backgroundSize: "0% 0px" }}
-        whileHover={{ backgroundSize: "100% 1px" }}
-        transition={{ duration: 0.5, ease: "easeInOut" }}
-        style={{
-          backgroundImage: "linear-gradient(90deg, white 100%, transparent 0)",
-          backgroundPosition: "0% 100%",
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "0% 1px",
-        }}
-      >
-        {item}
-      </motion.span>
-    </motion.li>
-  ))}
-</ul>
-
-
+                <motion.span
+                  className="relative cursor-pointer overflow-hidden"
+                  initial={{ backgroundSize: "0% 0px" }}
+                  whileHover={{ backgroundSize: "100% 1px" }}
+                  transition={{ duration: 0.5, ease: "easeInOut" }}
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(90deg, white 100%, transparent 0)",
+                    backgroundPosition: "0% 100%",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "0% 1px",
+                  }}
+                >
+                  {item}
+                </motion.span>
+              </motion.li>
+            ))}
+          </ul>
         </motion.div>
       </div>
 

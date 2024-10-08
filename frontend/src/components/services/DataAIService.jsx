@@ -12,6 +12,7 @@ import GenZAI from "./AI/GenZAi";
 import DataAnalysis from "./AI/DataAnalysis";
 import { useParams } from "react-router-dom";
 import { GiBottomRight3dArrow } from "react-icons/gi";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 const DataAIService = () => {
   const { service } = useParams();
@@ -86,7 +87,7 @@ const DataAIService = () => {
           muted
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-[#090a29] opacity-50"></div>
+        <div className="absolute inset-0 bg-[#090a29] opacity-40"></div>
 
         {/* Title on the left side */}
         <motion.h1
@@ -118,8 +119,8 @@ const DataAIService = () => {
       onClick={() => handleServiceClick(item)}
     >
       {/* Arrow icon, initially hidden, will appear when the item text is hovered */}
-      <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 mr-1 -rotate-45">
-        <GiBottomRight3dArrow />
+      <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 mr-1">
+        <FaArrowRightLong size={10} />
       </span>
 
       <motion.span

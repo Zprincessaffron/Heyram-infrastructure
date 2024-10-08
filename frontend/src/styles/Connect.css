@@ -17,8 +17,9 @@
 
 }
 .connect_div1{
-    font-size: 1.3rem;
+    font-size: 1rem;
     margin-bottom: 2rem;
+    letter-spacing: 1px;
     margin-top: 0;
     font-weight: 300;
     height: 3%;
@@ -36,16 +37,20 @@
 }
 .connect_button>button{
     padding: 7px 25px;
-    background-color: rgb(173, 169, 169);
+    background-color: rgb(9, 10, 41);
     border-radius: 25px;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
 }
 .connect_closebtn{
     position: absolute;
-    top: 20px;
+    top: 12px;
     right: 20px;
 }
 .connect_closebtn{
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     cursor: pointer;
 }
 .connect_form_6{
@@ -63,4 +68,8 @@
 .connect_form_6>form input{
     height: 10px;
     
+}
+
+#outlined-required-label{
+    font-size: 0.8rem;
 }

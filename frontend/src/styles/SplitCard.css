@@ -12,7 +12,7 @@
 }
 .sc_div1{
     height: 70%;
-    background-color: rgb(97, 109, 147);
+    background-color: rgba(64, 34, 107, 0.895);
     width: 20%;
     display: flex;
     justify-content: center;
@@ -49,7 +49,9 @@
 .sc_div2_11{
     width: 100%;
     height: 0;
-    background-color: rgb(195, 207, 245);
+    background-color: rgba(64, 34, 107, 0.895);
+    
+    /* background-color: rgb(195, 207, 245); */
     transition: height 1s ease;
 }
 .sc_div2_11.true{
@@ -65,6 +67,7 @@
     justify-content: space-between;
     padding: 10px;
     z-index: -1;
+    font-size: 0.8rem;
 }
 .sc_div2_1static_2{
     font-size: 5rem;
@@ -82,7 +85,7 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    color: black;
+    color: white;
     transition: all 0.5s ease;
     overflow: hidden;
     opacity: 0;
@@ -91,7 +94,7 @@
 .sc_div2_11_1_1>h1{
     text-transform: uppercase;
     letter-spacing: 0.8px;
-
+    font-size: 0.8rem;
 
 }
 .sc_div2_11_1_2{
@@ -103,18 +106,24 @@
 }
 .sc_div2_11_1_1>p{
     font-weight: 400;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     letter-spacing: 0.5px;
 
 }
 .sc_div1>h1{
     text-transform: uppercase;
+    font-size: 0.7rem;
+    font-weight: 300;
+    letter-spacing: 1.5px;
 
 }
 .sc_div1>button{
-    padding: 7px 25px;
-    background-color: rgb(208, 207, 206);
+    padding: 6px 20px;
+    background-color: rgb(255, 255, 255);
     margin-top: 10px;
     border-radius: 20px;
-    color: rgb(56, 6, 56);
+    color: rgb(9, 10, 41);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
 }

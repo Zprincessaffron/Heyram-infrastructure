@@ -199,10 +199,11 @@
 
 }
 .mainpagediv22_0_1>h1{
-    font-size: calc(15px + 1.5vw );
-    letter-spacing: 1px;
+    font-size: calc(8px + 1vw );
+    letter-spacing: 3px;
     margin-bottom: 4rem;
     font-weight: 300;
+    text-transform: uppercase;
 }
 .turningimg{
     position: absolute;
@@ -228,7 +229,6 @@
     display: flex;
     justify-content: start;
     flex-direction: column;
-    gap: 10px;
     transform: translateY(30px);
     transition: all 0.3s ease-in-out;
     margin-bottom: 5rem;
@@ -241,18 +241,21 @@
 .mainpagediv41>h3{
     font-size: 1rem;
     font-weight: 400;
-    letter-spacing: 1px;
+    letter-spacing: 1.2px;
+    margin-bottom: 50px;
 }
 .mainpagediv41>h2{
-    font-size: 2rem;
+    font-size: calc(8px + 1vw );
+    letter-spacing: 3px;
+    margin-bottom: 0.8rem;
     font-weight: 300;
-    letter-spacing: 1px;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 .mainpagediv41>p{
-    font-size: calc(0.5px + 0.9vw);
+    font-size: calc(0.5px + 0.8vw);
     font-weight: 300;
-    letter-spacing: 0.5px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
     text-transform: capitalize;
 }
 .mainpagediv41>div{
@@ -261,7 +264,9 @@
     justify-content: start;
     align-items: center;
     gap: 5px;
-    margin-top: 1rem;
+    font-size: 1rem;
+    letter-spacing: 1.2px;
+    font-weight: 300;
 }
 .mainpagediv5{
     width: 100%;
@@ -278,17 +283,16 @@
 
 }
 .mainpagediv5_h1{
-    font-size: calc(15px + 1.5vw );
-    letter-spacing: 1px;
+    font-size: calc(10px + 1.2vw );
+    letter-spacing: 3px;
+    margin-bottom: 1rem;
     font-weight: 300;
-
-
-
+    text-transform: uppercase;
 }
 .mainpagediv5_p{
     width: 60%;
-    font-size: calc(0.5px + 0.9vw);
-    font-weight: 300;
+    font-size: 0.7rem;
+    font-weight: 200;
     letter-spacing: 0.5px;
     text-transform: capitalize;
     text-align: center;
@@ -302,9 +306,9 @@
     flex-direction: row;
     gap: 5px;
     font-size: 20px;
-    font-weight:400;
+    font-weight:200;
     margin-top: 20px;
-
+    letter-spacing: 1px;
 }
 .mainpagediv5>div{
     padding: 10rem 0;

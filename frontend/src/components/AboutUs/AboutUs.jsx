@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import AboutUsImg from "/AboutBg.png";
+import AboutUsVid from "/about.mp4"
 import { FaChartLine, FaCode, FaDatabase } from "react-icons/fa";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -8,6 +9,9 @@ import Footer from "../footer/Footer.jsx";
 import { useNavigate } from "react-router-dom";
 import { AppContext } from "../../context/AppContext.jsx";
 import Connect from "../form/Connect.jsx";
+import Navbar from "../navbar/Navbar.jsx";
+import MenuButton from "../navbar/MenuButton.jsx";
+import Menubar from "../menubar/Menubar.jsx";
 
 const AboutUs = () => {
   const [scrollPercent, setScrollPercent] = useState(0);
@@ -268,18 +272,31 @@ const AboutUs = () => {
   };
 
   return (
+    <>
+    <Navbar/>
+    <MenuButton/>
+    <Menubar/>
     <div className="overflow-hidden">
       {/* Background Image Section */}
       <div className="relative w-full h-screen">
         {/* Animate the image */}
-        <motion.img
+        {/* <motion.img
           src={AboutUsImg}
           alt="About Us"
           className="bg-cover bg-no-repeat bg-center w-full h-full"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.5 }}
-        />
+        /> */}
+        <video src={AboutUsVid}
+          // alt="About Us"
+          autoPlay
+          loop
+          muted
+          className="absolute inset-0 w-full h-full object-cover"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.5 }}/>
 
         <div className="bg-[#090a29] inset-0 absolute opacity-20" />
 
@@ -711,6 +728,8 @@ const AboutUs = () => {
         </div>
       </div>
     </div>
+    </>
+    
   );
 };
 

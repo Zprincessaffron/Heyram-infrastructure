@@ -111,11 +111,11 @@ function MainPage() {
    <MenuButton/>
    <Menubar/>
    
-   
+   {/* <TopSection/> */}
+   <MainSection/>
    <div className='mainmain'>
 
-    {/* <TopSection/> */}
-    <MainSection/>
+    
 
     <div className='mainpagediv2'>
 
