@@ -40,9 +40,9 @@ const App = () => {
     <AppProvider>
       <Router>
         <AdminProvider>
-          <Navbar/>
+          {/* <Navbar/>
           <MenuButton/>
-          <Menubar/>
+          <Menubar/> */}
           <Routes>
             {/* <Route path="/" element={<Login />} />
              */}
