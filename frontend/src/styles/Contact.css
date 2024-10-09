@@ -1,12 +1,15 @@
 .contact_main{
     width: 100%;
     height: 100vh;
-    background-image: url('../images/contactback.jpg');
+    background-image: url('../images/contactback1.jpg');
+    background-size: cover;
+    
 }
 .contact_main>div{
     width: 100%;
+    color: white;
     height: 100%;
-    background-color: rgba(241, 252, 254, 0.868);
+    background-color: rgb(42, 15, 74);
     backdrop-filter: blur(5px);
     padding-top: 15vh;  
     
@@ -19,6 +22,7 @@
     letter-spacing: 1px;
 
 }
+
 .contact_main1{
     display: flex;
     flex-direction: column;
@@ -40,12 +44,32 @@
     flex-direction: column;
     
 }
+
+.contact_div1 .MuiInputBase-root::before {
+    border-bottom: 1px solid rgb(214, 214, 225); /* Default border color */
+  }
+  
+  .contact_div1 .MuiInputBase-root:hover:not(.Mui-disabled)::before {
+    border-bottom: 2px solid rgb(174, 108, 191); /* Border color when hovered */
+  }
+  
+  .contact_div1 .MuiInputBase-root.Mui-focused::before {
+    border-bottom: 2px solid rgb(230, 232, 234); /* Border color when focused */
+  }
+  
+  .contact_div1 .MuiInputBase-root::after {
+    border-bottom: 2px solid rgb(174, 108, 191); /* Border color when hovered */
+  }
 .contact_div1 textarea{
     background: none;
     border: 1px solid gray;
     border-radius: 5px;
     font-size: 1rem;
     padding: 10px;
+}
+.contact_div1 input{
+    color: white;
+    font-weight: 300;
 }
 .contact_div1 label{
     font-size: 1rem;
@@ -54,11 +78,13 @@
 .contact_div1 button{
     width: 180px;
     margin: 0 110px;
+    margin-top: 2rem;
     font-size: 1rem;
+    font-weight: 500;
     height: 40px;
-    color: white;
+    color: rgb(0, 0, 0);
     border-radius: 25px;
-    background-color: gray;
+    background-color: rgb(217, 213, 213);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -78,87 +104,107 @@
     letter-spacing: 0.5px;
     text-decoration: underline;
     padding-bottom: 3px;
-    text-underline-offset: 2px;
+    text-underline-offset: 5px;
     text-decoration-thickness: 1px; /* Adjust thickness as needed */
+    text-decoration-color: rgb(159, 119, 162);
 
 }
 .contact_div21>div>p{
     font-size: 0.9rem;
     letter-spacing: 0.5px;
+    font-weight: 300
 
 }
 .contact_div211{
     margin-top: 5px;
 }
 @media only screen and (max-width: 600px) {
-
-
-    .contact_main12{
+    .contact_mainn{
         width: 100%;
-        justify-content: center;
-        display: flex;
-        align-items: center;
-        flex-direction: row;
-        gap: 10rem;
-    }
-    .contact_main12>div{
-        width: fit-content;
-    }
-    .contact_div1,.contact_div11{
-        font-size: 1.5rem;
-        display: flex;
-        flex-direction: column;
+        padding-bottom: 2rem;
+        background-color: rgba(229, 245, 249, 0.73);
+        padding-top: 10vh;
         
     }
-    .contact_div1 textarea{
-        background: none;
-        border: 1px solid gray;
-        border-radius: 5px;
-        font-size: 1rem;
-        padding: 10px;
-    }
-    .contact_div1 label{
-        font-size: 1rem;
-        color: gray;
-    }
-    .contact_div1 button{
-        width: 180px;
-        margin: 0 110px;
-        font-size: 1rem;
-        height: 40px;
-        color: white;
-        border-radius: 25px;
-        background-color: gray;
+    .contact_mainn_1{
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    
-    .contact_div21{
-        display: flex;
-        flex-direction: row;
-        gap: 5px;
-        margin-top: 2rem;
-        justify-content: start;
-        align-items: start;
+
+    .contact_mainn_1>h1{
+        font-size: 13px;
+
     }
-    
+    .contact_mainn_2{
+        padding-left: 3vw;
+
+        
+    }
+    .contact_mainn_2{
+        font-size: 10px;
+
+    }
+    .contact_mainn_2>h1{
+        margin-bottom: 20px;
+    }
+    .contact_mainn_2 label{
+        font-size: 9px;
+        font-weight: 400;
+
+    }
+    .contact_mainn_2 input{
+        font-size: 9px;
+        font-weight: 400;
+        border: none;
+        background-color: transparent;
+        border-radius: 0;
+        border-bottom: 1px solid gray;
+        width: 70%;
+        margin-bottom: 10px;
+        outline: none;
+
+    }
+    .contact_mainn_2 textarea{
+        font-size: 9px;
+        font-weight: 400;
+        border: none;
+        background-color: transparent;
+        border-radius: 0;
+        border: 1px solid gray;
+        border-radius: 5px;
+        width: 70%;
+        margin-bottom: 10px;
+        outline: none;
+        padding: 10px;
+
+
+    }
+    .con_button_div{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+    }
+    .con_button_div>button{
+        background-color: rgb(70, 70, 70);
+        width: fit-content;
+        padding: 5px 20px;
+        border-radius: 20px;
+        color: white;
+    }
+    .contact_div21{
+        font-size: 13px;
+        padding-left: 6vw;
+        margin-top: 10px;
+
+    }
     .contact_div21>div>h1{
-        font-size: 1rem;
-        letter-spacing: 0.5px;
-        text-decoration: underline;
-        padding-bottom: 3px;
-        text-underline-offset: 2px;
-        text-decoration-thickness: 1px; /* Adjust thickness as needed */
-    
+        font-size: 10px;
     }
     .contact_div21>div>p{
-        font-size: 0.9rem;
-        letter-spacing: 0.5px;
-    
+        font-size: 8px;
     }
-    .contact_div211{
-        margin-top: 5px;
+    .contact_mainn_2{
+        gap: 0;
     }
-
 }
