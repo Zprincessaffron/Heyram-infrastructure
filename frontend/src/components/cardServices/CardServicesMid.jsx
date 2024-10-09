@@ -140,7 +140,7 @@ function CardServicesMid() {
 
 
             </div>
-            <div className=' pl-[3rem] pb-[3rem] w-[100%] '>
+            <div className=' lg:pl-[3rem] lg:pb-[3rem] lg:w-[100%] '>
                 <div className='cs_container5' >
                     <div className='cs_container51'>
                         <h1>{data.brandAwareness[0].title}</h1>

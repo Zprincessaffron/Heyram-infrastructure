@@ -40,6 +40,7 @@ function MainSection() {
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
   const [isFadingOut, setIsFadingOut] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+  const [isEnquireHovered, setIsEnquireHovered] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -139,7 +140,7 @@ function MainSection() {
                   onClick={() =>
                     navigate(services[currentServiceIndex].navigate)
                   }
-                  className="lg:px-7 lg:py-2 py-2 px-5 lg:text-[0.7rem] text-[0.6rem] tracking-wider bg-[#e5e5e5] text-[#090a29] rounded-full transition hover:bg-gray-300 flex items-center justify-center font-bold"
+                  className="lg:px-7 lg:py-2 py-2 px-5 lg:text-[0.7rem] text-[0.6rem] tracking-wider bg-[#e5e5e5] text-[#090a29] rounded-full hover:bg-gray-300 flex items-center justify-center font-bold"
                   onMouseEnter={() => setIsHovered(true)}
                   onMouseLeave={() => setIsHovered(false)}
                   style={{ maxWidth: "180px" }}
@@ -166,31 +167,32 @@ function MainSection() {
         </div>
 
         {/* Enquire Now Button at the bottom */}
-<div className="absolute bottom-5 left-0 right-0 flex justify-center z-10">
-  <div className="inline-block w-fit">
-    <motion.button
-      onClick={() => setConnectForm(true)}
-      className="lg:text-[0.7rem] text-[0.65rem] gap-2 tracking-wider text-white rounded-full transition flex items-center justify-center font-light cursor-pointer hover:text-[0.75rem]"
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: 20 }}
-      transition={{ duration: 0.5, delay: 0.6 }}
-      whileHover="hover"
-    >
-      Enquire Now
-      <motion.span
-        className="ml-2 inline-block"
-        initial={{ x: -10, opacity: 0 }} // Arrow hidden by default
-        animate={{ x: 0, opacity: 1 }}  // When hovered
-        whileHover={{ x: 0, opacity: 1 }} // Show when button is hovered
-        transition={{ duration: 0.3 }} // Smooth transition for arrow
-      >
-        <FaArrowRight className="text-white text-xs" />
-      </motion.span>
-    </motion.button>
-  </div>
-</div>
-
+        <div className="absolute bottom-16 lg:bottom-5 left-0 right-0 flex justify-center z-10">
+          <div className="inline-block w-fit">
+          <motion.button
+                  onClick={() => setConnectForm(true)}
+                  className="lg:text-[0.7rem] text-[0.65rem] gap-2 tracking-widest text-white rounded-full flex items-center justify-center font-light cursor-pointer hover:text-[0.75rem]"
+                  onMouseEnter={() => setIsEnquireHovered(true)}
+                  onMouseLeave={() => setIsEnquireHovered(false)}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: 20 }}
+                  transition={{ duration: 0.5, delay: 0.6 }}
+                >
+                  Enquire Now
+                  {isEnquireHovered && (
+                    <motion.div
+                      className=""
+                      initial={{ x: -10, opacity: 0 }}
+                      animate={{ x: 0, opacity: 1 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                    >
+                      <MdArrowForward className="text-white text-xs transition-all duration-300 ease-in-out" />
+                    </motion.div>
+                  )}
+                </motion.button>
+          </div>
+        </div>
       </div>
     </>
   );

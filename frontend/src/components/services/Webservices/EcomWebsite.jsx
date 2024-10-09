@@ -1,7 +1,7 @@
 import React from "react";
 import ServiceTemplate2 from "../ServiceTemplate2";
 import { FaShoppingCart, FaPizzaSlice, FaLaptop, FaHeart, FaPaintBrush, FaCar } from "react-icons/fa"; // Import relevant icons
-import Ecom from "/Ecom.jpg"
+import Ecom from "/Ecom2.png"
 
 const EcomWebsite = () => {
   // Define the data to pass to the template

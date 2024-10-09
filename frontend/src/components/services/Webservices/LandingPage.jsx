@@ -1,7 +1,7 @@
 import React from "react";
 import ServiceTemplate2 from "../ServiceTemplate2"; // Adjust the path if needed
 import { FaBullhorn, FaClipboardList, FaVideo, FaRegEnvelope, FaChartLine } from "react-icons/fa"; // Import relevant icons
-import Land from "/Land.jpg";
+import Land from "/Corp.png";
 
 const LandingPage = () => {
   // Define the data to pass to the template

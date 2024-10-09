@@ -3,7 +3,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 // Helper hook for smooth animations on scroll
-export const useAnimatedInView = (threshold = 0.2) => {
+export const useAnimatedInView = (threshold = 0.4) => {
   const controls = useAnimation();
   const [ref, inView] = useInView({ threshold });
 
@@ -17,6 +17,7 @@ export const useAnimatedInView = (threshold = 0.2) => {
 
   return [ref, controls];
 };
+
 
 // ServiceTemplate component for reusability
 const ServiceTemplate = ({

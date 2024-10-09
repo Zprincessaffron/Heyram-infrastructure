@@ -1,7 +1,7 @@
 import React from "react";
 import ServiceTemplate2 from "../ServiceTemplate2"; // Adjust the path if needed
 import { FaPalette, FaCameraRetro, FaUserTie, FaMusic, FaBuilding } from "react-icons/fa"; // Import relevant icons
-import Port from "/Port.jpg";
+import Port from "/Port2.jpg";
 
 const PortfolioWebsite = () => {
   // Define the data to pass to the template

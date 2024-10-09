@@ -27,11 +27,15 @@ const ServiceTemplate2 = ({
 
   // Animation variants for consistency across different sections
   const fadeInUp = {
-    hidden: { opacity: 0, y: 50 },
+    hidden: {
+      opacity: 0,
+      y: 50,
+      transition: { duration: 0.8, ease: "easeOut" },
+    }, // Smooth exit
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
+      transition: { duration: 0.8, ease: "easeOut" }, // Smooth entry
     },
   };
 
@@ -41,7 +45,7 @@ const ServiceTemplate2 = ({
       <div className="text-white py-4 px-4 lg:px-6">
         {/* Section Title */}
         <motion.h1
-          className="text-[1rem] lg:text-2xl font-light mb-4 tracking-widest uppercase lg:text-start text-center"
+          className="text-[1rem] lg:text-2xl font-light mb-6 tracking-widest uppercase lg:text-start text-center"
           ref={titleRef}
           initial="hidden"
           animate={titleControls}
@@ -52,7 +56,7 @@ const ServiceTemplate2 = ({
 
         {/* Introduction Paragraph */}
         <motion.p
-          className="text-[0.65rem] lg:text-xs mb-4 text-gray-300 tracking-wider lg:text-start text-center"
+          className="text-[0.65rem] lg:text-xs mb-8 text-gray-300 tracking-wider lg:text-start text-center"
           ref={introRef}
           initial="hidden"
           animate={introControls}
@@ -62,9 +66,9 @@ const ServiceTemplate2 = ({
         </motion.p>
 
         {/* Industries We Serve */}
-        <div className="mt-6">
+        <div className="mt-[60px]">
           <motion.h2
-            className="text-[1rem] lg:text-2xl font-light tracking-widest mb-8 text-white "
+            className="text-[1rem] lg:text-2xl font-light tracking-widest mb-8 text-white uppercase"
             ref={industriesRef}
             initial="hidden"
             animate={industriesControls}
@@ -72,7 +76,7 @@ const ServiceTemplate2 = ({
           >
             Industries We Serve :
           </motion.h2>
-          <div className="flex flex-wrap items-center justify-center gap-4">
+          <div className="flex flex-wrap items-center justify-center gap-4 my-[60px]">
             {industriesItems.map((industry, index) => (
               <motion.div
                 key={index}
@@ -80,11 +84,11 @@ const ServiceTemplate2 = ({
                 initial="hidden"
                 animate={industriesControls}
                 variants={{
-                  hidden: { opacity: 0, y: 20 },
+                  hidden: { opacity: 0, y: 20, transition: { duration: 0.5, ease: "easeOut" } },
                   visible: {
                     opacity: 1,
                     y: 0,
-                    transition: { duration: 0.5, delay: index * 0.1 },
+                    transition: { duration: 0.5, delay: index * 0.1,  ease: "easeOut"  },
                   },
                 }}
               >
@@ -100,11 +104,11 @@ const ServiceTemplate2 = ({
         </div>
 
         {/* What We Offer Section with Image on the Right */}
-        <div className="mt-8 flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-6 lg:space-y-0 lg:space-x-6 overflow-hidden">
+        <div className="mt-[70px] flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-6 lg:space-y-0 lg:space-x-6 overflow-hidden">
           {/* Left Content */}
           <div className="lg:w-1/2">
             <motion.h2
-              className="text-[1rem] lg:text-2xl font-light tracking-widest mb-6 text-white"
+              className="text-[1rem] lg:text-2xl font-light tracking-widest mb-6 text-white uppercase"
               ref={offerRef}
               initial="hidden"
               animate={offerControls}
@@ -120,7 +124,7 @@ const ServiceTemplate2 = ({
                   initial="hidden"
                   animate={offerControls}
                   variants={{
-                    hidden: { opacity: 0, y: 20 },
+                    hidden: { opacity: 0, y: 20 , transition: { duration: 0.8, ease: "easeOut" } },
                     visible: {
                       opacity: 1,
                       y: 0,
@@ -137,11 +141,20 @@ const ServiceTemplate2 = ({
           {/* Right Image */}
           <motion.div
             className="lg:w-1/2 items-center flex justify-center"
+            ref={offerRef}
             initial="hidden"
             animate={offerControls}
             variants={{
-              hidden: { opacity: 0, x: 50 },
-              visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
+              hidden: {
+                opacity: 0,
+                x: 50,
+                transition: { duration: 0.8, ease: "easeOut" },
+              },
+              visible: {
+                opacity: 1,
+                x: 0,
+                transition: { duration: 0.8, ease: "easeOut" },
+              },
             }}
           >
             <img
@@ -154,7 +167,7 @@ const ServiceTemplate2 = ({
 
         {/* Tagline */}
         <motion.p
-          className="mt-10 text-[0.7rem] lg:text-[0.8rem] text-gray-300 tracking-wider text-center italic"
+          className="mt-[60px] text-[0.7rem] lg:text-[0.8rem] text-gray-300 tracking-wider text-center italic"
           initial="hidden"
           ref={taglineRef}
           animate={taglineControls}
@@ -167,7 +180,7 @@ const ServiceTemplate2 = ({
         {/* Call to Action */}
         <div className="lg:mt-4 flex flex-col items-center justify-center">
           <motion.h2
-            className="text-md lg:pt-[3rem] pt-[1rem] lg:text-xl font-light mb-2 text-white tracking-wider text-center"
+            className="text-sm lg:pt-[3rem] pt-[1rem] lg:text-xl font-light mb-2 text-white tracking-wider text-center uppercase"
             ref={ctaRef}
             initial="hidden"
             animate={ctaControls}
@@ -176,7 +189,7 @@ const ServiceTemplate2 = ({
             {ctaText}
           </motion.h2>
           <motion.p
-            className="text-[0.65rem] lg:text-xs tracking-wider mb-4 text-gray-300"
+            className="text-[0.65rem] lg:text-[0.8rem] tracking-widest mb-[40px] text-gray-300"
             ref={ctaRef}
             initial="hidden"
             animate={ctaControls}

@@ -1,7 +1,7 @@
 import React from 'react';
 import ServiceTemplate3 from '../ServiceTemplate3';
 import { FaTshirt, FaUtensils, FaHeartbeat, FaFilm, FaBookOpen, FaHandsHelping } from 'react-icons/fa';
-import smm from "/Smm.jpg";
+import smm from "/Ppc2.jpg";
 
 const Smm = () => {
   const industriesItems = [

@@ -1,7 +1,7 @@
 import React from 'react';
 import ServiceTemplate3 from '../ServiceTemplate3';
 import { FaShoppingCart, FaPlane, FaMoneyBillWave, FaCar, FaUserMd, FaLaptop } from 'react-icons/fa';
-import ppc from "/Ppc.jpg";
+import ppc from "/Smm.jpg";
 
 const Ppc = () => {
   const industriesItems = [
