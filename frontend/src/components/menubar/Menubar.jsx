@@ -7,12 +7,12 @@ import { useNavigate } from 'react-router-dom'
 import techvideo from '../../images/techvideo.mp4'
 function Menubar() {
     const  navigate =useNavigate()
-    const { showMenu }=useContext(AppContext)
+    const { showMenu, setShowMenu }=useContext(AppContext)
     console.log(showMenu)
 
     function handleRedirect(val){
         navigate(val)
-        window.location.reload()
+        setShowMenu(false)
     }
 
   return (
