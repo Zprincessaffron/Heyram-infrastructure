@@ -17,7 +17,7 @@ import ParticularJobDetail from './ParticularJobDetail';
 import DeletePopUp from './DeletePopUp';
 import { IoMdClose } from "react-icons/io";
 import InternSeekerDetail from './InternSeekerDetail';
-import InternPostForm from './InternPostForm';
+import InternPostForm from './InternPostForm'; 
 import ParticularInternDetail from './ParticularInternDetail';
 import { MdDelete } from "react-icons/md";
 import { AdminContext } from '../../context/AdminContext';
@@ -33,6 +33,7 @@ function Jobs() {
   const [currentJobData,setCurrentJobData]=useState("")
   const [showDeletePop,setShowDeletePop]=useState(false)
   const [currentDeleteId,setCurrentDeleteId]=useState("")
+  const [currentDeleteRole,setCurrentDeleteRole]=useState("")
   const [showDeletePopSeeker,setShowDeletePopSeeker]=useState(false)
   const { setSelectedNav } = useContext(AdminContext)
 
@@ -56,9 +57,11 @@ function getJobDetails(){
 
   }, [ ])
 
-  function handleDeleteJob(id){
-    setCurrentDeleteId(id)
+  function handleDeleteJob(item){
+    setCurrentDeleteId(item._id)
+    setCurrentDeleteRole(item.internshipName)
     setShowDeletePop(true)
+    
 
   }
 
@@ -78,7 +81,7 @@ function getJobDetails(){
 
   const StyledTableCell = styled(TableCell)(({ theme }) => ({
     [`&.${tableCellClasses.head}`]: {
-      backgroundColor: '#3e4395',
+      backgroundColor: '#365c85',
       color: theme.palette.common.white,
     
     },
@@ -151,6 +154,27 @@ function getJobDetails(){
        
     }
   }
+
+  function handleDeleteJobAndApplicant(){
+   
+
+    try {
+      axios.delete(`/internseeker/delete/${currentDeleteRole}`).then(res=>{
+       setShowDeletePop(false)
+       getJobDetails()
+       handleJobDelete()
+
+
+      })
+      
+    } catch (error) {
+      
+    }
+    
+
+  }
+
+
   return (
      <div className='ad_job_main'>
        <div className='ad_job_div1'>
@@ -188,7 +212,8 @@ function getJobDetails(){
         {item.internshipName}
       </StyledTableCell>
       <StyledTableCell align="left">{item.duration}</StyledTableCell>
-      <StyledTableCell align="right" onClick={()=>handleDeleteJob(item._id)}><p style={{display:"flex",justifyContent:"end",paddingRight:"20px",cursor:"pointer"}}><MdDelete/></p></StyledTableCell>
+      <StyledTableCell align="right" onClick={()=>handleDeleteJob(item)}><p style={{display:"flex",justifyContent:"end",paddingRight:"20px",cursor:"pointer"}}><MdDelete/></p></StyledTableCell>
+
     </StyledTableRow>
   ))}
 </TableBody>
@@ -248,7 +273,9 @@ Next
               
             <button onClick={()=>{setShowDeletePop(false)}} style={{backgroundColor:"rgba(31, 30, 30, 0.868)"}} >Cancel</button>
               <button onClick={handleJobDelete} style={{backgroundColor:"#af2a05"}}
-              >Delete</button>
+              >Delete job</button>
+              <button onClick={handleDeleteJobAndApplicant} style={{backgroundColor:"#af2a05"}}
+             >Delete Apllicants</button>
             </div>
 
           </div>

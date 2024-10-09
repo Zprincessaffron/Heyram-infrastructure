@@ -43,15 +43,12 @@ const InternSeekerDetail = ({ seekerData,setShowDetail,setShowMain,loadJobSeeker
           <p><strong>Email:</strong> {seekerData.email}</p>
           <p><strong>Phone:</strong> {seekerData.phone}</p>
           <p><strong>Gender:</strong> {seekerData.gender}</p>
-          <p><strong>Current Organization:</strong> {seekerData.currentOrganization}</p>
+          <p><strong>College:</strong> {seekerData.college}</p>
           <p><strong>Education Level:</strong> {seekerData.educationLevel}</p>
           <p><strong>Degree:</strong> {seekerData.degree}</p>
           <p><strong>Stream:</strong> {seekerData.stream}</p>
-          <p><strong>Year Passed:</strong> {seekerData.yearPassed}</p>
-          <p><strong>Total Experience:</strong> {seekerData.totalExperience} years</p>
-          <p><strong>Expected CTC:</strong> {seekerData.expectedCTC}</p>
-          <p><strong>Notice Period:</strong> {seekerData.noticePeriod}</p>
-          <p><strong>Immediate Availability:</strong> {seekerData.immediateAvailable ? 'Yes' : 'No'}</p>
+          <p><strong>Year Passed:</strong> {seekerData.yearPassing}</p>
+          <p><strong>Total CGp:</strong> {seekerData.cgp}</p>
           <p><strong>Resume:</strong> <a href={seekerData.resume} target="_blank" rel="noopener noreferrer">View Resume</a></p>
           <p><strong>Links:</strong> 
             <ul>

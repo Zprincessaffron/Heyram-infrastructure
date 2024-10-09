@@ -37,7 +37,7 @@ function JobDetail() {
     setTimeout(() => {
       setShowPop(false)
     }, 4000);
-  }
+  } 
 
   const onSubmit = async (data) => {
     const applicationData = {
@@ -187,7 +187,7 @@ function JobDetail() {
               <TextField required id="outlined-required" label="Experience in Years" variant="outlined" className={`errormsg ${errors.totalExperience ? 'error' : ''}`}   {...register('totalExperience', { required: 'totalExperience is required' })} />
               <TextField required id="outlined-required" label="Current Organization" variant="outlined" className={`errormsg ${errors.currentOrganization ? 'error' : ''}`}   {...register('currentOrganization', { required: 'currentOrganization is required' })} />
               <TextField required id="outlined-required" label="Notice Period" variant="outlined" className={`errormsg ${errors.noticePeriod ? 'error' : ''}`}   {...register('noticePeriod', { required: 'noticePeriod is required' })} />
-              <p>( yes / no )</p>
+              <p className='jd_div11_p_yes'>( yes / no )</p>
 
               <TextField required id="outlined-required" label="immediate available" variant="outlined" className={`errormsg ${errors.immediateAvailable ? 'error' : ''}`}   {...register('immediateAvailable', { required: 'immediateAvailable is required' })} />
 

@@ -165,6 +165,8 @@
   }
   .jodmodeldesc p{
     font-weight: 300;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
   }
   
   .jodmodeldesc{
@@ -271,4 +273,156 @@
     text-underline-offset: 7px;
     transition: all 0.3s ease-in-out;
     text-decoration-color: rgb(128, 46, 215);
+  }
+  @media only screen and (max-width: 576px) {
+
+
+  .career_div2{
+  }
+  .career_div21{
+      padding: 4rem 0;
+   
+  }
+  
+  .career_div21_1{
+      font-size: 10px;
+  }
+  .career_div21_2{
+      font-size: 13px;
+  }
+  .career_div21_3{
+      font-size: 8px;
+      width: 50%;
+  
+  }
+  .career_div22{
+      padding-top: 2rem;
+      padding-bottom: 5rem;
+  
+  
+  }
+  .career_div22_1{
+      width: 90%;
+      height: fit-content;
+      padding-bottom: 10px;
+  }
+
+
+  .career_div22_21{
+      margin-top: 5px;
+      padding-left: 10px;
+  }
+  .career_div22_21{
+      font-size: 11px;
+  }
+  .career_div22_21>ul{
+      font-size: 9px;
+  }
+  .career_div22_21>p{
+    font-size: 9px;
+  }
+
+  
+  /* styles.css */
+  .careerdetail_1 {
+      
+      right: auto;
+      bottom: auto;
+      background: #2e2d2d;
+      padding: 20px;
+      border-radius: 8px;
+      width: 95%;
+      height: 98vh;
+    }
+    
+    .jodmodeldesc p{
+      font-weight: 300;
+      font-size: 8px;
+      margin-bottom: 7px;
+
+    }
+    
+    .jodmodeldesc{
+      padding: 3% 10%;
+      font-size: 10px;
+    }
+    .jodmodeldesc>h2{
+      font-size: 13px;
+      margin-top: 2rem;
+    }
+    .jodmodeldesc>h3{
+      text-align: center;
+      font-size: 9px;
+      letter-spacing: 1px;
+      font-weight: 300;
+  
+    }
+    .jodmodeldesc>h4{
+      font-size: 10px;
+      margin-top: 5px;
+  
+    }
+    .jodmodeldesc h1{
+      font-size: 10px;
+      margin-top: 20px;
+    }
+    .jodmodeldesc>h5{
+      text-align: left;
+      font-size: 10px;
+      letter-spacing: 1px;
+      margin-top: 10px;
+      
+      text-transform: uppercase;
+    }
+    .jodmodeldesc p{
+      font-size: 8px;
+    }
+  
+    .jodmodeldesc1{
+      padding: 1rem 0;
+    }
+
+    .jodmodeldesc2{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 5rem;
+    }
+    .jodmodeldesc2>button{
+      height: 30px;
+      width: 100px;
+  
+    }
+    .closemodel{
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: rgb(255, 255, 255);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    .closemodel:hover{
+      scale: 110%;
+      color: rgb(255, 255, 255);
+  
+    }
+    .career_div21_4{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 4rem;
+      color: gray;
+    }
+    .career_div21_4_h1{
+      cursor: pointer;
+    }
+    .career_div21_4_h1.true{
+      color: white;
+      text-decoration: underline;
+      text-underline-offset: 7px;
+      transition: all 0.3s ease-in-out;
+      text-decoration-color: rgb(128, 46, 215);
+    }
+  
+  
   }

@@ -111,7 +111,7 @@
         font-size: 1.1rem;
         cursor: pointer;
     }
-    .MuiInputBase-root{
+    .connect_form .MuiInputBase-root{
         width: 58%;
     }
     .errormsg {

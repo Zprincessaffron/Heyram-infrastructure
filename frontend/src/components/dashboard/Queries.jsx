@@ -61,9 +61,9 @@ function Queries() {
   }
   return (
     <div className='clients_main'>
-      <div className='clients_div1'>
+      <div className='clients_div1' >
         <h1>QUERIES</h1>
-        <p>Welcome to you Queries portal</p>
+        <p style={{color:'#7b83d1d3'}}>Welcome to you Queries portal</p>
       </div>
       <div className='clients_div2'>
       <div className="client-table">

@@ -24,7 +24,7 @@
     letter-spacing: 1px;
 }
 .ad_job_div11>p{
-    color: #52bba4;
+    color: #7b83d1d3;
 }
 .ad_job_div12{
     color: white;
@@ -44,7 +44,7 @@
     margin-top: 5rem;
 }
 .job_table_bottom{
-    background-color: #676994;
+    background-color: #f4f4ff;
     height: 50px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -100,7 +100,8 @@
 }
 
 .jobseekerlisthead{
-    background-color: #5156b5;
+    /* background-color: #5156b5; */
+    background-color: #365c85;
     color: white;
     margin-bottom: 5px;
     height: 50px; 

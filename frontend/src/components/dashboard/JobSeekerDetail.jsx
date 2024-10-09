@@ -53,7 +53,7 @@ const JobSeekerDetail = ({ seekerData,setShowDetail,setShowMain,loadJobSeekerDet
           <p><strong>Score:</strong> {seekerData.score}</p>
           <p><strong>Notice Period:</strong> {seekerData.noticePeriod}</p>
           <p><strong>Immediate Availability:</strong> {seekerData.immediateAvailable ? 'Yes' : 'No'}</p>
-          <p><strong>Resume:</strong> <a href={seekerData.resume} target="_blank" rel="noopener noreferrer">View Resume</a></p>
+          <p><strong>Resume:</strong> <a  onClick={() => window.open(seekerData.resume, "_blank")} >View Resume</a></p>
           <p><strong>Links:</strong> 
             <ul>
               <li><a href={seekerData.link1} target="_blank" rel="noopener noreferrer">Link 1</a></li>

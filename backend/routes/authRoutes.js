@@ -2,7 +2,7 @@ import express from 'express';
 import { sendOtp, verifyOtp, resendOtp } from '../controllers/authController.js';
 import { createClient, getClients, deleteClient,updateClientNotification } from '../controllers/clientController.js';
 import { getJobs, deleteJobs, createJobs } from '../controllers/jobController.js';
-import { postForm, getFormData, deleteJobsSeekerData,updateJobSeeker } from '../controllers/jobSeekerController.js';
+import { postForm, getFormData, deleteJobsSeekerData,updateJobSeeker,DeleteParticularJobSeeker } from '../controllers/jobSeekerController.js';
 import { createContact, getContacts, deleteContact,updatequeryNotification } from '../controllers/contactController.js';
 
 import {
@@ -14,7 +14,8 @@ import {
   createInternshipSeeker,
   getAllInternshipSeekers,
   deleteInternshipSeeker,
-  updateInternSeeker
+  updateInternSeeker,
+  DeleteParticularInternSeeker
 } from '../controllers/internshipSeekerController.js';
 
 
@@ -49,6 +50,7 @@ router.post('/js', postForm);
 router.get('/js', getFormData);
 router.delete('/js/:id', deleteJobsSeekerData);
 router.put('/js/:id', updateJobSeeker)
+router.delete('/js/delete/:appliedFor', DeleteParticularJobSeeker);
 
 
 
@@ -73,6 +75,9 @@ router.get('/internseeker', getAllInternshipSeekers);
 router.delete('/internseeker/:id', deleteInternshipSeeker);
 
 router.put('/internseeker/:id', updateInternSeeker)
+
+router.delete('/internseeker/delete/:appliedFor', DeleteParticularInternSeeker);
+
 
 
 
