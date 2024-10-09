@@ -30,10 +30,11 @@ import { HiBuildingOffice } from "react-icons/hi2";
 import { SiHomeassistantcommunitystore } from "react-icons/si";
 import Test from './Test'
 import SplitCard from './SplitCard'
+import MobileCards from './MobileCards'
 
 function MainPage() {
   const ref = React.useRef(null);
-  const { connectForm, setConnectForm } = useContext(AppContext)
+  const { connectForm, setConnectForm,isMobile } = useContext(AppContext)
 
   const isInView = useInView(ref, { once: false }); 
     const [scale,setScale]=useState()
@@ -130,32 +131,61 @@ function MainPage() {
              <div className='mainpagediv22_0_1'>
                      <h1>Choose the Perfect Package Tailored for Your Business Growth</h1>
              </div>
-             <div className='mainpagediv22_0_2'  style={{flexDirection:"row",justifyContent:"center"}}  >
-             <div >
-              <SlideInSection  delayy={0.2} durationn={0.4}>
-              <Cards translate="card_div2left"   type="Start-Up Companies" route='/startup-services' images={<SiHomeassistantcommunitystore/>} intro="Empowering new ventures to transform ideas into reality with agile and innovative solutions."
-              intro2="Start-ups require cost-effective and scalable solutions. We provide the support to fuel their growth." />
-             </SlideInSection>
-              </div>
-
-              <div>
-              <SlideInSection delayy={0.4} durationn={0.4}>
-
-              <Cards  translate="card_div2mid"  type="Growing Organizations"  route='/mid-services' images={<HiBuildingOffice/>}   intro="Helping established businesses scale up with technology and strategic solutions."
-              intro2="Mid-size companies need tailored strategies for scaling operations. We offer targeted solutions to achieve this." />
-             </SlideInSection> 
+             {isMobile?(
+              <div className='mainpagediv22_0_2'    >
+              <div >
+               <SlideInSection  delayy={0.2} durationn={0.4}>
+               <MobileCards translate="card_div2left"   type="Start-Up Companies" route='/startup-services' images={<SiHomeassistantcommunitystore/>} intro="Empowering new ventures to transform ideas into reality with agile and innovative solutions."
+               intro2="Start-ups require cost-effective and scalable solutions. We provide the support to fuel their growth." />
+              </SlideInSection>
+               </div>
  
+               <div>
+               <SlideInSection delayy={0.4} durationn={0.4}>
+ 
+               <MobileCards  translate="card_div2mid"  type="Growing Organizations"  route='/mid-services' images={<HiBuildingOffice/>}   intro="Helping established businesses scale up with technology and strategic solutions."
+               intro2="Mid-size companies need tailored strategies for scaling operations. We offer targeted solutions to achieve this." />
+              </SlideInSection> 
+  
+               </div>
+ 
+               <div>
+               <SlideInSection delayy={0.6} durationn={0.4}>
+ 
+               <MobileCards translate="card_div2right" type="Global Organizations"  route='/large-services' images={<PiBuildingApartmentFill/>}   intro="Supporting enterprises to stay ahead with enterprise-grade solutions and services."
+               intro2="Large companies require robust and secure solutions. We deliver enterprise-level services to match their needs." />
+              </SlideInSection>
+ 
+               </div>
               </div>
-
-              <div>
-              <SlideInSection delayy={0.6} durationn={0.4}>
-
-              <Cards translate="card_div2right" type="Global Organizations"  route='/large-services' images={<PiBuildingApartmentFill/>}   intro="Supporting enterprises to stay ahead with enterprise-grade solutions and services."
-              intro2="Large companies require robust and secure solutions. We deliver enterprise-level services to match their needs." />
-             </SlideInSection>
-
+             ):(
+              <div className='mainpagediv22_0_2'    >
+              <div >
+               <SlideInSection  delayy={0.2} durationn={0.4}>
+               <Cards translate="card_div2left"   type="Start-Up Companies" route='/startup-services' images={<SiHomeassistantcommunitystore/>} intro="Empowering new ventures to transform ideas into reality with agile and innovative solutions."
+               intro2="Start-ups require cost-effective and scalable solutions. We provide the support to fuel their growth." />
+              </SlideInSection>
+               </div>
+ 
+               <div>
+               <SlideInSection delayy={0.4} durationn={0.4}>
+ 
+               <Cards  translate="card_div2mid"  type="Growing Organizations"  route='/mid-services' images={<HiBuildingOffice/>}   intro="Helping established businesses scale up with technology and strategic solutions."
+               intro2="Mid-size companies need tailored strategies for scaling operations. We offer targeted solutions to achieve this." />
+              </SlideInSection> 
+  
+               </div>
+ 
+               <div>
+               <SlideInSection delayy={0.6} durationn={0.4}>
+ 
+               <Cards translate="card_div2right" type="Global Organizations"  route='/large-services' images={<PiBuildingApartmentFill/>}   intro="Supporting enterprises to stay ahead with enterprise-grade solutions and services."
+               intro2="Large companies require robust and secure solutions. We deliver enterprise-level services to match their needs." />
+              </SlideInSection>
+ 
+               </div>
               </div>
-             </div>
+             )}
             
 
 
@@ -170,18 +200,39 @@ function MainPage() {
             </SlideInSection>
 
             </div> */}
-            <div className='mainpagediv22_101'>
+            {!isMobile?(
+              <div className='mainpagediv22_101'>
               <SplitCard/>
 
             </div>
+            ):null}
             <div style={{marginBottom:"10rem"}}>
               <ServiceIntro/>
               {/* <Test/> */}
             </div>
             <div>
           
-        <div className='mainpagediv4'  ref={divRef}
->
+        {isMobile?(
+          <div className='mainpagediv4'  ref={divRef}>
+
+          <img  src={career} alt=""  style={{    width: `${80}%`,
+          position: 'static',
+          top: '30%', // Adjust the top position as needed
+          // Center the image horizontally
+           // To perfectly center the image
+         }}  />
+          <div className={`mainpagediv41 ${opacityContent?"true":""}`}>
+            <h3>CAREERS</h3>
+            <h2>Grow your career at the heart of change</h2>
+            <p>It's your time to shine. Bring your ingenuity, curiosity and big ideas.</p>
+            <div style={{cursor:"pointer"}} onClick={()=>{navigate('/careers')}}><span>Join  Us </span><Button/> </div>
+            
+
+          </div>
+          
+          </div>
+        ):(
+          <div className='mainpagediv4'  ref={divRef}>
 
             <img  src={career} alt=""  style={{    width: `${imageWidth}%`,
             position: 'sticky',
@@ -199,6 +250,7 @@ function MainPage() {
             </div>
             
             </div>
+        )}
             
             
             </div>

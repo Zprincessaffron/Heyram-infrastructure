@@ -16,7 +16,7 @@
     padding-top: 5rem;
     padding-bottom: 5rem;
 
-
+ 
 }
 
 .si_div1>div{
@@ -337,4 +337,118 @@
     font-size: calc(0.5px + 0.9vw);
     font-weight: 300;
     letter-spacing: 0.5px;
+}
+
+@media only screen and (max-width: 576px) {
+
+.si_main_quates{
+    text-align: center;
+    font-size: 13px;
+    width: 90%;
+    padding-left: 5%;
+}
+
+.si_div12{
+    background-color: aliceblue;
+    display: none;
+}
+.si_div11_0{
+    margin: 10px 0;
+    font-size: 10px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+}
+.si_div11_01{
+    transform: translateX(-300px);
+    letter-spacing: 1px;
+    font-size: 10px;
+}
+.si_div11_1{
+    font-size: 8px;
+    width: 100%;
+}
+
+.si_div1>div{
+    width: 60%;
+}
+.si_rightkey{
+    height: 100px;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-right: 3%;
+
+}
+.si_btn{
+    font-size: 8px;
+}
+.si_div1{
+    margin: 0;
+    padding: 10px 0;
+}
+
+.sifull_main{
+    width: 100%;
+    flex-direction: row;
+    margin-top: 10px;
+    gap: 2rem;
+    cursor: pointer;
+    padding: 10px 10px;
+    margin-top: 5rem;
+}
+.sifull_div1_1{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.si_circleimg{
+    width: 110px;
+}
+.sifull_div1_2{
+
+       flex-direction: column;
+       text-transform: capitalize;
+       color: rgba(255, 255, 255, 0.74);
+       font-weight: 400;
+       line-height: 10px;
+       transform: translateX(0);
+          color: rgb(81, 28, 102);
+       font-size: 10px;
+   }
+
+   
+.sifull_div2{
+    width: 60%;
+    font-size: 0.7rem;
+    font-weight: 200;
+    letter-spacing: 1.5px;
+}
+.sifull_div2>div>h1{
+    font-weight: 300;
+    font-size: 11px;
+    padding-left: 10px;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+  
+
+
+}
+.sifull_div21{
+    height: 15px;
+    margin-bottom: 10px;
+    white-space: nowrap;       /* Prevents text from wrapping to the next line */
+    overflow: hidden;          /* Hides the overflow text */
+    text-overflow: ellipsis; 
+    border-left: 3px solid rgb(179, 142, 223);
+
+
+}
+.sifull_div21_p{
+    font-size: 8px;
+    letter-spacing: 0.8px;
+    width: 90%;
+}
 }

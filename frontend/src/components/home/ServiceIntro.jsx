@@ -1,17 +1,19 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import "../../styles/ServiceIntro.css";
 import { BsChevronRight } from "react-icons/bs";
 
 import circletext from "../../images/circle-text.png";
 import SlideInSection from "./SlideInSection";
 import { useNavigate } from "react-router-dom";
+import { AppContext } from "../../context/AppContext";
 function ServiceIntro() {
   const [ballRotate, setBallRotate] = useState(0);
   const [ballText, setBallText] = useState("planning & discovery");
+  const {  isMobile }=useContext(AppContext)
   const arr = [
     "planning & discovery",
     "design",
-    "development",
+    "development", 
     "testing & launch",
   ];
   const [currentText, setCurrentText] = useState(""); // State to hold the current text
@@ -351,7 +353,7 @@ function ServiceIntro() {
                     style={{
                       transform: `${
                         currentText == "planning & discovery"
-                          ? "translateX(0px)"
+                          ? isMobile?"translateX(20px)":"translateX(0px)"
                           : ""
                       }`,
                     }}
@@ -371,7 +373,7 @@ function ServiceIntro() {
               <div className="sifull_div21">
                 <h1 className={`currenttext`}>{currentText}</h1>
               </div>
-              <div className="si_full_div21_2">
+              <div className="sifull_div21_p">
                 {currentText == "planning & discovery" && (
                   <>
                     This is the foundational phase where we gather all the
@@ -430,18 +432,18 @@ function ServiceIntro() {
               <div className="sifull_div1_1">
                 <div className={`sifull_div1_2 ${stop ? "true" : ""}`}>
                   {currentText == "planning & discovery" && (
-                    <h1 style={{ transform: "translateX(0px)" }}>
-                      research & strategy{" "}
+                    <h1 style={{ transform: `${isMobile?'translateX(20px)':"translateX(0px)"}` }}>
+                      research & strategy
                     </h1>
                   )}
                   {currentText == "design" && <h1>planning </h1>}
                   {currentText == "development" && (
-                    <h1 style={{ transform: "translateX(0px)" }}>
+                    <h1 style={{ transform: `${isMobile?'translateX(20px)':"translateX(0px)"}` }}>
                       execution & campaign{" "}
                     </h1>
                   )}
                   {currentText == "testing & launch" && (
-                    <h1 style={{ transform: "translateX(40px)" }}>
+                    <h1 style={{ transform: `${isMobile?'translateX(20px)':"translateX(40px)"}` }}>
                       analysis & optimization{" "}
                     </h1>
                   )}
@@ -467,7 +469,7 @@ function ServiceIntro() {
                   )}
                 </h1>
               </div>
-              <div>
+              <div className="sifull_div21_p">
                 {currentText == "planning & discovery" && (
                   <>
                     {" "}
@@ -555,7 +557,7 @@ function ServiceIntro() {
                   {currentText == "testing & launch" && <>deployment</>}
                 </h1>
               </div>
-              <div>
+              <div className="sifull_div21_p">
                 {currentText == "planning & discovery" && (
                   <>
                     This phase involves identifying the specific business
