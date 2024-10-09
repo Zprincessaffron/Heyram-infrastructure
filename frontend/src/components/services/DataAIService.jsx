@@ -91,7 +91,7 @@ const DataAIService = () => {
 
         {/* Title on the left side */}
         <motion.h1
-          className="absolute lg:top-1/2 lg:left-10 bottom-5 left-5 transform -translate-y-1/2 lg:text-5xl text-2xl font-light text-white uppercase tracking-widest max-w-3xl"
+          className="absolute lg:top-1/2 lg:left-10 bottom-10 left-5 transform -translate-y-1/2 lg:text-4xl text-xl font-light text-white uppercase tracking-widest max-w-3xl"
           variants={titleVariants}
           initial="hidden"
           animate="visible"
@@ -106,14 +106,14 @@ const DataAIService = () => {
           initial="hidden"
           animate="visible"
         >
-          <ul className="pl-5 text-white lg:space-y-4 space-y-6 cursor-pointer text-sm">
+          <ul className="pl-5 text-white lg:space-y-4 space-y-6 cursor-pointer lg:text-xs text-[0.65rem]">
             {[
               "Gen-Z AI",
               "Data Analysis"
             ].map((item, index) => (
               <motion.li
       key={index}
-      className="flex items-center tracking-wider text-[0.75rem] border-l pl-2 relative group" // Added 'group' for hover targeting
+      className="flex items-center tracking-wider text-[0.65rem] border-l pl-2 relative group" // Added 'group' for hover targeting
       variants={itemVariants}
       whileHover={{ scale: 1.05 }}
       onClick={() => handleServiceClick(item)}

@@ -130,7 +130,7 @@ const DigitalMarketing = () => {
 
         {/* Title on the left side */}
         <motion.h1
-          className="absolute lg:top-1/2 lg:left-10 bottom-5 left-5 transform -translate-y-1/2 lg:text-5xl text-2xl font-light text-white uppercase tracking-widest max-w-3xl"
+          className="absolute lg:top-1/2 lg:left-10 bottom-10 left-5 transform -translate-y-1/2 lg:text-4xl text-xl font-light text-white uppercase tracking-widest max-w-3xl"
           variants={titleVariants}
           initial="hidden"
           animate="visible"
@@ -140,12 +140,12 @@ const DigitalMarketing = () => {
 
         {/* List on the right side */}
         <motion.div
-          className="absolute top-1/2 right-5 transform -translate-y-1/2 mt-6"
+          className="absolute lg:top-[55%] top-1/2 right-0 transform -translate-y-1/2 mt-6"
           variants={listVariants}
           initial="hidden"
           animate="visible"
         >
-          <ul className="pl-5 text-white lg:space-y-4 space-y-6 cursor-pointer text-sm">
+          <ul className="pl-5 text-white lg:space-y-4 space-y-6 cursor-pointer lg:text-xs text-[0.65rem]">
             {[
               "Search Engine Optimization (SEO)",
               "Pay-Per-Click (PPC) Advertising",
