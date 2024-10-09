@@ -1,7 +1,7 @@
 import React from 'react';
 import ServiceTemplate3 from '../ServiceTemplate3';
 import { FaClipboardList, FaEnvelopeOpen, FaFileAlt, FaBullhorn, FaCogs } from 'react-icons/fa';
-import Lg from "/Lg.jpg";
+import Lg from "/Lg2.jpg";
 
 const LeadGeneration = () => {
   const industriesItems = [

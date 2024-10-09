@@ -1,7 +1,7 @@
 import React from 'react';
 import ServiceTemplate3 from '../ServiceTemplate3';
 import { FaShoppingCart, FaHeartbeat, FaChartLine, FaIndustry, FaGraduationCap, FaPhoneAlt } from 'react-icons/fa';
-import Da from "/Da.jpg";
+import Da from "/Da2.jpg";
 
 const DataAnalysis = () => {
   const industriesItems = [

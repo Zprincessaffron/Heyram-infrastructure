@@ -32,7 +32,8 @@
     "react-spinners": "^0.14.1",
     "react-spring": "^9.7.4",
     "react-toastify": "^10.0.5",
-    "swiper": "^11.1.14"
+    "swiper": "^11.1.14",
+    "tailwind-scrollbar": "^3.1.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",

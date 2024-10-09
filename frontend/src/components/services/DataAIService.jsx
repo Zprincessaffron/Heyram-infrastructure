@@ -13,6 +13,7 @@ import DataAnalysis from "./AI/DataAnalysis";
 import { useParams } from "react-router-dom";
 import { GiBottomRight3dArrow } from "react-icons/gi";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { IoIosArrowForward } from "react-icons/io";
 
 const DataAIService = () => {
   const { service } = useParams();
@@ -101,7 +102,7 @@ const DataAIService = () => {
 
         {/* List on the right side */}
         <motion.div
-          className="absolute lg:top-[90%] top-1/2 right-5 transform -translate-y-1/2"
+          className="absolute lg:top-[80%] top-[65%] right-5 transform -translate-y-1/2"
           variants={listVariants}
           initial="hidden"
           animate="visible"
@@ -120,7 +121,7 @@ const DataAIService = () => {
     >
       {/* Arrow icon, initially hidden, will appear when the item text is hovered */}
       <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 mr-1">
-        <FaArrowRightLong size={10} />
+        <IoIosArrowForward size={10} />
       </span>
 
       <motion.span

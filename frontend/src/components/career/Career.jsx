@@ -151,7 +151,7 @@ function Career() {
 
       {modalIsOpen ? (
        <>
-       {currentPage == "jobs" &&(
+       {currentPage == "job" &&(
          <div className='careerdetail'>
          <div className='careerdetail_1'>
            {selectedJob && (

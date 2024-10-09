@@ -1,7 +1,7 @@
 import React from 'react';
 import ServiceTemplate3 from '../ServiceTemplate3';
 import { FaShoppingCart, FaDollarSign, FaHome, FaBookOpen, FaHeart, FaCog } from 'react-icons/fa';
-import cro from "/Cro.png";
+import cro from "/Lg.jpg";
 
 const Cro = () => {
   const industriesItems = [

@@ -19,9 +19,9 @@ const AboutUs = () => {
   const { setConnectForm } = useContext(AppContext);
   const navigate = useNavigate();
 
-  useEffect(()=>{
-    window.scrollTo(0, 0);
-  },[])
+  // useEffect(()=>{
+  //   window.scrollTo(0, 0);
+  // },[])
 
   // Function to handle scroll progress
   const handleScroll = () => {
@@ -280,15 +280,15 @@ const AboutUs = () => {
       {/* Background Image Section */}
       <div className="relative w-full h-screen">
         {/* Animate the image */}
-        {/* <motion.img
+        <motion.img
           src={AboutUsImg}
           alt="About Us"
           className="bg-cover bg-no-repeat bg-center w-full h-full"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.5 }}
-        /> */}
-        <video src={AboutUsVid}
+        />
+        {/* <video src={AboutUsVid}
           // alt="About Us"
           autoPlay
           loop
@@ -296,7 +296,7 @@ const AboutUs = () => {
           className="absolute inset-0 w-full h-full object-cover"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1.5 }}/>
+          transition={{ duration: 1.5 }}/> */}
 
         <div className="bg-[#090a29] inset-0 absolute opacity-20" />
 
@@ -318,7 +318,7 @@ const AboutUs = () => {
             </motion.h2>
 
             <motion.p
-              className="text-[0.75rem] md:text-sm tracking-wider font-light"
+              className="text-[0.6rem] md:text-[0.7rem] tracking-wider font-light"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.9 }}
@@ -341,7 +341,7 @@ const AboutUs = () => {
       >
         {/* Animated Heading */}
         <motion.h3
-          className="inline-block text-lg md:text-xl font-normal text-white mb-6 border-t-2 border-b-2 border-purple-600 tracking-widest lg:py-4 py-2"
+          className="inline-block text-lg md:text-xl font-normal text-white mb-6 border-b border-purple-600 tracking-widest lg:py-2 py-1"
           variants={textVariants}
         >
           Who We Are?
@@ -349,7 +349,7 @@ const AboutUs = () => {
 
         {/* Animated Text */}
         <motion.div className="max-w-xl mx-auto" variants={textVariants}>
-          <h5 className="text-sm md:text-[0.9rem] font-light text-gray-200 mb-4 tracking-wider">
+          <h5 className="text-[0.6rem] md:text-[0.75rem] font-light text-gray-200 mb-4 tracking-wider">
             Heyram Infrastructure is a forward-thinking Private Limited Company
             based in Chennai, Tamil Nadu. We’ve been at the forefront of
             innovation, seamlessly integrating three distinct pillars:
@@ -371,18 +371,18 @@ const AboutUs = () => {
           {/* Service Cards Arrangement */}
           <div className="flex flex-col items-center relative">
             {/* Digital Marketing Services (Left) */}
-            <motion.div
-              className="flex justify-start w-full mb-10 relative"
+            <div
+              className="flex justify-start w-full mb-10 relative">
+              <div className="md:absolute left-1/2 transform -translate-x-1/2 translate-y-6 hidden md:block">
+                <FaChartLine className="text-purple-600 text-3xl bg-white rounded-full p-2" />
+              </div>
+              <motion.div className="text-white rounded-lg p-6 text-center w-full md:w-1/3 ml-auto hover:scale-105 border lg:border-none"
               ref={refMarketing}
               initial="hidden"
               animate={controlsMarketing}
               variants={rightVariants}
-            >
-              <div className="md:absolute left-1/2 transform -translate-x-1/2 translate-y-6 hidden md:block">
-                <FaChartLine className="text-purple-600 text-3xl bg-white rounded-full p-2" />
-              </div>
-              <div className="text-white rounded-lg p-6 text-center w-full md:w-1/3 ml-auto transition-transform transform hover:scale-105 border lg:border-none">
-                <h4 className="text-md font-normal mb-4 border-b-2 border-purple-600 inline-block tracking-wider">
+              >
+                <h4 className="text-md font-normal mb-4 border-b border-purple-600 inline-block tracking-wider">
                   Digital Marketing Services
                 </h4>
                 <p className="text-white text-[0.75rem] font-light tracking-wide">
@@ -393,22 +393,22 @@ const AboutUs = () => {
                   Marketing and Email Marketing to build trust, boost sales, and
                   maintain a positive online presence.
                 </p>
-              </div>
-            </motion.div>
+              </motion.div>
+            </div>
 
             {/* Web Development (Right) */}
-            <motion.div
-              className="flex justify-end w-full mb-10 relative"
+            <div
+              className="flex justify-end w-full mb-10 relative">
+              <div className="absolute left-1/2 transform -translate-x-1/2 translate-y-6 hidden md:block">
+                <FaCode className="text-purple-600 text-3xl bg-white rounded-full p-2" />
+              </div>
+              <motion.div className="text-white rounded-lg p-6 text-center w-full md:w-1/3 mr-auto hover:scale-105 border lg:border-none"
               ref={refDevelopment}
               initial="hidden"
               animate={controlsDevelopment}
               variants={leftVariants}
-            >
-              <div className="absolute left-1/2 transform -translate-x-1/2 translate-y-6 hidden md:block">
-                <FaCode className="text-purple-600 text-3xl bg-white rounded-full p-2" />
-              </div>
-              <div className="text-white rounded-lg p-6 text-center w-full md:w-1/3 mr-auto transition-transform transform hover:scale-105 border lg:border-none">
-                <h4 className="text-md font-normal mb-4 border-b-2 border-purple-600 inline-block tracking-wider">
+              >
+                <h4 className="text-md font-normal mb-4 border-b border-purple-600 inline-block tracking-wider">
                   Web Development
                 </h4>
                 <p className="text-white text-[0.75rem] font-light tracking-wide">
@@ -421,23 +421,23 @@ const AboutUs = () => {
                   solutions, and custom web applications tailored to meet your
                   business needs and support your business goals.
                 </p>
-              </div>
-            </motion.div>
+              </motion.div>
+            </div>
 
             {/* Data Analysis & AI (Left) */}
-            <motion.div
-              className="flex justify-start w-full mb-10 relative"
-              ref={refDataAI}
-              initial="hidden"
-              animate={controlsDataAI}
-              variants={rightVariants}
-            >
+            <div
+              className="flex justify-start w-full mb-10 relative">
               <div className="absolute left-1/2 transform -translate-x-1/2 translate-y-6 hidden md:block">
                 <FaDatabase className="text-purple-600 text-3xl bg-white rounded-full p-2" />
               </div>
 
-              <div className="text-white rounded-lg p-6 text-center w-full md:w-1/3 ml-auto transition-transform transform hover:scale-105 border lg:border-none">
-                <h4 className="text-md font-normal mb-4 border-b-2 border-purple-600 inline-block tracking-wider">
+              <motion.div className="text-white rounded-lg p-6 text-center w-full md:w-1/3 ml-auto hover:scale-105 border lg:border-none"
+              ref={refDataAI}
+              initial="hidden"
+              animate={controlsDataAI}
+              variants={rightVariants}
+              >
+                <h4 className="text-md font-normal mb-4 border-b border-purple-600 inline-block tracking-wider">
                   Data Analysis & AI
                 </h4>
                 <p className="text-white text-[0.75rem] font-light tracking-wide">
@@ -448,8 +448,8 @@ const AboutUs = () => {
                   focus on simplicity and effectiveness, we provide the tools to
                   optimize your business operations and stay competitive.
                 </p>
-              </div>
-            </motion.div>
+              </motion.div>
+            </div>
           </div>
         </div>
       </div>
@@ -457,7 +457,7 @@ const AboutUs = () => {
       {/* Why choose Us */}
       <div className="text-center my-14">
         <motion.h3
-          className="inline-block text-lg md:text-xl font-normal text-white mb-6 border-t-2 border-b-2 border-purple-600 tracking-widest lg:py-4 py-2"
+          className="inline-block text-lg md:text-xl font-normal text-white mb-6 border-b border-purple-600 tracking-widest lg:py-2 py-1"
           ref={refContainer}
           initial="hidden"
           animate={controlsContainer}
@@ -472,20 +472,23 @@ const AboutUs = () => {
           animate={controlsContainer}
           variants={containerVariants}
         >
-          <motion.h5 className="text-sm md:text-[0.9rem] font-light text-gray-200 mb-4 tracking-wider">
-            <motion.ul className="space-y-2">
+          <motion.h5 className="text-[0.6rem] md:text-[0.75rem] font-light text-gray-200 mb-4 tracking-wider">
+            <motion.ul className="space-y-3">
               <motion.li variants={itemVariants}>
                 Holistic Approach: We don’t just build websites; we build
                 experiences.
               </motion.li>
+              <br />
               <motion.li variants={itemVariants}>
                 Code Craftsmanship: Our developers write symphonies in
                 JavaScript.
               </motion.li>
+              <br />
               <motion.li variants={itemVariants}>
                 Data-Driven Marketing: Metrics matter, and we turn data into
                 actionable insights.
               </motion.li>
+              <br />
               <motion.li variants={itemVariants}>
                 Client-Centric: Your success is our obsession. Let’s create
                 magic together!
@@ -503,7 +506,7 @@ const AboutUs = () => {
           <div className="px-4 sm:px-8 lg:px-16">
             <div className="mb-[100px]">
               <motion.h3
-                className="inline-block text-lg sm:text-xl font-light uppercase text-white mb-4 border-b-2 border-purple-600 tracking-widest py-2"
+                className="inline-block text-lg sm:text-xl font-light uppercase text-white mb-4 border-b border-purple-600 tracking-widest py-2"
                 ref={refMission}
                 initial="hidden"
                 animate={controlsMission}
@@ -519,7 +522,7 @@ const AboutUs = () => {
                 variants={containerMission}
               >
                 <motion.h5
-                  className="text-sm md:text-[0.9rem] tracking-widest text-white mb-2"
+                  className="text-[0.6rem] md:text-[0.75rem] tracking-widest text-white mb-2"
                   variants={missionVariants}
                 >
                   We think that every person has the potential to achieve great
@@ -532,7 +535,7 @@ const AboutUs = () => {
 
             <div className="mb-[100px]">
               <motion.h3
-                className="inline-block text-lg sm:text-xl font-light uppercase text-white mb-4 border-b-2 border-purple-600 tracking-widest py-2"
+                className="inline-block text-lg sm:text-xl font-light uppercase text-white mb-4 border-b border-purple-600 tracking-widest py-2"
                 ref={refVision}
                 initial="hidden"
                 animate={controlsVision}
@@ -548,7 +551,7 @@ const AboutUs = () => {
                 variants={containerVision}
               >
                 <motion.h5
-                  className="text-sm md:text-[0.9rem] tracking-widest text-white mb-2"
+                  className="text-[0.6rem] md:text-[0.75rem] tracking-widest text-white mb-2"
                   variants={visionVariants}
                 >
                   We think that every person has the potential to achieve great
@@ -561,7 +564,7 @@ const AboutUs = () => {
 
             <div className="mb-[100px]">
               <motion.h3
-                className="inline-block text-lg sm:text-xl font-light uppercase text-white mb-4 border-b-2 border-purple-600 tracking-widest py-2"
+                className="inline-block text-lg sm:text-xl font-light uppercase text-white mb-4 border-b border-purple-600 tracking-widest py-2"
                 ref={refPledge}
                 initial="hidden"
                 animate={controlsPledge}
@@ -577,7 +580,7 @@ const AboutUs = () => {
                 variants={containerPledge}
               >
                 <motion.h5
-                  className="text-sm md:text-[0.9rem]  tracking-widest text-white mb-2"
+                  className="text-[0.6rem] md:text-[0.75rem]  tracking-widest text-white mb-2"
                   variants={pledgeVariants}
                 >
                   We think that every person has the potential to achieve great
@@ -603,11 +606,11 @@ const AboutUs = () => {
             >
               {/* Left side text */}
               <motion.div className="w-full md:w-1/2">
-                <h3 className="text-md sm:text-xl font-light text-white uppercase mb-4 sm:mb-6 border-b-2 border-purple-600 tracking-widest py-2 sm:py-4">
+                <h3 className="text-md sm:text-xl font-light text-white uppercase mb-4 sm:mb-6 border-b border-purple-600 tracking-widest py-2 sm:py-4">
                   Corporate Social Responsibilities
                 </h3>
                 <div className="max-w-xl font-light">
-                  <h5 className="text-sm md:text-[0.9rem]  tracking-widest text-white text-start mb-2 sm:mb-4">
+                  <h5 className="text-[0.6rem] md:text-[0.75rem]  tracking-widest text-white text-start mb-2 sm:mb-4">
                     We think that every person has the potential to achieve
                     great things. We have four principles (commitment, quality,
                     integrity, and care) that guide our business, product
@@ -655,31 +658,35 @@ const AboutUs = () => {
                 animate={controlsSectionBottom}
                 variants={sectionVariants}
               >
-                <h3 className="text-md sm:text-xl text-center font-light uppercase text-white mb-4 sm:mb-6 border-b-2 border-purple-600 tracking-widest py-2 sm:py-4">
+                <h3 className="text-md sm:text-xl text-center font-light uppercase text-white mb-4 sm:mb-6 border-b border-purple-600 tracking-widest py-2 sm:py-4">
                   Our Values
                 </h3>
                 <div className="max-w-xl font-light">
-                  <h5 className="text-sm md:text-[0.9rem]  tracking-widest text-start text-white mb-4">
+                  <h5 className="text-[0.6rem] md:text-[0.75rem]  tracking-widest text-start text-white mb-4">
                     At Heyram Infrastructure, our values drive everything we do.
                     We believe in:
                   </h5>
-                  <ul className="space-y-1 text-sm md:text-[0.9rem]  text-start text-white">
+                  <ul className="space-y-2 text-[0.6rem] md:text-[0.75rem]  text-start text-white">
                     <li>
                       Innovation: Constantly pushing boundaries to develop
                       cutting-edge solutions.
                     </li>
+                    <br />
                     <li>
                       Collaboration: Working together to achieve common goals
                       and foster creativity.
                     </li>
+                    <br />
                     <li>
                       Integrity: Upholding the highest ethical standards in all
                       our endeavors.
                     </li>
+                    <br />
                     <li>
                       Diversity: Embracing the unique perspectives and
                       backgrounds of our team members.
                     </li>
+                    <br />
                     <li>
                       Sustainability: Committing to environmentally friendly
                       practices in all aspects of our work.
@@ -690,11 +697,9 @@ const AboutUs = () => {
             </motion.div>
           </div>
 
-          <hr className="w-[90%] mx-auto my-4" />
-
 
           {/* Transformation and services */}
-          <div className="flex flex-col md:flex-row mb-10 px-4 sm:px-8 lg:px-16">
+          <div className="flex flex-col md:flex-row mb-10 items-center justify-center mt-[70px]">
             {/* Top left content */}
             <motion.div
               className="pr-0 md:pr-5"
@@ -703,16 +708,16 @@ const AboutUs = () => {
               animate={controlsService}
               variants={serviceVariants}
             >
-              <h3 className="inline-block text-md sm:text-xl font-light text-white uppercase mb-4 sm:mb-6 border-b-2 border-purple-600 tracking-widest py-2 sm:py-4">
+              <h3 className="inline-block lg:text-xl text-sm font-light text-white uppercase mb-4 border-b border-purple-600 tracking-widest py-2">
                 Transformation starts here
               </h3>
               <div className="max-w-xl text-white">
-                <p className="font-light tracking-wider text-sm sm:text-base">
+                <p className="font-light tracking-wider text-[0.6rem] md:text-[0.9rem]">
                   Reimagine your future
                 </p>
                 <button
                   onClick={() => navigate("/services")}
-                  className="border px-6 sm:px-7 py-2 sm:py-3 font-thin rounded-full tracking-widest mt-4 text-sm md:text-[0.9rem]"
+                  className="border lg:px-5 lg:py-2 px-3 py-1  font-bold rounded-full tracking-widest mt-4 text-[0.6rem] md:text-[0.75rem] hover:bg-white hover:text-[#090a29]"
                 >
                   Our Services
                 </button>
@@ -722,7 +727,7 @@ const AboutUs = () => {
         </div>
 
         {/* Footer */}
-        <hr className="w-[100%] mx-auto my-4" />
+
         <div>
           <Footer />
         </div>

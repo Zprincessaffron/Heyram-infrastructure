@@ -140,11 +140,10 @@ function Footer() {
             "Conversion Rate Optimization (CRO)",
             "Influencer Marketing",
             "Analytics And Reporting",
-            "Online Reputation",
+            "Online Reputation Management",
             "Branding Services",
             "Traffic Generation",
             "Lead Generation",
-            "Brand Awareness",
           ].map((service, index) => (
             <div
               key={index}

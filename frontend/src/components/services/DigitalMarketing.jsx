@@ -24,6 +24,7 @@ import BrandAwareness from "./Digitalservice/BrandAwareness";
 import { useParams } from "react-router-dom";
 import { GiBottomRight3dArrow } from "react-icons/gi";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { IoIosArrowForward } from "react-icons/io";
 
 const DigitalMarketing = () => {
   const { service } = useParams(); // Retrieve the selected service from the URL
@@ -85,16 +86,14 @@ const DigitalMarketing = () => {
         return <InfluencerMarketing />;
       case "Analytics And Reporting":
         return <AnalyticsAndReporting />;
-      case "Online Reputation":
+      case "Online Reputation Management":
         return <OnlineReputation />;
       case "Branding Services":
         return <Branding />;
       case "Traffic Generation":
         return <TrafficGeneration />;
-      case "lead generation":
+      case "Lead generation":
         return <LeadGeneration />;
-      case "brand awareness":
-        return <BrandAwareness />;
       default:
         return <Seo />;
     }
@@ -130,7 +129,7 @@ const DigitalMarketing = () => {
 
         {/* Title on the left side */}
         <motion.h1
-          className="absolute lg:top-1/2 lg:left-10 bottom-10 left-5 transform -translate-y-1/2 lg:text-4xl text-xl font-light text-white uppercase tracking-widest max-w-3xl"
+          className="absolute lg:top-1/2 lg:left-10 bottom-2 left-5 transform -translate-y-1/2 lg:text-4xl text-[1rem] font-light text-white uppercase tracking-widest max-w-3xl"
           variants={titleVariants}
           initial="hidden"
           animate="visible"
@@ -145,7 +144,7 @@ const DigitalMarketing = () => {
           initial="hidden"
           animate="visible"
         >
-          <ul className="pl-5 text-white lg:space-y-4 space-y-6 cursor-pointer lg:text-xs text-[0.65rem]">
+          <ul className="pl-5 text-white lg:space-y-4 space-y-4 cursor-pointer lg:text-xs text-[0.65rem]">
             {[
               "Search Engine Optimization (SEO)",
               "Pay-Per-Click (PPC) Advertising",
@@ -156,22 +155,21 @@ const DigitalMarketing = () => {
               "Conversion Rate Optimization (CRO)",
               "Influencer Marketing",
               "Analytics And Reporting",
-              "Online Reputation",
+              "Online Reputation Management",
               "Branding Services",
               "Traffic Generation",
-              "lead generation",
-              "brand awareness",
+              "Lead generation",
             ].map((item, index) => (
               <motion.li
       key={index}
-      className="flex items-center tracking-wider text-[0.65rem] border-l pl-2 relative group" // Added 'group' for hover targeting
+      className="flex items-center tracking-wider text-[0.6rem] border-l pl-2 relative group" // Added 'group' for hover targeting
       variants={itemVariants}
       whileHover={{ scale: 1.05 }}
       onClick={() => handleServiceClick(item)}
     >
       {/* Arrow icon, initially hidden, will appear when the item text is hovered */}
       <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 mr-1">
-        <FaArrowRightLong size={10}/>
+        <IoIosArrowForward size={10}/>
       </span>
 
       <motion.span

@@ -19,6 +19,7 @@ import webdev from "/vid1.mp4"; // Video background
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { GiBottomRight3dArrow } from "react-icons/gi";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { IoIosArrowForward } from "react-icons/io";
 
 const WebDevelopment = () => {
   const { service } = useParams(); // Retrieve the selected service from the URL
@@ -148,7 +149,7 @@ const WebDevelopment = () => {
               >
                 {/* Arrow icon, initially hidden, will appear when the item text is hovered */}
                 <span className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 mr-1 ">
-                  <FaArrowRightLong size={10} />
+                  <IoIosArrowForward size={10} />
                 </span>
 
                 <motion.span

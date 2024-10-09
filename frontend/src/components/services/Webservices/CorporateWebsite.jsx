@@ -1,7 +1,7 @@
 import React from "react";
 import ServiceTemplate2 from "../ServiceTemplate2";
 import { FaBuilding, FaLaptopCode, FaIndustry, FaHospitalAlt, FaHandsHelping, FaLandmark } from "react-icons/fa";
-import corp from "/Corp.png";
+import corp from "/Corp2.jpg";
 
 const CorporateWebsite = () => {
   // Define the data to pass to the template

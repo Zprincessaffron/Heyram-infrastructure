@@ -29,8 +29,16 @@ const ServiceTemplate3 = ({
 
   // Animation variants for consistency across different sections
   const fadeInUp = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+    hidden: {
+      opacity: 0,
+      y: 50,
+      transition: { duration: 0.8, ease: "easeOut" },
+    }, // Smooth exit
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" }, // Smooth entry
+    },
   };
 
   return (
@@ -39,7 +47,7 @@ const ServiceTemplate3 = ({
      <div className="text-white py-4 px-4 lg:px-6">
       {/* Section Title */}
       <motion.h1
-        className="text-[1rem] lg:text-2xl font-light mb-4 tracking-widest uppercase lg:text-start text-center"
+        className="text-[1rem] lg:text-2xl font-light mb-6 tracking-widest uppercase lg:text-start text-center"
         ref={titleRef}
         initial="hidden"
         animate={titleControls}
@@ -50,7 +58,7 @@ const ServiceTemplate3 = ({
 
       {/* Introduction Paragraph */}
       <motion.p
-        className="text-[0.65rem] lg:text-xs mb-4 text-gray-300 tracking-wider lg:text-start text-center"
+        className="text-[0.65rem] lg:text-xs mb-8 text-gray-300 tracking-wider lg:text-start text-center"
         ref={introRef}
         initial="hidden"
         animate={introControls}
@@ -60,9 +68,9 @@ const ServiceTemplate3 = ({
       </motion.p>
 
       {/* Industries We Serve */}
-      <div className="mt-6">
+      <div className="mt-[60px]">
         <motion.h2
-          className="text-[1rem] lg:text-2xl font-light tracking-widest mb-8 text-white"
+          className="text-[1rem] lg:text-2xl font-light tracking-widest mb-8 text-white uppercase"
           ref={industriesRef}
           initial="hidden"
           animate={industriesControls}
@@ -78,8 +86,12 @@ const ServiceTemplate3 = ({
               initial="hidden"
               animate={industriesControls}
               variants={{
-                hidden: { opacity: 0, y: 20 },
-                visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay: index * 0.1 } },
+                hidden: { opacity: 0, y: 20, transition: { duration: 0.5, ease: "easeOut" } },
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 0.5, delay: index * 0.1,  ease: "easeOut"  },
+                },
               }}
             >
               <div className="text-white">
@@ -94,12 +106,12 @@ const ServiceTemplate3 = ({
       </div>
 
       {/* Benefits and What We Offer Section */}
-      <div className="mt-8 flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-6 lg:space-y-0 lg:space-x-6 overflow-hidden">
+      <div className="mt-[70px] flex flex-col lg:flex-row lg:items-center lg:justify-between space-y-6 lg:space-y-0 lg:space-x-6 overflow-hidden">
         {/* Left Content */}
         <div className="lg:w-1/2">
           {/* Benefits of Getting the Service */}
           <motion.h2
-            className="text-[1rem] lg:text-2xl font-light tracking-widest mb-6 text-white"
+            className="text-[1rem] lg:text-2xl font-light tracking-widest mb-6 text-white uppercase"
             ref={benefitsRef}
             initial="hidden"
             animate={benefitsControls}
@@ -125,9 +137,9 @@ const ServiceTemplate3 = ({
           </ul>
 
           {/* What We Offer Section */}
-          <div className="mt-8">
+          <div className="mt-[70px]">
             <motion.h2
-              className="text-[1rem] lg:text-2xl font-light tracking-widest mb-6 text-white"
+              className="text-[1rem] lg:text-2xl font-light tracking-widest mb-6 text-white uppercase"
               ref={offerRef}
               initial="hidden"
               animate={offerControls}
@@ -156,18 +168,34 @@ const ServiceTemplate3 = ({
 
         {/* Right Image */}
         <motion.div
-          className="lg:w-1/2 flex items-center justify-center"
-          initial="hidden"
-          animate={offerControls}
-          variants={{ hidden: { opacity: 0, x: 50 }, visible: { opacity: 1, x: 0, transition: { duration: 0.8 } } }}
-        >
-          <img src={image} alt="Service Illustration" className="w-[60%] rounded-lg shadow-lg" />
-        </motion.div>
+            className="lg:w-1/2 items-center flex justify-center"
+            ref={offerRef}
+            initial="hidden"
+            animate={offerControls}
+            variants={{
+              hidden: {
+                opacity: 0,
+                x: 50,
+                transition: { duration: 0.8, ease: "easeOut" },
+              },
+              visible: {
+                opacity: 1,
+                x: 0,
+                transition: { duration: 0.8, ease: "easeOut" },
+              },
+            }}
+          >
+            <img
+              src={image}
+              alt="Service Illustration"
+              className="w-[60%] rounded-lg shadow-lg"
+            />
+          </motion.div>
       </div>
 
       {/* Quote Section */}
       <motion.p
-        className="mt-10 text-[0.7rem] lg:text-[0.8rem] text-gray-300 tracking-wider text-center italic"
+        className="mt-[60px] text-[0.7rem] lg:text-[0.8rem] text-gray-300 tracking-wider text-center italic"
         initial="hidden"
         ref={taglineRef}
         animate={taglineControls}
@@ -180,7 +208,7 @@ const ServiceTemplate3 = ({
       {/* Call to Action */}
       <div className="lg:mt-4 flex flex-col items-center justify-center">
         <motion.h2
-          className="text-md lg:pt-[3rem] pt-[1rem] lg:text-xl font-light mb-2 text-white tracking-wider"
+          className="text-sm lg:pt-[3rem] pt-[1rem] lg:text-xl font-light mb-2 text-white tracking-wider text-center uppercase"
           ref={ctaRef}
           initial="hidden"
           animate={ctaControls}
@@ -189,7 +217,7 @@ const ServiceTemplate3 = ({
           {ctaText}
         </motion.h2>
         <motion.p
-          className="text-[0.65rem] lg:text-xs tracking-wider mb-4 text-gray-300"
+          className="text-[0.65rem] lg:text-[0.8rem] tracking-wider mb-[40px] text-gray-300"
           ref={ctaRef}
           initial="hidden"
           animate={ctaControls}
