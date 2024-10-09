@@ -15,14 +15,14 @@ function SplitCard() {
         {
           id: 1,
           title: "Shoot & Studio",
-          content: "JavaScript is a versatile programming language used.",
+          content: "Website Development: We create customized websites that elevate your brand's online presence. From responsive design to secure, scalable solutions, our web development services ensure an engaging user experience that drives conversions and growth.",
           al:"start",
           flexd:"column"
         },
         {
           id: 2,
           title: "Setup",
-          content: "CSS is used to style and layout web pages. ",
+          content: "E-commerce Solutions: Build a powerful online store with our e-commerce services. We handle everything from product management and secure payment integration to optimizing the customer journey, helping you turn visitors into buyers.",
           al:"end",
           flexd:"column-reverse"
 
@@ -30,7 +30,7 @@ function SplitCard() {
         {
           id: 3,
           title: "Show",
-          content: "HTML is the standard language for creating web pages",
+          content: "Search Engine Optimization (SEO): Our SEO services help you rank higher on search engines, driving organic traffic to your website. By optimizing your content, structure, and performance, we ensure that your business gets the visibility it needs to succeed.",
           al:"start",
           flexd:"column"
 
@@ -39,7 +39,7 @@ function SplitCard() {
         {
           id: 4,
           title: "Sky",
-          content: "React is a JavaScript library for building user interfaces",
+          content: "Social Media Marketing: Engage your audience where they spend the most time—social media. Our targeted social media marketing strategies grow your brand's presence, build customer loyalty, and increase engagement through creative and effective campaigns.",
           al:"end",
           flexd:"column-reverse"
 
@@ -48,7 +48,7 @@ function SplitCard() {
         {
           id: 5,
           title: "Suggest",
-          content: "Node.js is a runtime environment that allows JavaScript",
+          content: "Data & AI Solutions: Transform your data into actionable insights with our Data & AI services. We offer advanced analytics, and AI-driven solutions to help you predict trends, optimize operations, and make data-backed decisions.",
           al:"start",
           flexd:"column"
 
@@ -76,7 +76,7 @@ function SplitCard() {
                       <div className={`sc_div2_11 ${hoverState == item.id ? "true" : ""}`} >
                         <div style={{flexDirection:`${item.flexd}`}} className={`sc_div2_11_1 ${hoverState == item.id ? "true" : ""}`} >
                         <div className='sc_div2_11_1_1'>
-                        <h1>{item.title}</h1>
+                        <h1 className='pb-5'>{item.title}</h1>
                         <p>{item.content}</p>
                         </div>
                       <div className='sc_div2_11_1_2'>

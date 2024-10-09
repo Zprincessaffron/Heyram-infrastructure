@@ -19,6 +19,7 @@ const ServiceTemplate2 = ({
   const [titleRef, titleControls] = useAnimatedInView();
   const [introRef, introControls] = useAnimatedInView();
   const [offerRef, offerControls] = useAnimatedInView();
+  const [imageRef, imageControls] = useAnimatedInView();
   const [taglineRef, taglineControls] = useAnimatedInView();
   const [industriesRef, industriesControls] = useAnimatedInView();
   const [ctaRef, ctaControls] = useAnimatedInView();
@@ -141,9 +142,9 @@ const ServiceTemplate2 = ({
           {/* Right Image */}
           <motion.div
             className="lg:w-1/2 items-center flex justify-center"
-            ref={offerRef}
+            ref={imageRef}
             initial="hidden"
-            animate={offerControls}
+            animate={imageControls}
             variants={{
               hidden: {
                 opacity: 0,

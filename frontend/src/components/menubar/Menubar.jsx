@@ -12,6 +12,7 @@ function Menubar() {
 
     function handleRedirect(val){
         navigate(val)
+        window.location.reload()
     }
 
   return (

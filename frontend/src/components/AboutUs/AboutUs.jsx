@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
-import AboutUsImg from "/AboutBg.png";
+// import AboutUsImg from "/AboutBg.png";
+import AboutUsImg from "/Aboutus2.jpg";
 import AboutUsVid from "/about.mp4"
 import { FaChartLine, FaCode, FaDatabase } from "react-icons/fa";
 import { motion, useAnimation } from "framer-motion";
@@ -19,9 +20,9 @@ const AboutUs = () => {
   const { setConnectForm } = useContext(AppContext);
   const navigate = useNavigate();
 
-  // useEffect(()=>{
-  //   window.scrollTo(0, 0);
-  // },[])
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[])
 
   // Function to handle scroll progress
   const handleScroll = () => {
@@ -298,7 +299,7 @@ const AboutUs = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1.5 }}/> */}
 
-        <div className="bg-[#090a29] inset-0 absolute opacity-20" />
+        <div className="bg-[#090a29] inset-0 absolute opacity-50" />
 
         {/* Animate the text */}
         <motion.div
