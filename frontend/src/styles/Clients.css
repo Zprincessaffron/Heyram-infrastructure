@@ -148,3 +148,21 @@
     align-items: center;
     gap: 5px;
   }
+  .ad_job_div12_div{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+  .ad_job_div12_div>button>img{
+    height: 27px;
+    cursor: pointer;
+    transition: scale 0.2s ease-in-out;
+  }
+  .ad_job_div12_div>button>img:hover{
+    scale: 115%;
+    
+  }
+  .ad_job_div12_div>button:hover{
+    font-size: 1.3rem;
+    transition: all 0.2s ease-in-out;
+  }

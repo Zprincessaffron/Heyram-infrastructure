@@ -156,21 +156,7 @@ function Contact() {
                                     <p>Monday to Saturday (9AM - 6PM)</p>
                                 </div>
                             </div>
-                            <div className='contact_div21'>
-                                <div className='contact_div211' >
-                                    <span><IoShareSocialOutline /></span>
-
-
-                                </div>
-                                <div >
-                                    <h1>Social</h1>
-                                    <p>Instagram</p>
-                                    <p>Facebook</p>
-                                    <p>whatsapp</p>
-                                    <p>linkedin</p>
-
-                                </div>
-                            </div>
+          
 
                         </div>
                     </div>

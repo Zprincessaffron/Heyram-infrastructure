@@ -14,7 +14,7 @@
 .jd_div1{
     width: fit-content;
 
-
+ 
 }
 .jd_div11>p{
     display: flex;
@@ -135,4 +135,25 @@ input:-webkit-autofill {
     text-align: center;
     font-size: 1.5rem;
     letter-spacing: 1px;
+}
+
+
+@media only screen and (max-width: 576px) {
+    .application_title{
+        font-size: 13px;
+
+    }
+
+    .jd_main .MuiInputBase-root{
+        width: 90%;
+        height: 50px;
+        font-size: 9px;
+    }
+    .jd_div1>h1{
+        font-size: 12px;
+    }
+    .jd_div11>p,.jd_div11_p_yes{
+        font-size: 9px;
+    }
+
 }

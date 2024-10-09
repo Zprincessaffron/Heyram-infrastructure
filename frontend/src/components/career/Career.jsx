@@ -15,7 +15,7 @@ function Career() {
   const navigate = useNavigate();
 
   const openModal = (job) => {
-    setSelectedJob(job);
+    setSelectedJob(job); 
     setModalIsOpen(true);
   };
 
@@ -150,7 +150,9 @@ function Career() {
       </div>
 
       {modalIsOpen ? (
+        
        <>
+       {console.log("modalIsOpen",modalIsOpen)}
        {currentPage == "job" &&(
          <div className='careerdetail'>
          <div className='careerdetail_1'>
@@ -163,7 +165,7 @@ function Career() {
                <h3>Chennai</h3>
                <h4>Be The First To Apply</h4>
                <h5>DESCRIPTION</h5>
-               <p style={{ fontSize: "0.9rem", marginBottom: "1rem" }}> {selectedJob.jobDescription}</p>
+               <p> {selectedJob.jobDescription}</p>
                <h1 style={{ marginBottom: "0.5rem" }}>QUALIFICATION</h1>
                <p >
                  Experience with natural language processing (NLP) and computer vision

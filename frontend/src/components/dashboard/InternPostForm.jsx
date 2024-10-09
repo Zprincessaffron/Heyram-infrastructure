@@ -8,7 +8,7 @@ const InternPostForm = ( {setshowAddForm} ) => {
   const [jobDescription, setJobDescription] = useState('');
   const [jobType, setJobType] = useState('');
   const [location, setLocation] = useState('');
-  const [minExperience, setMinExperience] = useState('');
+  const [duration, setDuration] = useState('');
   const [maxExperience, setMaxExperience] = useState('');
   const [skills, setSkills] = useState(['']); // Array for dynamic skill inputs
   const [questions, setQuestions] = useState([
@@ -51,23 +51,17 @@ const InternPostForm = ( {setshowAddForm} ) => {
     const jobData = {
       jobName,
       jobDescription,
-      jobType,
       location,
-      minExperience,
-      maxExperience,
+      duration,
       skills,
-      questions,
     };
     try {
         axios.post('/intern',{
-            jobName:jobData.jobName,
-            jobDescription:jobData.jobDescription,
-            jobType:jobData.jobType,
+          internshipName:jobData.jobName,
+          internshipDescription:jobData.jobDescription,
             location:jobData.location,
-            minExperience:jobData.minExperience,
-            maxExperience:jobData.maxExperience,
+            duration:jobData.duration,
             skills:jobData.skills,
-            questions:jobData.questions,
         })
         console.log(jobData)
         setshowAddForm(false)
@@ -89,7 +83,7 @@ const InternPostForm = ( {setshowAddForm} ) => {
             close
         </div>
         <div className="form-group">
-          <label>Job Name</label>
+          <label>Internship Name</label>
           <input
             type="text"
             value={jobName}
@@ -101,7 +95,7 @@ const InternPostForm = ( {setshowAddForm} ) => {
 
         {/* Job Description Input */}
         <div className="form-group">
-          <label>Job Description</label>
+          <label>Internship Description</label>
           <textarea
             value={jobDescription}
             onChange={(e) => setJobDescription(e.target.value)}
@@ -112,13 +106,14 @@ const InternPostForm = ( {setshowAddForm} ) => {
 
         {/* Job Type Selection */}
         <div className="form-group">
-          <label>Job Type</label>
-          <select value={jobType} onChange={(e) => setJobType(e.target.value)} required>
-            <option value="">Select Type</option>
-            <option value="Full-time">Full-time</option>
-            <option value="Part-time">Part-time</option>
-            <option value="Contract">Contract</option>
-          </select>
+          <label>Internship Duration</label>
+          <input
+            type="text"
+            value={duration}
+            onChange={(e) => setDuration(e.target.value)}
+            placeholder="Enter Duration"
+            required
+          />
         </div>
 
         {/* Location Input */}
@@ -128,32 +123,12 @@ const InternPostForm = ( {setshowAddForm} ) => {
             type="text"
             value={location}
             onChange={(e) => setLocation(e.target.value)}
-            placeholder="Location of the Job"
+            placeholder="Location of the Internship"
             required
           />
         </div>
 
-        {/* Experience Range */}
-        <div className="form-group">
-          <label>Experience (in years)</label>
-          <div className="experience-range">
-            <input
-              type="number"
-              value={minExperience}
-              onChange={(e) => setMinExperience(e.target.value)}
-              placeholder="Min Experience"
-              required
-            />
-            <input
-              type="number"
-              value={maxExperience}
-              onChange={(e) => setMaxExperience(e.target.value)}
-              placeholder="Max Experience"
-              required
-            />
-          </div>
-        </div>
-
+  
         {/* Dynamic Skills Section */}
         <div className="form-group">
           <label>Skills Required</label>
@@ -174,51 +149,7 @@ const InternPostForm = ( {setshowAddForm} ) => {
           )}
         </div>
 
-        {/* Dynamic Questions Section */}
-        <div className="form-group">
-          <label>Interview Questions (Up to 3)</label>
-          {questions.map((q, index) => (
-            <div key={index} className="question-section">
-              <input
-                type="text"
-                value={q.question}
-                onChange={(e) => handleQuestionChange(index, 'question', e.target.value)}
-                placeholder={`Question ${index + 1}`}
-                required
-              />
-
-              {/* Options for Each Question */}
-              <div className="options-section">
-                {q.options.map((option, optionIndex) => (
-                  <input
-                    key={optionIndex}
-                    type="text"
-                    value={option}
-                    onChange={(e) => handleQuestionChange(index, optionIndex, e.target.value)}
-                    placeholder={`Option ${optionIndex + 1}`}
-                    required
-                  />
-                ))}
-              </div>
-
-              {/* Expected Answer Input */}
-              <input
-                type="text"
-                value={q.answer}
-                onChange={(e) => handleQuestionChange(index, 'answer', e.target.value)}
-                placeholder="Correct Answer"
-                required
-              />
-            </div>
-          ))}
-
-          {/* Add New Question Button */}
-          {questions.length < 3 && (
-            <button type="button" className="add-button" onClick={handleAddQuestion}>
-              + Add Question
-            </button>
-          )}
-        </div>
+       
 
         {/* Submit Button */}
         <button type="submit" className="submit-button">

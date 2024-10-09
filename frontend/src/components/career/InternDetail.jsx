@@ -13,7 +13,7 @@ import { useNavigate } from 'react-router-dom';
 import drive from '../../images/drive.png'
 
 
-
+ 
 function InternDetail() {
 
   const location = useLocation();
@@ -28,7 +28,6 @@ function InternDetail() {
     formState: { errors },
   } = useForm();
 
-  console.log(jobData)
 
   function popup() {
     setSucessMsg(true)
@@ -44,14 +43,16 @@ function InternDetail() {
       setShowPop(false)
     }, 4000);
   }
-
+console.log(jobData)
   const onSubmit = async (data) => {
     const applicationData = {
       ...data,
-      appliedFor: jobData.InternshipName,
+      appliedFor: jobData.internshipName,
     };
+
     try {
-      const response = await axios.post('/js', applicationData);
+      
+      const response = await axios.post('/internseeker', applicationData);
       console.log('Job application submitted successfully:', response.data);
       setResponseBack(response.data.message)
       setShowPop(true)

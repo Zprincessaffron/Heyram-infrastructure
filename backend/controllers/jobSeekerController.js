@@ -95,3 +95,25 @@ export const updateJobSeeker = async (req, res) => {
     res.status(400).json({ message: 'Error updating job Seeker', error });
   }
 };
+
+//delete all  job seeker data those who applied for same jobs
+
+export const DeleteParticularJobSeeker = async (req, res) => {
+
+  try {
+  const { appliedFor } = req.params;
+
+    // Use `deleteMany` to remove all entries with matching `appliedFor` field
+    const result = await JobSeeker.deleteMany({ appliedFor: appliedFor });
+
+    // Check if any documents were deleted
+    if (result.deletedCount > 0) {
+      res.status(200).send({ message: `${result.deletedCount} document(s) deleted successfully.` });
+    } else {
+      res.status(404).send({ message: "No documents found with the specified 'appliedFor' value." });
+    }
+  } catch (error) {
+    console.error(error);
+    res.status(500).send({ error: "An error occurred while deleting documents." });
+  }
+}
