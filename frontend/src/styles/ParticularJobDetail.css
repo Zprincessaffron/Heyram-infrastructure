@@ -1,33 +1,52 @@
 /* JobDetails.css */
 .job-details-container {
     width: 60%;
-    height: 100vh;
+    margin-top: 3vh;
+    height: fit-content;
+    
   }
   
   .job-details-main {
-    background: #fff;
+    background: #ffffffad;
     padding: 30px;
     width: 100%;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     overflow-y: scroll;
+    max-height: 85vh;
   }
+  .job-details-main::-webkit-scrollbar {
+    width: 7px;                /* Width of the entire scrollbar */
+  }
+  
+  .job-details-main::-webkit-scrollbar-track {
+    background: #8888889f;        /* Track background */
+    border-radius: 10px;        /* Rounded corners for the track */
+  }
+  
+  .job-details-main::-webkit-scrollbar-thumb {
+    background-color: #413d3ddc;     /* Scrollbar color */
+    border-radius: 10px;   
+  }
+  
+
   
   .job-title {
     font-size: 2em;
     margin-bottom: 10px;
-    color: #333;
+    color: #000000;
   }
   
   .job-type {
     font-size: 1.2em;
-    color: #6c757d;
+    color: #2f3031;
     margin-bottom: 20px;
   }
   
   .job-description {
     margin-bottom: 30px;
     line-height: 1.6;
+    
   }
   
   .job-info {
@@ -37,7 +56,7 @@
   .job-info h2 {
     margin-bottom: 10px;
     font-size: 1.5em;
-    color: #4a5568;
+    color: #000000;
   }
   
   .job-info-item {
@@ -55,7 +74,7 @@
   
   .skills-section h2 {
     font-size: 1.5em;
-    color: #4a5568;
+    color: #000000;
   }
   
   .skills-list {

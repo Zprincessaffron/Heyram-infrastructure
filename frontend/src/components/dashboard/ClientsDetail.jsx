@@ -1,6 +1,8 @@
 import axios from 'axios';
 import React, { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import AdminNav from './AdminNav';
+import { FaArrowLeft } from "react-icons/fa6";
 
 const ClientsDetails = () => {
   const { state } = useLocation();
@@ -12,18 +14,23 @@ const ClientsDetails = () => {
 
     } catch (error) {
         
-    }
+    } 
   }, [])
   return (
     <div className='clients_main'>
+        <div className='admin_navc'>
+        <AdminNav />
+      </div>
     <div className='clients_div1'>
-      <h1>CLIENTS</h1>
-      <p>Welcome to you clients portal</p> 
+    <div className=' ad_job_div11'>
+          <h1>CLIENTS</h1>
+          <p>Welcome to you clients portal</p>
+        </div>
     </div> 
     <div className='clients_div2'>
     <div className="client-details">
       <div className="back-button">
-        <button onClick={() => navigate(-1)}>Back to List</button>
+        <button onClick={() => navigate(-1)}><FaArrowLeft/> </button>
       </div>
       <h2>Client Information</h2>
       <div className="details-container">

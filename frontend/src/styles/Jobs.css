@@ -1,5 +1,8 @@
 .ad_job_main{
     padding-top: 10vh;
+    background-color: #02142a90;
+    height: 100vh;
+    backdrop-filter: blur(50px);
     
 }
 .ad_job_div1{
@@ -11,30 +14,42 @@
 }
 .ad_job_div13{
     color: white;
-    border: 1px solid rgba(128, 128, 128, 0.642);
+    background-color: rgba(154, 151, 151, 0.26);
+    backdrop-filter: blur(20px);
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
+    width: 180px;
     cursor: pointer;
     border-radius: 10px;
+    height: 45px;
+    font-weight: 300;
+
 }
 .ad_job_div11>h1{
-    color: white;
-    letter-spacing: 1px;
+    color: rgb(255, 255, 255);
+    letter-spacing: 1.5px;
+    font-size: 1.2rem;
+    font-weight: 300;
 }
 .ad_job_div11>p{
-    color: #7b83d1d3;
+    color: #d7d3d3;
+    font-weight: 300;
 }
 .ad_job_div12{
     color: white;
-    border: 1px solid rgba(128, 128, 128, 0.642);
+    background-color: rgba(154, 151, 151, 0.26);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 2px 5px 1px rgba(4, 20, 41, 0.29);
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100px;
+    height: 45px;
+    width: 80px;
     border-radius: 10px;
     cursor: pointer;
+    font-weight: 300;
+
 
 }
 .tableCon{
@@ -55,9 +70,10 @@
 
 }
 .job_appli{
-    padding: 3rem 1rem ;
     height: 50%;
     width: 100%;
+    padding-left:5rem ;
+    padding-top: 5rem;
 
 }
 .job_appli>div{
@@ -125,8 +141,10 @@
 .selectedjsdata{
     width: 100%;
     height: 100vh;
+    
     background-color: rgba(52, 51, 51, 0.321);
     position: fixed;
+    backdrop-filter: blur(5px);
     top: 0;
     left: 0;
     display: flex;
@@ -146,18 +164,22 @@
 }
 .particular_jobdata{
     background-color: rgba(52, 51, 51, 0.321);
+    backdrop-filter: blur(5px);
     width: 100%;
+    height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .Delete_pop{
     position: fixed;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.421);
+    background-color: rgba(52, 50, 50, 0.421);
+    backdrop-filter: blur(2px);
     top: 0;
     left: 0;
     display: flex;
@@ -165,9 +187,10 @@
     align-items: center;
 }
 .Delete_pop>div{
-    width: 40%;
+    width: 50%;
     height: 40%;
-    background-color: #ffffff;
+    backdrop-filter: blur(10px);
+    background-color: #9e8f8fc0;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -211,3 +234,96 @@
 .dp_buttondiv>button:active{
     scale:97%;
 }
+.StyledTableRow{
+    background-color: #365c85;
+}
+
+
+.ad_j-table-container {
+    width: 80%;
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+    padding: 20px;
+  }
+  
+  .ad_j-table-title {
+    color: white;
+    text-align: center;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    text-align: left;
+    letter-spacing: 1px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.497);
+
+  }
+  
+  .ad_j-orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    overflow: hidden;
+  }
+  
+  .ad_j-orders-table th, .ad_j-orders-table td {
+    padding: 10px;
+    color: #ddd;
+  }
+  .ad_j-orders-table th{
+
+    font-weight: 600;
+    letter-spacing: 1px;
+
+  }
+  .ad_j-orders-table td {
+    letter-spacing: 0.5px;
+    font-weight: 300;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.249);
+  }
+  
+  .ad_j-orders-table th {
+    background: rgba(192, 210, 209, 0.058);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid white;
+  
+
+  }
+  
+  .ad_j-orders-table td {
+    height: 60px;
+  }
+  
+  .ad_j-orders-table tbody tr {
+    transition: background 0.3s ease;
+  }
+  
+  .ad_j-orders-table tbody tr:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .ad_j-product-name {
+    display: flex;
+    align-items: center;
+  }
+  
+  .ad_j-action-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin: 0 2px;
+    transition: color 0.3s ease;
+  }
+  
+  .ad_j-action-btn:hover {
+    color: #ddd;
+  }
+  .jobTableMain{
+    width: 90%;
+  }
+  .ad_j-orders-table>thead{
+    height: 10px;
+  }

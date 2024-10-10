@@ -18,6 +18,7 @@ import DeletePopUp from './DeletePopUp';
 import { IoMdClose } from "react-icons/io";
 import { MdDelete } from "react-icons/md";
 import { AdminContext } from '../../context/AdminContext';
+import AdminNav from './AdminNav';
 
 function Jobs() {
   const [ jobData,setJobData]=useState([])
@@ -90,17 +91,17 @@ function getJobDetails(){
   }));
   
   const StyledTableRow = styled(TableRow)(({ theme }) => ({
-    '&:nth-of-type(odd)': {
-      backgroundColor: "white",
+    // '&:nth-of-type(odd)': {
+    //   backgroundColor: "none",
     
-    },
-    '&:nth-of-type(even)': {
-      backgroundColor: "white",
-    },
-    // hide last border
-    '&:last-child td, &:last-child th': {
-      border: 0,
-    },
+    // },
+    // '&:nth-of-type(even)': {
+    //   backgroundColor: "white",
+    // },
+    // // hide last border
+    // '&:last-child td, &:last-child th': {
+    //   border: 0,
+    // },
   }));
   const handleSeekerClick = (id) => {
     const selectedData = jobSeeker.find((item) => item._id === id);
@@ -174,13 +175,16 @@ function getJobDetails(){
   }
   return (
      <div className='ad_job_main'>
+       <div className='admin_nav'>
+          <AdminNav/>
+        </div>
        <div className='ad_job_div1'>
         <div className=' ad_job_div11'>
         <h1>JOBS</h1>
         <p>Welcome to You Job Portal</p>
         </div>
         <div className='ad_job_div12' onClick={()=>{setshowAddForm(true)}}>
-          Add+
+          Add +
         </div>
         <div className='ad_job_div13' onClick={handleChangeMain}>
           {showMain?"View Applications":"View Job"}
@@ -192,19 +196,19 @@ function getJobDetails(){
        {showMain?(
 
 <div className='tableCon'>
-<TableContainer style={{background:"none"}} sx={{ width:'95%'}}    component={Paper}>
+{/* <TableContainer style={{background:"none"}} sx={{ width:'95%'}}    component={Paper}>
 <Table   aria-label="customized table" >
 <TableHead>
   <TableRow >
     
-    <StyledTableCell >job</StyledTableCell>
+    <StyledTableCell  >job</StyledTableCell>
     <StyledTableCell align="ceter">Job Type</StyledTableCell>
     <StyledTableCell align="right">Delete</StyledTableCell>
   </TableRow>
 </TableHead>
 <TableBody>
   {jobData.map((item) => (
-    <StyledTableRow key={item._id}   >
+    <StyledTableRow className='jobTableChild' key={item._id}   >
       <StyledTableCell component="th" scope="row"  onClick={()=>handleParticularJob(item._id)}>
         {item.jobName}
       </StyledTableCell>
@@ -219,30 +223,98 @@ function getJobDetails(){
 Next
 
 </div>
-</TableContainer>
+</TableContainer> */}
+
+  <div className='jobTableMain'>
+  <div className="ad_j-table-container">
+      <h2 className="ad_j-table-title"> Job Deatail</h2>
+      <table className="ad_j-orders-table">
+        <thead>
+          <tr>
+            <th>SI.NO</th>
+            <th>Job</th>
+            <th>Job type</th>
+            <th style={{width:"100px"}}>View</th>
+            <th >Delete</th>
+          </tr>
+        </thead>
+        <tbody> 
+      {jobData.map((item,index) => (
+
+          <tr>
+            <td>{index+1}</td>
+            <td >{item.jobName}</td>
+            <td>{item.jobType}</td>
+            <td  style={{cursor:"pointer"}}  onClick={()=>handleParticularJob(item._id)}> View</td>
+            <td  style={{cursor:"pointer"}} onClick={()=>handleDeleteJob(item)}>Delete</td>
+          </tr>
+           ))}        
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
 </div>
        ):(
          <div className='job_appli'>
-           <div className='jobseekerlisthead'>
-           <div >Name</div>
-           <div >Applied For</div>
-           <div>Degree</div>  
-           <div>Applied on</div>
-           <div >Delete</div>
-         </div>
-         {jobSeeker.map((item)=>(
-           <div className={`jobseekerlist ${item.opened =="yes"? "true":""} `}  >
-           <div onClick={()=>handleSeekerClick(item._id)}>{item.name}</div>
-           <div onClick={()=>handleSeekerClick(item._id)}>{item.appliedFor}</div>
-           <div>{item.degree}</div>         
-           <div>{new Date(item.jobPostedDate).toLocaleDateString('en-GB')}</div>
-           <div  className='job_delete_button' onClick={()=>handleDeleteSeekerInfo(item._id)} ><MdDelete/></div>
+        {/* //    <div className='jobseekerlisthead'>
+        //    <div >Name</div>
+        //    <div >Applied For</div>
+        //    <div>Degree</div>  
+        //    <div>Applied on</div>
+        //    <div >Delete</div>
+        //  </div>
+        //  {jobSeeker.map((item)=>( */}
+        {/* //    <div className={`jobseekerlist ${item.opened =="yes"? "true":""} `}  >
+        //    <div onClick={()=>handleSeekerClick(item._id)}>{item.name}</div>
+        //    <div onClick={()=>handleSeekerClick(item._id)}>{item.appliedFor}</div>
+        //    <div>{item.degree}</div>         
+        //    <div>{new Date(item.jobPostedDate).toLocaleDateString('en-GB')}</div>
+        //    <div  className='job_delete_button' onClick={()=>handleDeleteSeekerInfo(item._id)} ><MdDelete/></div>
            
            
-         </div>
-         ))}
-          
-        </div>
+        //  </div>
+        //  ))} */}
+     
+     <div className='jobTableMain'>
+  <div className="ad_j-table-container">
+      <h2 className="ad_j-table-title">Orders Summary</h2>
+      <table className="ad_j-orders-table">
+        <thead>
+          <tr>
+            <th>SI.NO</th>
+            <th>Name</th>
+            <th>Applied For</th>
+            <th>Degree</th>
+            <th>Applied on</th>
+            <th  style={{width:"100px"}}>View</th>
+            <th >Delete</th>
+          </tr>
+        </thead>
+        <tbody> 
+      {jobSeeker.map((item,index) => (
+
+          <tr>
+            <td>{index+1}</td>
+            <td >{item.name}</td>
+            <td>{item.appliedFor}</td>
+            <td>{item.degree}</td>
+            <td>{new Date(item.jobPostedDate).toLocaleDateString('en-GB')}</td>
+            <td  style={{cursor:"pointer"}}  onClick={()=>handleSeekerClick(item._id)}> View</td>
+            <td  style={{cursor:"pointer"}}onClick={()=>handleDeleteSeekerInfo(item._id)} >Delete</td>
+          </tr>
+           ))}        
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+</div>
+
+
+
        )
 
        }

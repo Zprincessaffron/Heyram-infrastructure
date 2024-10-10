@@ -18,9 +18,10 @@ import DeletePopUp from './DeletePopUp';
 import { IoMdClose } from "react-icons/io";
 import InternSeekerDetail from './InternSeekerDetail';
 import InternPostForm from './InternPostForm'; 
-import ParticularInternDetail from './ParticularInternDetail';
+import ParticularInternDetail from './ParticularInternDetail'; 
 import { MdDelete } from "react-icons/md";
 import { AdminContext } from '../../context/AdminContext';
+import AdminNav from './AdminNav';
 
 function Jobs() {
   const [ jobData,setJobData]=useState([])
@@ -177,13 +178,16 @@ function getJobDetails(){
 
   return (
      <div className='ad_job_main'>
+        <div className='admin_nav'>
+          <AdminNav/>
+        </div>
        <div className='ad_job_div1'>
         <div className=' ad_job_div11'>
         <h1>INTERNSHIPS</h1>
         <p>Welcome to You Internship Portal</p>
         </div>
         <div className='ad_job_div12' onClick={()=>{setshowAddForm(true)}}>
-          Add+
+          Add +
         </div>
         <div className='ad_job_div13' onClick={handleChangeMain}>
           {showMain?"View Applications":"View Internship"}
@@ -195,7 +199,7 @@ function getJobDetails(){
        {showMain?(
 
 <div className='tableCon'>
-<TableContainer style={{background:"none"}} sx={{ width:'95%'}}    component={Paper}>
+{/* <TableContainer style={{background:"none"}} sx={{ width:'95%'}}    component={Paper}>
 <Table   aria-label="customized table" >
 <TableHead>
   <TableRow >
@@ -223,11 +227,41 @@ function getJobDetails(){
 Next
 
 </div>
-</TableContainer>
+</TableContainer> */}
+
+<div className='jobTableMain'>
+  <div className="ad_j-table-container">
+      <h2 className="ad_j-table-title">Internship Details</h2>
+      <table className="ad_j-orders-table">
+        <thead>
+          <tr>
+            <th>SI.NO</th>
+            <th>Internship</th>
+            <th>Duration</th>
+            <th style={{width:"100px"}}>View</th>
+            <th >Delete</th>
+          </tr>
+        </thead>
+        <tbody> 
+      {jobData.map((item,index) => (
+
+          <tr>
+            <td>{index+1}</td>
+            <td >{item.internshipName}</td>
+            <td>{item.duration}</td>
+            <td  style={{cursor:"pointer"}}  onClick={()=>handleParticularJob(item._id)}> View</td>
+            <td  style={{cursor:"pointer"}} onClick={()=>handleDeleteJob(item)}>Delete</td>
+          </tr>
+           ))}        
+        </tbody>
+      </table>
+    </div>
+
+  </div>
 </div>
        ):(
          <div className='job_appli'>
-            <div className='jobseekerlisthead'>
+            {/* <div className='jobseekerlisthead'>
            <div >Name</div>
            <div >Applied For</div>
            <div>Degree</div>  
@@ -242,7 +276,42 @@ Next
            <div>{new Date(item.jobPostedDate).toLocaleDateString('en-GB')}</div>
            <div  className='job_delete_button' onClick={()=>handleDeleteSeekerInfo(item._id)} ><MdDelete/></div>
          </div>
-         ))}
+         ))} */}
+
+
+<div className='jobTableMain'>
+  <div className="ad_j-table-container">
+      <h2 className="ad_j-table-title">Orders Summary</h2>
+      <table className="ad_j-orders-table">
+        <thead>
+          <tr>
+            <th>SI.NO</th>
+            <th>Name</th>
+            <th>Applied For</th>
+            <th>Degree</th>
+            <th>Applied on</th>
+            <th  style={{width:"100px"}}>View</th>
+            <th >Delete</th>
+          </tr>
+        </thead>
+        <tbody> 
+      {jobSeeker.map((item,index) => (
+
+          <tr>
+            <td>{index+1}</td>
+            <td >{item.name}</td>
+            <td>{item.appliedFor}</td>
+            <td>{item.degree}</td>
+            <td>{new Date(item.jobPostedDate).toLocaleDateString('en-GB')}</td>
+            <td  style={{cursor:"pointer"}}  onClick={()=>handleSeekerClick(item._id)}> View</td>
+            <td  style={{cursor:"pointer"}}onClick={()=>handleDeleteSeekerInfo(item._id)} >Delete</td>
+          </tr>
+           ))}        
+        </tbody>
+      </table>
+    </div>
+
+  </div>
           
         </div>
        )

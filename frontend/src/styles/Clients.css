@@ -1,7 +1,18 @@
 .clients_main{
-    margin-top: 10vh;
+  background-color: #02142a90;
+  backdrop-filter: blur(50px);
+  padding-top: 10vh;
+  min-height: 100vh;
+  
+
+}
+.admin_navc{
     width: 100%;
-    height: 100%;
+    height: 9vh;
+    color: white;
+    position: fixed;
+    top: 0;
+    right: 0;
 
 }
 .clients_div1{
@@ -52,7 +63,7 @@
   }
   
   .client-table button {
-    padding: 6px 25px;
+    width: 200px;
     background-color: #525557;
     border: none;
     color: #fff;
@@ -68,10 +79,13 @@
   .client-details {
     width: 80%;
     padding: 20px; /* Inner padding for the container */
-    border: 1px solid #e0e0e0; /* Light border around the container */
     border-radius: 8px; /* Rounded corners */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    background-color: #ffffff; /* White background */
+    background-color: #6c696952; /* White background */
+    backdrop-filter: blur(5px);
+    color: white;
+    font-weight: 300;
+    letter-spacing: 1px;
   }
   
   .back-button {
@@ -79,35 +93,36 @@
   }
   
   .back-button button {
-    padding: 10px 15px; /* Button padding */
-    border: none; /* Remove default border */
-    border-radius: 35px; /* Rounded corners for button */
-    background-color: #404142; /* Button background color */
-    color: white; /* Text color */
-    
+    background-color: rgba(91, 86, 86, 0.318);
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer; /* Pointer cursor for hover effect */
     transition: background-color 0.3s; /* Smooth background color transition */
   }
   
   .back-button button:hover {
-    background-color: #000000; 
+    background-color: #0000005f; 
+    scale: 105%;
   }
  
   
   .details-container {
     padding: 15px; 
-    border: 1px solid #e0e0e0; 
     border-radius: 4px;
-    background-color: #f9f9f9; 
+    background-color: transparent; /* White background */
   }
   
   .details-container p {
     margin: 10px 0; /* Space between paragraphs */
-    color: #555; /* Dark gray text color */
+    color: hsla(0, 0%, 100%, 0.844); /* Dark gray text color */
   }
   
   strong {
-    color: #000; /* Bold text color */
+    color: #ffffff; /* Bold text color */
   }
   
   .clients_div2{
@@ -115,6 +130,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 0;
   }
   .client-details>h2{
     text-transform: uppercase;

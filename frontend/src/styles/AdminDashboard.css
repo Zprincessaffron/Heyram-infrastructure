@@ -1,19 +1,21 @@
 .ad_sidebar{
     width: 15%;
-    background-color: #1f2a40;
     position: fixed;
     height: 100%;
-    padding-top: 5vh;
     color: white;
+    background-image:url('../images/adminback.jpg');
+
 
 }
 .ad_outlet{
     width: 85%;
     margin-left: 15%;
+    background-size: cover;
+    background-image: url('../images/adminback.jpg');
 }
 .admin_nav{
-    width: 85%;
-    height: 10vh;
+    width: 100%;
+    height: 9vh;
     color: white;
     position: fixed;
     top: 0;
@@ -27,9 +29,18 @@
   
 
 }
-.ad_sidebar>nav{
-    margin-top: 5rem;
-    padding-left: 2vw;
+.ad_sidebar>div{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 19, 43, 0.547);
+    padding-top: 1rem;
+    backdrop-filter: blur(80px);
+
+}
+.ad_sidebar>div>nav{
+    margin-top: 10rem;
+    padding-left: 0;
+
 }
 .link{
     width: 100%;
@@ -40,8 +51,34 @@
     flex-direction: row;  
     gap: 0.8rem;
     color: rgba(240, 248, 255, 0.827);
+    padding: 7px 2vw;
+    text-decoration: none;
+
+
 }
 
 .link.true{
-    color: #7b83d1d3;
+    color: #5cd3ffd3;
+    background-color: rgba(72, 85, 107, 0.514);
+
+}
+
+.heading_ad{
+    font-size: 0.7rem;
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+
+.ad_ul li:hover{
+    text-decoration: none;
+    color: red;
+
+}
+.ad_ul_title{
+    text-decoration: none;
+}
+.ad_ul_title:hover{
+    text-decoration: none;
 }

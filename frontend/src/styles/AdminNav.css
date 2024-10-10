@@ -1,9 +1,12 @@
 .an_main{
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    align-items: center;
+    padding: 0 20px;
     flex-direction: row;
-    background-color: #090a29;
+    background-color: #50516828;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.351);
+    height: 100%;
 }
 .ad_div3{
     display: flex;
@@ -29,4 +32,8 @@
 .nav_ll>button:hover{
     scale: 102%;
     cursor: pointer;
+}
+.an_main>div>h1{
+    font-weight: 300;
+    letter-spacing: 1px;
 }
