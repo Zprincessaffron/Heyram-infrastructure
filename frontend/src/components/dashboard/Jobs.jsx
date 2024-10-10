@@ -175,7 +175,7 @@ function getJobDetails(){
   }
   return (
      <div className='ad_job_main'>
-       <div className='admin_nav'>
+       <div className='admin_nav'> 
           <AdminNav/>
         </div>
        <div className='ad_job_div1'>

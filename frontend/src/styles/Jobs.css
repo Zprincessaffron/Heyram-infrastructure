@@ -1,7 +1,7 @@
 .ad_job_main{
     padding-top: 10vh;
     background-color: #02142a90;
-    height: 100vh;
+   min-height: 100vh;
     backdrop-filter: blur(50px);
     
 }
