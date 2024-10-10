@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../../styles/CardServices.css'
 import dottedback from '../../images/dottedback.png'
 import webd from '../../images/webd.jpg'
@@ -19,8 +19,11 @@ import datanalysis from '../../images/dataanalysis.jpg'
 import reputation from '../../images/reputation.jpg'
 import convo from '../../images/convo.jpg'
 import brandawareness from '../../images/brandawareness.jpg'
-import background from '../../images/largec.jpg'
+import background from '/Gorg.jpg'
 import largeSizeCompanies from './CardServicesData'
+import Navbar from '../navbar/Navbar'
+import MenuButton from '../navbar/MenuButton'
+import Menubar from '../menubar/Menubar'
 function CardServicesLarge() {
     const [heigth, setHeight] = useState('')
     const data = largeSizeCompanies.largeSizeCompanies
@@ -70,7 +73,14 @@ function CardServicesLarge() {
             preserveAspectRatio: 'xMidYMid slice',
         },
     }; 
+    useEffect(()=>{
+        window.scrollTo(0,0);
+      },[])
     return (
+        <>
+        <Navbar/>
+        <MenuButton/>
+        <Menubar/>
         <div className='cs_main'>
             <div className='cs_container1' style={{backgroundImage:`url(${background})`}}>
                 <div>
@@ -190,6 +200,8 @@ function CardServicesLarge() {
 
             <Footer />
         </div>
+        </>
+        
     )
 }
 

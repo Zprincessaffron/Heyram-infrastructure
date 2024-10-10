@@ -71,7 +71,7 @@ const ServiceTemplate3 = ({
       {/* Industries We Serve */}
       <div className="mt-[60px]">
         <motion.h2
-          className="text-[1rem] lg:text-2xl font-light tracking-widest mb-8 text-white uppercase"
+          className="text-[1rem] lg:text-xl font-light tracking-widest mb-8 text-white uppercase"
           ref={industriesRef}
           initial="hidden"
           animate={industriesControls}
@@ -112,7 +112,7 @@ const ServiceTemplate3 = ({
         <div className="lg:w-1/2">
           {/* Benefits of Getting the Service */}
           <motion.h2
-            className="text-[1rem] lg:text-2xl font-light tracking-widest mb-6 text-white uppercase"
+            className="text-[1rem] lg:text-xl font-light tracking-widest mb-6 text-white uppercase"
             ref={benefitsRef}
             initial="hidden"
             animate={benefitsControls}
@@ -140,7 +140,7 @@ const ServiceTemplate3 = ({
           {/* What We Offer Section */}
           <div className="mt-[70px]">
             <motion.h2
-              className="text-[1rem] lg:text-2xl font-light tracking-widest mb-6 text-white uppercase"
+              className="text-[1rem] lg:text-xl font-light tracking-widest mb-6 text-white uppercase"
               ref={offerRef}
               initial="hidden"
               animate={offerControls}

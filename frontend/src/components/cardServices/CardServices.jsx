@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../../styles/CardServices.css";
 import dottedback from "../../images/dottedback.png";
 import webd from "../../images/webd.jpg";
@@ -71,6 +71,10 @@ function CardServices() {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
+  useEffect(()=>{
+    window.scrollTo(0,0);
+  },[])
+
   return (
     <>
     <Navbar/>

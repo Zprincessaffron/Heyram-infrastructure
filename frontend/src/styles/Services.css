@@ -27,17 +27,18 @@
 }
 
 .services_div11_font1 {
-    font-size: calc(20px + 3vw);
+    font-size: calc(10px + 3vw);
     color: white;
     font-weight: 300;
     letter-spacing: 1px;
     text-align: center;
+    text-transform: uppercase;
 }
 
 .services_div11_font2 {
-    font-size: calc(8px + 0.5vw);
+    font-size: calc(6px + 0.5vw);
     color: white;
-    font-weight: 100;
+    font-weight: 300;
     letter-spacing: 1px;
     width: 60%;
     text-align: center !important;

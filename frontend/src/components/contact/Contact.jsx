@@ -14,6 +14,8 @@ import axios from 'axios';
 import { ThreeDots } from "react-loader-spinner"; // Import the desired spinner
 import { toast } from 'react-toastify';
 import { AppContext } from '../../context/AppContext';
+import MenuButton from '../navbar/MenuButton';
+import Menubar from '../menubar/Menubar';
 
 
 
@@ -54,6 +56,8 @@ function Contact() {
 
         <>
             <Navbar />
+            <MenuButton/>
+            <Menubar/>
             {isMobile ? (
                 <div className='contact_mainn'>
 
@@ -115,7 +119,7 @@ function Contact() {
                         </form>
 
                     </div>
-                    <div className='contact_mainn_2'>
+                    <div className='contact_mainn_3'>
                     <div  className='contact_div21'>
                                     <div className='contact_div211' >
                                         <span><FaMapMarkedAlt /></span>

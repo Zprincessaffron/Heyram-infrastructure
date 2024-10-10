@@ -7,7 +7,7 @@ import Navbar from "../navbar/Navbar";
 import Menubar from "../menubar/Menubar";
 import MenuButton from "../navbar/MenuButton";
 import DataAndAI from "./AI/DataAndAI";
-import DataAi from "/vid3.mp4";
+import DataAi from "/vid4.mp4";
 import GenZAI from "./AI/GenZAi";
 import DataAnalysis from "./AI/DataAnalysis";
 import { useParams } from "react-router-dom";
@@ -67,7 +67,7 @@ const DataAIService = () => {
   // Function to handle clicking a service
   const handleServiceClick = (item) => {
     setSelectedService(item);
-    // detailsRef.current.scrollIntoView({ behavior: "smooth" }); // Smooth scroll to the details section
+    detailsRef.current.scrollIntoView({ behavior: "smooth" }); // Smooth scroll to the details section
   };
 
   // Scroll to the top when component mounts

@@ -341,10 +341,10 @@
     align-items: center;
     flex-direction: row;
     gap: 5px;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 200;
     margin-top: 20px;
-    letter-spacing: 1px;
+    letter-spacing: 1.2px;
 }
 
 .mainpagediv5>div {

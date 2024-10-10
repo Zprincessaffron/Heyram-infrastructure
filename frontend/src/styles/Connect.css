@@ -3,7 +3,7 @@
     top: 0;
     right: -55%;
     width: 50%;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     height: 100vh;
     overflow: hidden;
     z-index: 17;
@@ -21,7 +21,7 @@
     margin-bottom: 2rem;
     letter-spacing: 1px;
     margin-top: 0;
-    font-weight: 300;
+    font-weight: 500;
     height: 3%;
 }
 .connect_form textarea{

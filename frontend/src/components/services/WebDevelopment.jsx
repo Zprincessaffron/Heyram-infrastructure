@@ -89,6 +89,7 @@ const WebDevelopment = () => {
   // Function to handle clicking a service
   const handleServiceClick = (item) => {
     setSelectedService(item);
+    detailsRef.current.scrollIntoView({ behavior: "smooth" }); // Smooth scroll to the details section
   };
 
   // Scroll to the top when component mounts

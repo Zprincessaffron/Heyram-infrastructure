@@ -99,7 +99,7 @@ function Career() {
                   <div className='career_div22_2'>
                     <div className='career_div22_21'>
                       <h1>{job.jobName}</h1>
-                      <p> {job.minExperience} - {job.maxExperience} years</p>
+                      <p className='lowercase'> {job.minExperience} - {job.maxExperience} years</p>
                       <ul>
                         <li>
                           <span style={{ fontSize: "0.8rem" }}><TbPointFilled /></span>{job.jobType}
@@ -126,7 +126,7 @@ function Career() {
                   <div className='career_div22_2'>
                     <div className='career_div22_21'>
                       <h1>{job.internshipName}</h1>
-                      <p> {job.duration}</p>
+                      <p className='lowercase gap-2'> {job.duration}</p>
                       <ul>
                         <li>
                           <span style={{ fontSize: "0.8rem" }}><TbPointFilled /></span>{job.location}

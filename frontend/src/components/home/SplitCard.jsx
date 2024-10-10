@@ -69,8 +69,8 @@ function SplitCard() {
                       <div className='sc_div2_1static_1'>
                           <h1>{item.title}</h1>
                       </div>
-                      <div className='sc_div2_1static_2'>
-                          <h2>0{item.id}</h2>
+                      <div className='sc_div2_1static_2 '>
+                          <h2 className=''>0{item.id}</h2>
                       </div>
                     </div>
                       <div className={`sc_div2_11 ${hoverState == item.id ? "true" : ""}`} >

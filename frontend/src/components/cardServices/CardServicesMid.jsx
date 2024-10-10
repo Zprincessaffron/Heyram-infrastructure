@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import '../../styles/CardServices.css'
 import dottedback from '../../images/dottedback.png'
 import webd from '../../images/webd.jpg'
@@ -22,6 +22,9 @@ import brandawareness from '../../images/brandawareness.jpg'
 import background from '../../images/midc.jpg'
 import strategy from '../../images/strategy.jpg'
 import midSizeCompanies from './CardServicesData'
+import Navbar from '../navbar/Navbar'
+import MenuButton from '../navbar/MenuButton'
+import Menubar from '../menubar/Menubar'
 function CardServicesMid() {
     const [heigth, setHeight] = useState('')
     const data = midSizeCompanies.midSizeCompanies
@@ -71,7 +74,14 @@ function CardServicesMid() {
             preserveAspectRatio: 'xMidYMid slice',
         },
     };
+    useEffect(()=>{
+        window.scrollTo(0,0);
+      },[])
     return (
+        <>
+        <Navbar/>
+        <MenuButton/>
+        <Menubar/>
         <div className='cs_main'>
             <div className='cs_container1' style={{backgroundImage:`url(${background})`}}>
             <div>
@@ -179,6 +189,7 @@ function CardServicesMid() {
 
             <Footer />
         </div>
+        </>
     )
 }
 

@@ -3,7 +3,7 @@ import '../../styles/Home.css'
 import firstimg from '../../images/40.jpg'
 import rectangle from '../../images/rectangle11.png'
 import rectangle20 from '../../images/rectangle20.jpg'
-import career from '../../images/career.jpg'
+import career from '/career.jpg'
 import { motion } from 'framer-motion';
 import { useSpring, animated } from 'react-spring';
 import { useInView } from 'react-intersection-observer';

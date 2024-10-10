@@ -69,7 +69,7 @@ const ServiceTemplate2 = ({
         {/* Industries We Serve */}
         <div className="mt-[60px]">
           <motion.h2
-            className="text-[1rem] lg:text-2xl font-light tracking-widest mb-8 text-white uppercase"
+            className="text-[1rem] lg:text-xl font-light tracking-widest mb-8 text-white uppercase"
             ref={industriesRef}
             initial="hidden"
             animate={industriesControls}
@@ -109,7 +109,7 @@ const ServiceTemplate2 = ({
           {/* Left Content */}
           <div className="lg:w-1/2">
             <motion.h2
-              className="text-[1rem] lg:text-2xl font-light tracking-widest mb-6 text-white uppercase"
+              className="text-[1rem] lg:text-xl font-light tracking-widest mb-6 text-white uppercase"
               ref={offerRef}
               initial="hidden"
               animate={offerControls}
