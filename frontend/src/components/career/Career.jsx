@@ -67,7 +67,8 @@ function Career() {
     <div className='careermain'>
       <div className='career_div1'>
         <div className='career_div11'>
-          <div>We're more than professionals.<br /> We're a UNITY.</div>
+          <div>Shape the Future with Us<br /> </div>
+          <p>Be part of a team that's driving innovation and creating lasting impact.</p>
         </div>
       </div>
 
