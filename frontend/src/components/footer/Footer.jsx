@@ -29,6 +29,33 @@ function Footer() {
     navigate(`/data-ai/${service}`);
   };
 
+  const handleRedirect = (val) => {
+    if(val == 'linkedin'){
+      window.open("https://www.linkedin.com/company/heyram-infrastructure/posts/?feedView=all", "_blank");
+      return
+    }
+    if(val == 'whatsapp'){
+      const phoneNumber = "7538870577";
+      const message = "Hello";
+      const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+      
+      window.open(whatsappLink, "_blank");
+      return
+    }
+    if(val == 'facebook'){
+      window.open("https://www.facebook.com/people/HeyRam-Infrastructures/61565623726059/", "_blank");
+      return
+    }
+    if(val == 'twitter'){
+      window.open("https://x.com/k_raja86298", "_blank");
+      return
+    }
+    if(val == 'instagram'){
+      window.open("https://www.instagram.com/heyraminfrastructure/?hl=en", "_blank");
+      return
+    }
+  };
+
   return (
     <div className="footermain">
         <hr className="mb-20 opacity-20" />
@@ -75,19 +102,19 @@ function Footer() {
         </div>
         <div className="footer_div1_1">
           <h1>Connect with us</h1>
-          <div>
+          <div onClick={()=>handleRedirect("linkedin")}>
             <FaLinkedinIn /> LinkedIn
           </div>
-          <div>
+          <div  onClick={()=>handleRedirect("instagram")}>
             <FaInstagram /> Instagram
           </div>
-          <div>
+          <div  onClick={()=>handleRedirect("whatsapp")}>
             <FaWhatsapp /> WhatsApp
           </div>
-          <div>
+          <div  onClick={()=>handleRedirect("facebook")}>
             <FaFacebookF /> Facebook
           </div>
-          <div>
+          <div onClick={()=>handleRedirect("twitter")}>
             <FaXTwitter /> Twitter
           </div>
         </div>

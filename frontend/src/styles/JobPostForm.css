@@ -61,20 +61,22 @@
   }
   
   .add-button {
-    background: #007bff;
+    background: #2e3237;
     color: #fff;
     border: none;
     padding: 8px 12px;
+
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 20px;
+    margin-top: 10px;
   }
   
   .add-button:hover {
-    background: #0056b3;
+    background: #05121f;
   }
   
   .submit-button {
-    background: #28a745;
+    background: #120634;
     color: #fff;
     border: none;
     padding: 10px 15px;
@@ -90,4 +92,11 @@
   .jp_closebtn{
     display: flex;
     justify-content: end;
+  }
+  .jp_closebtn>div{
+    cursor: pointer;
+  }
+  .jp_closebtn>div:hover{
+    scale: 150%;
+    transition: scale 0.2s ease;
   }

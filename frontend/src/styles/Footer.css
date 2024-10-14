@@ -43,6 +43,13 @@
     text-transform: capitalize;
     letter-spacing: 1px;
     font-size: 0.8rem;
+    cursor: pointer;
+
+}
+.footer_div1_1>div:hover{
+    color: rgb(202, 136, 255);
+    font-weight: 400;
+    
 
 }
 .footer_div2>div{

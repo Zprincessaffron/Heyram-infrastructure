@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../../styles/JobPostForm.css'; // External CSS file for styling
 import axios from 'axios';
+import { IoMdClose } from "react-icons/io";
 
 const JobPostForm = ( {setshowAddForm} ) => {
   // State variables for the main form fields
@@ -86,7 +87,7 @@ const JobPostForm = ( {setshowAddForm} ) => {
       <form onSubmit={handleSubmit} className="job-form">
         {/* Job Name Input */}
         <div className='jp_closebtn' onClick={()=>{setshowAddForm(false)}}>
-            close
+            <div><IoMdClose /></div>
         </div>
         <div className="form-group">
           <label>Job Name</label>

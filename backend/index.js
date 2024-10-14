@@ -7,7 +7,6 @@ import authRoutes from './routes/authRoutes.js';
 
 
 const app = express();
-const port = 3000;
 dotenv.config();
 
 // Middleware
@@ -17,7 +16,7 @@ app.use(express.json());
 
 
 // MongoDB connection
-mongoose.connect('mongodb+srv://heyraminfrastructure:Princes111@cluster0.3qzmx.mongodb.net/main', {
+mongoose.connect(`${process.env.MONGO_URL}`, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }).then(() => console.log('MongoDB connected'))
@@ -28,6 +27,6 @@ app.use('/', authRoutes )
 
 
 // Start server
-app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
+app.listen(process.env.PORT, () => {
+  console.log(`Server running on http://localhost:${process.env.PORT}`);
 });

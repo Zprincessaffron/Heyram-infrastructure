@@ -52,6 +52,8 @@ function Contact() {
         window.scrollTo(0, 0);
     }, []);
 
+    
+
     return (
 
         <>
@@ -128,7 +130,7 @@ function Contact() {
                                     <div >
                                         <h1>HEYRAM INFRASTRUCTURE </h1>
                                         <p>Sakthi Nagar,Porur</p>
-                                        <p>Chennai-600116</p>
+                                        <p>Chennai- <span className='numberarea'>600116</span> </p>
                                     </div>
                                 </div>
                     
@@ -142,7 +144,7 @@ function Contact() {
                                     </div>
                                     <div >
                                         <h1>Call Us </h1>
-                                        <p>+91 7538870577</p>
+                                        <p><span className='numberarea'>+91 7538870577</span></p>
                                     </div>
                                 </div>
 
@@ -165,7 +167,7 @@ function Contact() {
                                     </div>
                                     <div >
                                         <h1>Operating Hours</h1>
-                                        <p>Monday to Saturday (9AM - 6PM)</p>
+                                        <p>Monday to Saturday <span className='numberarea'>(9AM - 6PM)</span> </p>
                                     </div>
                                 </div>
                                 
@@ -239,7 +241,7 @@ function Contact() {
                                     <div >
                                         <h1>HEYRAM INFRASTRUCTURE </h1>
                                         <p>Sakthi Nagar,Porur</p>
-                                        <p>Chennai-600116</p>
+                                        <p>Chennai- <span className='numberarea'>600116</span></p>
                                     </div>
                                 </div>
 
@@ -252,7 +254,7 @@ function Contact() {
                                     </div>
                                     <div >
                                         <h1>Call Us </h1>
-                                        <p>+91 7538870577</p>
+                                        <p><span className='numberarea'>+91 7538870577</span></p>
                                     </div>
                                 </div>
 
@@ -275,7 +277,7 @@ function Contact() {
                                     </div>
                                     <div >
                                         <h1>Operating Hours</h1>
-                                        <p>Monday to Saturday (9AM - 6PM)</p>
+                                        <p>Monday to Saturday <span className='numberarea' >(9AM - 6PM)</span></p>
                                     </div>
                                 </div>
 

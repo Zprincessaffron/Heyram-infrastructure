@@ -22,7 +22,14 @@ import ParticularInternDetail from './ParticularInternDetail';
 import { MdDelete } from "react-icons/md";
 import { AdminContext } from '../../context/AdminContext';
 import AdminNav from './AdminNav';
+import { IoMdInformationCircle } from "react-icons/io";
+import { FaDownload } from "react-icons/fa";
+import jsPDF from "jspdf";
+import "jspdf-autotable";
+import * as XLSX from "xlsx";
 
+import pdflogo from '../../images/pdflogo.png'
+import xcellogo from '../../images/xcellogo.png'
 function Jobs() {
   const [ jobData,setJobData]=useState([])
   const [ jobSeeker,setJobSeeker]=useState([])
@@ -37,6 +44,7 @@ function Jobs() {
   const [currentDeleteRole,setCurrentDeleteRole]=useState("")
   const [showDeletePopSeeker,setShowDeletePopSeeker]=useState(false)
   const { setSelectedNav } = useContext(AdminContext)
+  const [showDownloadSplitter, setDownloadSplitter] = useState(false)
 
 
 
@@ -176,6 +184,60 @@ function getJobDetails(){
   }
 
 
+  ///download////
+  
+  const generatePDF = () => {
+    // Initialize jsPDF
+    const doc = new jsPDF();
+
+    // Add title
+    doc.text("Client Data", 20, 10);
+
+    // Define columns for the table
+    const tableColumn = ["Name", "Email", "Phone", "Applied For", "Applied on"];
+    const tableRows = [];
+    const formattedDate = new Date(jobSeeker.createdAt).toLocaleDateString('en-GB')
+
+    // Extract only the relevant fields from client data
+    jobSeeker.forEach(client => {
+      const clientData = [
+        client.name,
+        client.email,
+        client.phone,
+        client.appliedFor,
+        new Date(client.jobPostedDate).toLocaleDateString('en-GB')
+      ];
+      tableRows.push(clientData);
+    });
+
+    // Add table to the PDF
+    doc.autoTable({
+      head: [tableColumn],
+      body: tableRows,
+      startY: 20, // Position table below the title
+    });
+
+    // Save the PDF and prompt download
+    doc.save("intern_applicants_data.pdf");
+  };
+  /// xcel format//
+
+  const generateExcel = () => {
+    // Create a new workbook and a worksheet
+    const worksheet = XLSX.utils.json_to_sheet(jobSeeker.map(client => ({
+      Name: client.name,
+      Email: client.email,
+      Phone: client.phone,
+      AppliedFor: client.appliedFor,
+      AppliedOn: new Date(client.jobPostedDate).toLocaleDateString('en-GB')
+    })));
+
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, "Applicants");
+
+    // Generate the Excel file and prompt download
+    XLSX.writeFile(workbook, "intern_Applicants_data.xlsx");
+  };
   return (
      <div className='ad_job_main'>
         <div className='admin_nav'>
@@ -192,6 +254,29 @@ function getJobDetails(){
         <div className='ad_job_div13' onClick={handleChangeMain}>
           {showMain?"View Applications":"View Internship"}
         </div>
+        {showDownloadSplitter ? (<>
+          <div style={{ width: "180px", borderColor: "rgba(128, 128, 128, 0.315)" }} className='ad_job_div12' >
+            <div className='ad_job_div12_div'>
+              <button >
+                <img onClick={generatePDF} src={pdflogo} alt="" />
+              </button>
+              <button  >
+                <img onClick={generateExcel} src={xcellogo} alt="" />
+              </button>
+
+              <button >
+                <IoMdClose onClick={() => { setDownloadSplitter(false) }} />
+              </button>
+            </div>
+            <div>
+
+            </div>
+          </div>
+        </>) : (
+          <div style={{ width: "180px" }} className='ad_job_div12' onClick={() => { setDownloadSplitter(true) }}>
+            Download  <span style={{ marginLeft: "10px" }}><FaDownload /></span>
+          </div>
+        )}
        </div>
         
 
@@ -280,7 +365,7 @@ Next
 
 
 <div className='jobTableMain'>
-  <div className="ad_j-table-container">
+  <div className="ad_j-table-container"> 
       <h2 className="ad_j-table-title">Orders Summary</h2>
       <table className="ad_j-orders-table">
         <thead>
@@ -299,7 +384,7 @@ Next
 
           <tr>
             <td>{index+1}</td>
-            <td >{item.name}</td>
+            <td className='client_name_column'> {item.name} {item.opened != 'yes'? (<span><IoMdInformationCircle/></span>):null } </td>
             <td>{item.appliedFor}</td>
             <td>{item.degree}</td>
             <td>{new Date(item.jobPostedDate).toLocaleDateString('en-GB')}</td>

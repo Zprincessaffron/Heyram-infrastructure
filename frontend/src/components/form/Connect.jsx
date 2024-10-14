@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext,useState } from "react";
 import "../../styles/Connect.css";
 import { useForm } from "react-hook-form";
 import axios from "axios";
@@ -7,26 +7,58 @@ import TextField from "@mui/material/TextField";
 import { AppContext } from "../../context/AppContext";
 import { IoMdClose } from "react-icons/io";
 import { useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify';
 
 function Connect() {
   const { connectForm, setConnectForm } = useContext(AppContext);
-
+  const services = ["Web Development", "Digital Services", "GenZAI"];
+  const [input, setInput] = useState('');
+  const [suggestions, setSuggestions] = useState([]);
+  
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
   } = useForm();
-
   const onSubmit = async (data) => {
+    const applicationData = {
+      ...data,
+      service: input,
+    };
     try {
-      const response = await axios.post("/client", data);
+      const response = await axios.post("/client", applicationData);
       console.log("Client Form submitted successfully:", response.data);
       // You can also reset the form or redirect after submission
       reset();
+      setInput('')
+      toast("Submited Sucessfully ✓")
+      document.getElementById('form_textarea').value = '';
+
+
+      
     } catch (error) {
       console.error(error);
     }
+  };
+
+  const handleInputChange = (e) => {
+    const value = e.target.value.toLowerCase();
+    setInput(value);
+
+    if (value) {
+      const filteredSuggestions = services.filter(service =>
+        service.toLowerCase().includes(value)
+      );
+      setSuggestions(filteredSuggestions);
+    } else {
+      setSuggestions([]);
+    }
+  };
+
+  const handleSuggestionClick = (suggestion) => {
+    setInput(suggestion);
+    setSuggestions([]); // Hide suggestions after selection
   };
   return (
     <div className={`connect_form ${connectForm ? "true" : ""}`}>
@@ -96,9 +128,24 @@ function Connect() {
                 required
                 id="outlined-required"
                 label="Service"
-                className={`errormsg ${errors.service ? "error" : ""}`}
-                {...register("service", { required: "services is required" })}
+                value={input}
+                onChange={handleInputChange}
+                className={`errormsg ${errors.name ? "error" : ""}`}
               />
+                {suggestions.length > 0 && (
+        <div className="suggestions-box">
+          {suggestions.map((suggestion, index) => (
+            <div
+              key={index}
+              onClick={() => handleSuggestionClick(suggestion)}
+              className="suggestion-item"
+            >
+              {suggestion}
+            </div>
+          ))}
+        </div>
+      )}
+              
               <TextField
                 required
                 id="outlined-required"
@@ -112,9 +159,12 @@ function Connect() {
              
             </Box>
             <textarea
-                name=""
-                id=""
+                name="message"
+                id="form_textarea"
                 rows={4}
+                placeholder="Message..."
+                className={`errormsg ${errors.howDidYouHear ? "error" : ""}`}
+                
                 {...register("message", { required: "message is required" })}
               ></textarea>
           </div>

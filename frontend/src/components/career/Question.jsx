@@ -64,8 +64,8 @@ function Question() {
       <div className='instruction_div'>
       <div className='instructions'>
 
-  <p>
-    Instructions:
+  <p className='ques_inst'>
+    Instructions
   </p>
   <ol>
     <li>Please read each question carefully.</li>

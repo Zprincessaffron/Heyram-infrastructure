@@ -1,19 +1,18 @@
 .question_main {
-    background-color: #1e1e1e; /* Dark background */
-    color: #f0f0f0; /* Light text color */
+    color: #f0f0f0; 
     padding: 20px;
     border-radius: 8px;
     padding-top: 10vh;
     padding-bottom: 3rem;
     padding-left: 3vw;
     margin: auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   }
 
   
   .instructions {
     text-align: left;
     margin-bottom: 20px;
+    font-size: 14px;
     font-style: italic;
     color: #c7c7c7d2; 
   }
@@ -31,19 +30,29 @@
     justify-content: end;
     padding-right: 5rem;
   }
+  .ques_inst{
+    font-size: 15px;
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.4rem;
+  }
   .submit_button {
-    background-color: #3282d7; /* Button color */
+    background-color: #160934; /* Button color */
     color: white;
-    padding: 10px 20px;
+    width: 130px;
+    height: 40px;
     border: none;
-    border-radius: 20px;
+    border-radius: 25px;
+    letter-spacing: 1px;
 
     cursor: pointer;
     transition: background-color 0.3s;
+   border: 1px solid rgba(128, 128, 128, 0.21);
   }
   
   .submit_button:hover {
-    background-color: #0056b3; /* Darker button on hover */
+    background-color: #24052f; /* Darker button on hover */
   }
   .qustion_div1{
     text-align: center;
@@ -51,8 +60,9 @@
     font-weight: 300;
     letter-spacing: 1px ;
     text-transform: uppercase;
-    text-decoration: underline;
+    text-decoration: none;
     text-underline-offset: 7px;
+    letter-spacing: 2px;
     text-decoration-thickness: 1px;
     text-decoration-color: rgba(196, 193, 193, 0.844); 
 

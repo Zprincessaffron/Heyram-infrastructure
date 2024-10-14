@@ -156,6 +156,7 @@
     flex-direction: row;
     gap: 2rem;
     padding-left: 5rem;
+    margin-bottom: 10px;
   }
   .clients_div1_1>div{
     display: flex;
@@ -181,4 +182,50 @@
   .ad_job_div12_div>button:hover{
     font-size: 1.3rem;
     transition: all 0.2s ease-in-out;
+  }
+  .ad_j-orders-table td.clients{
+    letter-spacing: 0.5px;
+    font-weight: 300;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.249);
+  }
+  .client_table.true td{ 
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+  }
+  .client_name_column{
+    display: flex;
+    gap: 3px;
+    align-items: center;
+  }
+  .client_name_column>span{
+    font-size: 10px;
+    color: rgb(74, 74, 238);
+  }
+  .ad_service_sugg{
+    background-color: rgba(102, 51, 153, 0.341);
+    backdrop-filter: blur(10px);
+    font-weight: 300;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+  }
+  .ad_service_sugg_item:hover{
+    background-color: rgba(255, 255, 255, 0.795);
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+
+  }
+  .ad_service_sugg_item{
+    padding: 0 2px;
+
+  }
+  .services-button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .services-button>span{
+    font-size: 20px;
   }

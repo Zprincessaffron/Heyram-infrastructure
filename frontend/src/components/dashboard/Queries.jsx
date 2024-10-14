@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { MdDelete } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
 import AdminNav from './AdminNav';
+import { IoMdInformationCircle } from "react-icons/io";
 
 function Queries() {
 
@@ -121,7 +122,7 @@ function Queries() {
 
           <tr  key={client._id}> 
             <td>{index+1}</td>
-            <td>{client.name}</td>
+            <td className='client_name_column'> {client.name} {client.opened != 'yes'? (<span><IoMdInformationCircle/></span>):null } </td>
                   <td>{client.email}</td>
                   <td>{new Date(client.createdAt).toLocaleDateString('en-GB')}</td>
                   <td style={{cursor:"pointer"}}>

@@ -12,6 +12,8 @@ import { FaDownload } from "react-icons/fa";
 import pdflogo from '../../images/pdflogo.png'
 import xcellogo from '../../images/xcellogo.png'
 import AdminNav from './AdminNav';
+import { IoMdInformationCircle } from "react-icons/io";
+import { IoMdArrowDropright } from "react-icons/io";
 
 
 function Clients() {
@@ -24,7 +26,8 @@ function Clients() {
   const [filterType, setFilterType] = useState("")
   const [storedData, setStoredData] = useState([])
   const [showDownloadSplitter, setDownloadSplitter] = useState(false)
-
+  const services = ["Web Development", "Digital Services", "GenZAI","All"];
+  const [showSuggestions, setShowSuggestions] = useState(false);
 
 
   function getClientData() {
@@ -163,6 +166,23 @@ function Clients() {
     XLSX.writeFile(workbook, "client_data.xlsx");
   };
 
+  const handleButtonClick = () => {
+    setShowSuggestions(!showSuggestions); // Toggle the suggestions visibility
+  };
+  function handleServiceFilter(val){
+    if(val == 'All'){
+      setStoredData(clientData)
+      setShowSuggestions(!showSuggestions); 
+      return
+
+
+    }else{
+        const filteredData =  clientData.filter(entry => entry.service === val);
+        setStoredData(filteredData)
+        setShowSuggestions(!showSuggestions); 
+      
+    }
+  }
   return (
     <div className='clients_main'>
       <div className='admin_navc'>
@@ -227,6 +247,20 @@ function Clients() {
           <p>Read</p>
 
         </div>
+        <div className="services-container">
+      <button onClick={handleButtonClick} className="services-button">
+        Services <span><IoMdArrowDropright/></span>
+      </button>
+      {showSuggestions && (
+        <div className="ad_service_sugg">
+          {services.map((service, index) => (
+            <div key={index} onClick={()=>handleServiceFilter(service)} className="ad_service_sugg_item">
+              {service}
+            </div>
+          ))}
+        </div>
+      )}
+    </div>
 
 
       </div>
@@ -279,9 +313,9 @@ function Clients() {
         <tbody> 
       {storedData.map((client,index) => (
 
-          <tr  key={client._id}> 
+          <tr  key={client._id} className={`client_table ${client.opened != 'yes' ? "true":""}`}> 
             <td>{index+1}</td>
-            <td>{client.name}</td>
+            <td className='client_name_column'> {client.name} {client.opened != 'yes'? (<span><IoMdInformationCircle/></span>):null } </td>
             <td>{client.service}</td>
             <td>{new Date(client.createdAt).toLocaleDateString('en-GB')}</td>
             <td  style={{cursor:"pointer"}} onClick={() => handleClientClick(client)}> View</td>
