@@ -5,7 +5,7 @@ import './index.css'
 import axios from 'axios';
 
 // Setting up the Axios base URL globally
-axios.defaults.baseURL = 'http://localhost:3000';
+axios.defaults.baseURL = 'http://localhost:4040';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

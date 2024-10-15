@@ -155,8 +155,8 @@
     
     right: auto;
     bottom: auto;
-    background: #0a083b8e;
-    backdrop-filter: blur(10px);
+    background: #04042f8e;
+    backdrop-filter: blur(20px);
     padding: 20px;
     border-radius: 8px;
     width: 80%;
