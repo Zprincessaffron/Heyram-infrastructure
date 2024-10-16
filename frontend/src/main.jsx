@@ -5,7 +5,7 @@ import './index.css'
 import axios from 'axios';
 
 // Setting up the Axios base URL globally
-axios.defaults.baseURL = 'http://localhost:4040';
+axios.defaults.baseURL = 'https://heyram-infrastructure.onrender.com';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
