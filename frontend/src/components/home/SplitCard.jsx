@@ -14,14 +14,14 @@ function SplitCard() {
     const dataSet = [
         {
           id: 1,
-          title: "Shoot & Studio",
+          title: "Discover",
           content: "Website Development: We create customized websites that elevate your brand's online presence. From responsive design to secure, scalable solutions, our web development services ensure an engaging user experience that drives conversions and growth.",
           al:"start",
           flexd:"column"
         },
         {
           id: 2,
-          title: "Setup",
+          title: "Design",
           content: "E-commerce Solutions: Build a powerful online store with our e-commerce services. We handle everything from product management and secure payment integration to optimizing the customer journey, helping you turn visitors into buyers.",
           al:"end",
           flexd:"column-reverse"
@@ -29,7 +29,7 @@ function SplitCard() {
         },
         {
           id: 3,
-          title: "Show",
+          title: "develop",
           content: "Search Engine Optimization (SEO): Our SEO services help you rank higher on search engines, driving organic traffic to your website. By optimizing your content, structure, and performance, we ensure that your business gets the visibility it needs to succeed.",
           al:"start",
           flexd:"column"
@@ -38,7 +38,7 @@ function SplitCard() {
         },
         {
           id: 4,
-          title: "Sky",
+          title: "Deploy",
           content: "Social Media Marketing: Engage your audience where they spend the most time—social media. Our targeted social media marketing strategies grow your brand's presence, build customer loyalty, and increase engagement through creative and effective campaigns.",
           al:"end",
           flexd:"column-reverse"
@@ -47,7 +47,7 @@ function SplitCard() {
         },
         {
           id: 5,
-          title: "Suggest",
+          title: "Deliver",
           content: "Data & AI Solutions: Transform your data into actionable insights with our Data & AI services. We offer advanced analytics, and AI-driven solutions to help you predict trends, optimize operations, and make data-backed decisions.",
           al:"start",
           flexd:"column"

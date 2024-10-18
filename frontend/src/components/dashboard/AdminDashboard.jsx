@@ -16,9 +16,6 @@ const AdminDashboard = () => {
 
   return (
     <div  style={{ display: 'flex', height: '100vh' }}>
-
-      {/* Static Sidebar */}
-
       <div className='ad_sidebar'>
               <div className='ad_sidebar01'>
 

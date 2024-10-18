@@ -169,9 +169,7 @@ function Career() {
                <p> {selectedJob.jobDescription}</p>
                <h1 style={{ marginBottom: "0.5rem" }}>QUALIFICATION</h1>
                <p >
-                 Experience with natural language processing (NLP) and computer vision
-                 Knowledge of cloud computing platforms such as AWS, Azure, or Google Cloud
-                 Familiarity with version control systems such as Git
+               {selectedJob.qualification}
                </p>
                <h1 style={{ marginBottom: "0.5rem" }}>JOB INFO</h1>
                <p><span>Type:</span> {selectedJob.jobType}</p>
@@ -213,9 +211,7 @@ function Career() {
                <p style={{ fontSize: "0.9rem", marginBottom: "1rem" }}> {selectedJob.internshipDescription}</p>
                <h1 style={{ marginBottom: "0.5rem" }}>QUALIFICATION</h1>
                <p >
-                 Experience with natural language processing (NLP) and computer vision
-                 Knowledge of cloud computing platforms such as AWS, Azure, or Google Cloud
-                 Familiarity with version control systems such as Git
+               {selectedJob.qualification}
                </p>
                <h1 style={{ marginBottom: "0.5rem" }}>INTERNSHIP INFO</h1>
                <p><span>Location:</span> {selectedJob.location}</p>
