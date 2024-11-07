@@ -2,9 +2,9 @@ import mongoose from 'mongoose';
 
 // Sub-schema for each question
 const questionSchema = new mongoose.Schema({
-  question: { type: String, required: true },
-  options: { type: [String], required: true },  // Array of options
-  answer: { type: String, required: true }       // Index of the correct option
+  question: { type: String, required: false },
+  options: { type: [String], required: false },  // Array of options
+  answer: { type: String, required: false }       // Index of the correct option
 });
 
 // Main job schema

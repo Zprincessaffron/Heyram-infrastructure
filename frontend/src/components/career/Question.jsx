@@ -21,7 +21,7 @@ function Question() {
   // Handle option change for each question
   const handleOptionChange = (questionId, selectedOption) => {
     setAnswers((prevAnswers) => ({
-      ...prevAnswers,
+      ...prevAnswers, 
       [questionId]: selectedOption,
     }));
   };

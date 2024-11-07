@@ -18,7 +18,11 @@ function JobDetail() {
   const [reponseBack, setResponseBack] = useState()
   const [showPop, setShowPop] = useState(false)
   const [sucessMsg, setSucessMsg] = useState()
-  const { jobData, calculatedScore } = location.state || {}; const {
+  // const { jobData, calculatedScore } = location.state || {}; const { temp cmted for not redirected from test page so dynamicaly inputscore : 0
+  const jobData = location.state;  
+  console.log("jobData",jobData)
+    
+  const {
     register,
     handleSubmit,
     formState: { errors },
@@ -43,7 +47,8 @@ function JobDetail() {
     const applicationData = {
       ...data,
       appliedFor: jobData.jobName,
-      score: calculatedScore
+      // score: calculatedScore    temp cmted for not redirected from test page so dynamicaly inputscore : 0
+      score: 0
     };
     try {
       const response = await axios.post('/js', applicationData);

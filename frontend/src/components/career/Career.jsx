@@ -25,7 +25,8 @@ function Career() {
   };
 
   const handleApply = () => {
-    navigate(`/test/${selectedJob._id}`, { state: selectedJob });
+    // navigate(`/test/${selectedJob._id}`, { state: selectedJob }); temp cmted the test submiting page
+    navigate(`/apply/${selectedJob._id}`, { state: selectedJob });
 
   };
   
