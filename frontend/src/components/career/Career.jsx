@@ -177,7 +177,7 @@ function Career() {
                <p><span>Location:</span> {selectedJob.location}</p>
                <p><span>Experience:</span> {selectedJob.minExperience} - {selectedJob.maxExperience} years</p>
                <p><span>Posted Date:</span> {new Date(selectedJob.jobPostedDate).toLocaleDateString()}</p>
-               {selectedJob.salary?(<p><span>Location:</span> {selectedJob.salary}</p>):null}
+               {selectedJob.salary?(<p><span>Salary:</span> {selectedJob.salary}</p>):null}
                <div className='jodmodeldesc1'>
                  <h2>REQUIRED SKILLS</h2>
                  <div className='skillset_div'>
